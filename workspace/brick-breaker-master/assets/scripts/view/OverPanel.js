@@ -9,7 +9,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.gameModel = new GameModel();
     },
 
     init(gameCtl){
@@ -38,7 +37,7 @@ cc.Class({
     },
 
     onBtnRestart(){
-        if(this.gameModel.life>0){
+        if(this.gameModel.life>0&& this.gameModel.surviveBricksNumber > 0){
             this.gameCtl.reStartGame();
         }else{
             this.gameCtl.startGame();
