@@ -15,6 +15,9 @@ cc.Class({
         for (let i = 0; i < this.bricksNumber; i++) {
             let brickNode = cc.instantiate(this.brickPrefab);
             brickNode.parent = this.node;
+            if(i%2 == 0){
+                brickNode.color = cc.color(255,0,0,255)
+            }
             brickNode.x = this.padding + (i % this.cols) * (brickNode.width + this.spacing) + brickNode.width / 2;
             brickNode.y = -this.padding - Math.floor(i / this.cols) * (brickNode.height + this.spacing) - brickNode.height / 2;
         }

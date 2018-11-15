@@ -1,3 +1,4 @@
+const GameModel = require('GameModel');
 cc.Class({
     extends: cc.Component,
 
@@ -8,7 +9,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-
+        this.gameModel = new GameModel();
     },
 
     init(gameCtl){
@@ -26,7 +27,21 @@ cc.Class({
         this.scoreLabel.string = score+'';
     },
 
+    showReBegin(score,life){
+        this.node.active = true;
+        this.resultLabel.string = 'life:'+life;
+        this.scoreLabel.string = score+'';
+    },
+
+    updateGameModel(gameModel){
+        this.gameModel = gameModel;
+    },
+
     onBtnRestart(){
-        this.gameCtl.startGame();
-    }
+        if(this.gameModel.life>0){
+            this.gameCtl.reStartGame();
+        }else{
+            this.gameCtl.startGame();
+        }
+    },
 });

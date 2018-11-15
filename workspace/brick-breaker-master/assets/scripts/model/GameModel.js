@@ -4,11 +4,16 @@ cc.Class({
     properties: {
         score:0,
         bricksNumber:0,
+        life:0,
     },
 
     init(){
         this.score = 0;
         this.bricksNumber = 50;
+    },
+
+    initLife(){
+        this.life = 3;
     },
 
     addScore(score){
@@ -17,6 +22,10 @@ cc.Class({
 
     minusBrick(n){
         this.bricksNumber -= n;
+    },
+
+    reduceLife(){
+        this.life -= 1;
     },
 
 });

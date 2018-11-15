@@ -35,8 +35,9 @@ cc.Class({
     init() {
         this.physicsManager.enabled = true;
         this.gameModel.init();
-
+        this.gameModel.initLife();
         this.gameView.init(this);
+        this.gameView.initLife(this.gameModel.life);
         this.ball.init(this);
         this.paddle.init();
         this.brickLayout.init(this.gameModel.bricksNumber);
@@ -44,10 +45,24 @@ cc.Class({
 
     },
 
+    reInit(){
+        this.physicsManager.enabled = true;
+        this.gameModel.init();
+        this.gameView.init(this);
+        this.gameView.initLife(this.gameModel.life);
+        this.ball.init(this);
+        this.paddle.init();
+        this.brickLayout.init(this.gameModel.bricksNumber);
+        this.overPanel.init(this);
+    },
+
     startGame() {
         this.init();
     },
 
+    reStartGame(){
+        this.reInit();
+    },
     pauseGame() {
         this.physicsManager.enabled = false;
     },
@@ -61,6 +76,11 @@ cc.Class({
         this.overPanel.show(this.gameModel.score, this.gameModel.bricksNumber === 0);
     },
 
+    reBeginGame(){
+        this.physicsManager.enabled = false;
+        this.overPanel.showReBegin(this.gameModel.score, this.gameModel.life);
+    },
+
     onBallContactBrick(ballNode, brickNode) {
         brickNode.parent = null;
         this.gameModel.addScore(1);
@@ -72,7 +92,14 @@ cc.Class({
     },
 
     onBallContactGround(ballNode, groundNode) {
-        this.stopGame();
+        if(this.gameModel.life>0){
+            this.gameModel.reduceLife();
+            this.gameView.updateLife(this.gameModel.life)
+            this.overPanel.updateGameModel(this.gameModel)
+            this.reBeginGame();
+        }else{
+            this.stopGame();
+        }
     },
 
     onBallContactPaddle(ballNode, paddleNode) {
@@ -85,6 +112,6 @@ cc.Class({
 
     onDestroy() {
         this.physicsManager.enabled = false;
-    }
+    },
 
 });
