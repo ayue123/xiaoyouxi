@@ -8,6 +8,9 @@ cc.Class({
 
     init(gameCtl){
         this.gameCtl = gameCtl;
+    },
+
+    initScore(){
         this.scoreLabel.string = '0';
     },
 

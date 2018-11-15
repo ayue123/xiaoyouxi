@@ -26,10 +26,12 @@ cc.Class({
     init() {
         this.physicsManager.enabled = true;
         this.gameModel.init();
+        this.gameModel.initScore();
         this.gameModel.initLife();
         this.gameModel.initLevelOnePosition();
         this.gameView.init(this);
         this.gameView.initLife(this.gameModel.life);
+        this.gameView.initScore();
         this.ball.init(this);
         this.paddle.init();
         this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.levelOnePosition);
@@ -39,7 +41,6 @@ cc.Class({
 
     reInit(){
         this.physicsManager.enabled = true;
-        this.gameModel.init();
         this.gameView.init(this);
         this.gameView.initLife(this.gameModel.life);
         this.ball.init(this);
