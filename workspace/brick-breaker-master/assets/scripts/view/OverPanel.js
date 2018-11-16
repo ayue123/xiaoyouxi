@@ -29,7 +29,7 @@ cc.Class({
     showReBegin(score,life){
         this.node.active = true;
         this.resultLabel.string = 'life:'+life;
-        this.scoreLabel.string = score+'';
+        this.scoreLabel.string = 'score:'+score;
     },
 
     updateGameModel(gameModel){
@@ -39,7 +39,11 @@ cc.Class({
     onBtnRestart(){
         if(this.gameModel.life>0&& this.gameModel.surviveBricksNumber > 0){
             this.gameCtl.reStartGame();
-        }else{
+        }else if(this.gameModel.life>0&& this.gameModel.surviveBricksNumber <= 0){
+            this.gameModel.initLevelPosition();
+            this.gameCtl.reInitLevelPosition(this.gameModel.getLevelPosition());
+            this.gameCtl.reStartGame();
+        } else{
             this.gameCtl.startGame();
         }
     },

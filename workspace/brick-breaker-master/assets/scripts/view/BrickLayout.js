@@ -9,12 +9,12 @@ cc.Class({
         bricksNumber: 0,
     },
 
-    init(bricksNumber,levelOnePosition) {
+    init(bricksNumber,levelPosition) {
         this.node.removeAllChildren();
         this.bricksNumber = bricksNumber;
         for (let i = 0; i < this.bricksNumber; i++) {
-            for(let j = 0; j<levelOnePosition.length;j++){
-                if(i ==levelOnePosition[j] ){
+            for(let j = 0; j<levelPosition.length;j++){
+                if(i ==levelPosition[j] ){
                     let brickNode = cc.instantiate(this.brickPrefab);
                     brickNode.parent = this.node;
                     if(i%4 == 0){

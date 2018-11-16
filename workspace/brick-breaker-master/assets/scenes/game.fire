@@ -47,8 +47,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.3688268015248356,
-      "y": 0.3688268015248356,
+      "x": 0.1359375,
+      "y": 0.1359375,
       "z": 1
     },
     "_quat": {
@@ -1340,13 +1340,13 @@
       "__id__": 31
     },
     "_enabled": true,
-    "padding": 5,
-    "spacing": 5,
-    "cols": 15,
+    "padding": 10,
+    "spacing": 10,
+    "cols": 10,
     "brickPrefab": {
       "__uuid__": "edbd9d67-e2ab-4be8-80b8-5afb06361626"
     },
-    "bricksNumber": 150,
+    "bricksNumber": 100,
     "_id": "2d+K8Az5BAM76BTkS6YE28"
   },
   {

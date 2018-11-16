@@ -27,6 +27,7 @@ cc.Class({
         this.physicsManager.enabled = true;
         this.gameModel.init();
         this.gameModel.initScore();
+        this.gameModel.initLevel();
         this.gameModel.initLife();
         this.gameModel.initLevelOnePosition();
         this.gameView.init(this);
@@ -48,12 +49,16 @@ cc.Class({
         this.overPanel.init(this);
     },
 
+    reInitLevelPosition(levelPosition){
+        this.brickLayout.init(this.gameModel.bricksNumber,levelPosition);
+    },
+
     startGame() {
         this.init();
     },
 
-    reStartGame(){
-        this.reInit();
+    reStartGame(levelPosition){
+        this.reInit(levelPosition);
     },
     pauseGame() {
         this.physicsManager.enabled = false;
@@ -80,7 +85,10 @@ cc.Class({
         this.gameModel.minusSurviveBrick(1);
         this.gameView.updateScore(this.gameModel.score);
         if (this.gameModel.surviveBricksNumber <= 0) {
-            this.stopGame();
+            // this.stopGame();
+            this.gameModel.addLevel();
+            this.overPanel.updateGameModel(this.gameModel);
+            this.reBeginGame();
         }
     },
 
@@ -90,7 +98,7 @@ cc.Class({
             this.gameView.updateLife(this.gameModel.life)
             this.overPanel.updateGameModel(this.gameModel)
             this.reBeginGame();
-        }else{
+        } else {
             this.stopGame();
         }
     },
