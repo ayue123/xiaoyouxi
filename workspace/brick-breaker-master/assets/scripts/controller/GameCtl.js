@@ -43,6 +43,7 @@ cc.Class({
     reInit(){
         this.physicsManager.enabled = true;
         this.gameView.init(this);
+        this.gameView.init(this);
         this.gameView.initLife(this.gameModel.life);
         this.ball.init(this);
         this.paddle.init();
@@ -81,7 +82,7 @@ cc.Class({
     onBallContactBrick(ballNode, brickNode) {
         brickNode.parent = null;
         this.gameModel.addScore(1);
-        this.gameModel.minusBrick(1);
+        // this.gameModel.minusBrick(1);
         this.gameModel.minusSurviveBrick(1);
         this.gameView.updateScore(this.gameModel.score);
         if (this.gameModel.surviveBricksNumber <= 0) {

@@ -47,8 +47,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.19453098948245642,
-      "y": 0.19453098948245642,
+      "x": 2.785761802547542,
+      "y": 2.785761802547542,
       "z": 1
     },
     "_quat": {
@@ -1346,7 +1346,7 @@
     "brickPrefab": {
       "__uuid__": "edbd9d67-e2ab-4be8-80b8-5afb06361626"
     },
-    "bricksNumber": 101,
+    "bricksNumber": 100,
     "_id": "2d+K8Az5BAM76BTkS6YE28"
   },
   {
@@ -1421,8 +1421,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 360,
-      "y": 229,
+      "x": 361.4,
+      "y": 226.2,
       "z": 0
     },
     "_scale": {
@@ -1499,7 +1499,7 @@
     "_id": "25w9FtAvlFq6AjOx7LtEPp"
   },
   {
-    "__type__": "cc.PhysicsBoxCollider",
+    "__type__": "cc.PhysicsPolygonCollider",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -1517,12 +1517,64 @@
       "x": 0,
       "y": 0
     },
-    "_size": {
-      "__type__": "cc.Size",
-      "width": 177,
-      "height": 24
-    },
-    "_id": "e43xfr8YZPyr7XYA65Lvke"
+    "points": [
+      {
+        "__type__": "cc.Vec2",
+        "x": -41.5,
+        "y": 12
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -69,
+        "y": 6.5
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -88.5,
+        "y": 2
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -88.5,
+        "y": -3
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -87.5,
+        "y": -6
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -79.5,
+        "y": -12
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 79.5,
+        "y": -12
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 86.5,
+        "y": -7
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 88.5,
+        "y": -0.2
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 69.7,
+        "y": 5.7
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 41.3,
+        "y": 12
+      }
+    ],
+    "_id": "9fkYIQb31Ed5kkEFcZ6z02"
   },
   {
     "__type__": "4dc82c1qO9KbZBsMZGbHlMV",

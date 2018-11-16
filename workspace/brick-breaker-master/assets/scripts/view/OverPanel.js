@@ -41,8 +41,8 @@ cc.Class({
             this.gameCtl.reStartGame();
         }else if(this.gameModel.life>0&& this.gameModel.surviveBricksNumber <= 0){
             this.gameModel.initLevelPosition();
-            this.gameCtl.reInitLevelPosition(this.gameModel.getLevelPosition());
             this.gameCtl.reStartGame();
+            this.gameCtl.reInitLevelPosition(this.gameModel.getLevelPosition());
         } else{
             this.gameCtl.startGame();
         }
