@@ -81,12 +81,10 @@ cc.Class({
 
     onBallContactBrick(ballNode, brickNode) {
        if(brickNode.parent!=null){
-           console.log( brickNode.parent._children.length+'ddd')
            brickNode.parent = null;
            this.gameModel.addScore(1);
            // this.gameModel.minusBrick(1);
            this.gameModel.minusSurviveBrick(1);
-            console.log(this.gameModel.surviveBricksNumber)
            this.gameView.updateScore(this.gameModel.score);
            if (this.gameModel.surviveBricksNumber <= 0) {
                // this.stopGame();
