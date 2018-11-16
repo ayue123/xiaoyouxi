@@ -80,26 +80,33 @@ cc.Class({
     },
 
     onBallContactBrick(ballNode, brickNode) {
-        brickNode.parent = null;
-        this.gameModel.addScore(1);
-        // this.gameModel.minusBrick(1);
-        this.gameModel.minusSurviveBrick(1);
-        this.gameView.updateScore(this.gameModel.score);
-        if (this.gameModel.surviveBricksNumber <= 0) {
-            // this.stopGame();
-            this.gameModel.addLevel();
-            this.overPanel.updateGameModel(this.gameModel);
-            this.reBeginGame();
-        }
+       if(brickNode.parent!=null){
+           console.log( brickNode.parent._children.length+'ddd')
+           brickNode.parent = null;
+           this.gameModel.addScore(1);
+           // this.gameModel.minusBrick(1);
+           this.gameModel.minusSurviveBrick(1);
+            console.log(this.gameModel.surviveBricksNumber)
+           this.gameView.updateScore(this.gameModel.score);
+           if (this.gameModel.surviveBricksNumber <= 0) {
+               // this.stopGame();
+               this.gameModel.addLevel();
+               this.overPanel.updateGameModel(this.gameModel);
+               this.reBeginGame();
+           }
+       }
     },
 
     onBallContactGround(ballNode, groundNode) {
-        if(this.gameModel.life>0 && this.gameModel.surviveBricksNumber > 0){
+        if(this.gameModel.life>1 && this.gameModel.surviveBricksNumber > 0){
             this.gameModel.reduceLife();
             this.gameView.updateLife(this.gameModel.life)
             this.overPanel.updateGameModel(this.gameModel)
             this.reBeginGame();
         } else {
+            this.gameModel.reduceLife();
+            this.gameView.updateLife(this.gameModel.life)
+            this.overPanel.updateGameModel(this.gameModel)
             this.stopGame();
         }
     },
