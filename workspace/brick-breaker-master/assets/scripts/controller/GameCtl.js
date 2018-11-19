@@ -12,15 +12,11 @@ cc.Class({
 
     onLoad: function () {
         //安卓返回键退出
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, (event) => {
-            if (event.keyCode === cc.KEY.back) {
-                cc.director.end();
-            }
-        });
         this.physicsManager = cc.director.getPhysicsManager();
         this.gameModel = new GameModel();
         this.startGame();
-        this.overPanel.updateGameModel(this.gameModel)
+        this.overPanel.updateGameModel(this.gameModel);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     },
 
     init() {
@@ -119,6 +115,15 @@ cc.Class({
 
     onDestroy() {
         this.physicsManager.enabled = false;
+        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+    },
+
+    onKeyDown (event) {
+        switch(event.keyCode) {
+            case cc.KEY.back:
+                this.overPanel.showReBegin(this.gameModel.score, this.gameModel.life);
+                break;
+        }
     },
 
 });
