@@ -8,6 +8,7 @@ cc.Class({
         paddle: require('Paddle'),
         brickLayout: require('BrickLayout'),
         overPanel: require('OverPanel'),
+        slump: require('Slump'),
     },
 
     onLoad: function () {
@@ -30,10 +31,18 @@ cc.Class({
         this.gameView.initLife(this.gameModel.life);
         this.gameView.initScore();
         this.ball.init(this);
+
+        //小球复制代码
+        // var newBallNode = cc.instantiate(this.ball.node);
+        // newBallNode.parent = this.ball.node.parent;
+        // var newBall = new Ball();
+        // newBall.node = newBallNode;
+        // newBall.newInit(this);
+
         this.paddle.init();
         this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.levelOnePosition);
         this.overPanel.init(this);
-
+        this.slump.init(this);
     },
 
     reInit(){
