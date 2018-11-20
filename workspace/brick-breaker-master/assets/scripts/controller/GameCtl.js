@@ -1,5 +1,6 @@
 const GameModel = require('GameModel');
 const Ball = require('Ball');
+const Slump = require('Slump');
 cc.Class({
     extends: cc.Component,
 
@@ -27,16 +28,26 @@ cc.Class({
         this.gameModel.initScore();
         this.gameModel.initLevel();
         this.gameModel.initLife();
-        this.gameModel.initLevelOnePosition();
+        this.gameModel.initLevelPosition();
         this.gameView.init(this);
         this.gameView.initLife(this.gameModel.life);
         this.gameView.initScore();
-        this.ball.init(this);
+        // this.ball.init(this);
+        this.ball.node.position = cc.v2(-30,-30);
+        this.ball.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
+        this.ball.initGamCtl(this);
+        var newBallNode = cc.instantiate(this.ball.node);
+        newBallNode.parent = this.paddle.node.parent;
+        newBallNode.pos = 1;
+        var newBall = new Ball();
+        newBall.node = newBallNode;
+        newBall.newInit(this);
 
         this.paddle.init();
         this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.levelOnePosition);
         this.overPanel.init(this);
-        this.slump.init(this);
+        this.slump.initGamCtl(this);
+        console.log(this.paddle.node.parent._children)
     },
 
     reInit(){
@@ -48,7 +59,13 @@ cc.Class({
         var ball = undefined;
         for(var i = 0;i<this.paddle.node.parent._children.length;i++){
             if(this.paddle.node.parent._children[i]._name == "ball"){
-                ball =this.paddle.node.parent._children[i];
+                if(ball == undefined){
+                    ball =this.paddle.node.parent._children[i];
+                }else if(this.paddle.node.parent._children[i].pos == 1){
+                    this.paddle.node.parent._children[i].destroy();
+                }
+            }else if(this.paddle.node.parent._children[i]._name == "slump"&&this.paddle.node.parent._children[i].pos ==1){
+                this.paddle.node.parent._children[i].destroy();
             }
         }
         var newBall = new Ball();
@@ -88,7 +105,6 @@ cc.Class({
     },
 
     onBallContactBrick(ballNode, brickNode) {
-        console.log(brickNode.parent)
         if(brickNode.parent!=null){
            brickNode.parent = null;
            this.gameModel.addScore(1);
@@ -100,6 +116,13 @@ cc.Class({
                this.gameModel.addLevel();
                this.overPanel.updateGameModel(this.gameModel);
                this.reBeginGame();
+           }
+           var dropBricks =  this.gameModel.dropBricks;
+           for(var i = 0;i<dropBricks.length;i++){
+               if(brickNode.pos == dropBricks[i] ){
+                   this.createSlump();
+                   break;
+               }
            }
        }
     },
@@ -139,18 +162,29 @@ cc.Class({
     createNewBall(slumpNode){
         //小球复制代码
         var newBallNode = cc.instantiate(this.ball.node);
-        newBallNode.parent = this.ball.node.parent;
+        newBallNode.parent = this.paddle.node.parent;
+        newBallNode.pos = 1;
         var newBall = new Ball();
         newBall.node = newBallNode;
         newBall.newInit(this);
         slumpNode.destroy();
     },
 
-
+    createSlump(){
+        var newSlumpNode = cc.instantiate(this.slump.node);
+        newSlumpNode.parent = this.paddle.node.parent;
+        newSlumpNode.pos = 1;
+        var newSlump = new Slump();
+        newSlump.node = newSlumpNode;
+        newSlump.init(this);
+    },
 
     onDestroy() {
         this.physicsManager.enabled = false;
-        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+    },
+
+    onRebirth(){
+        this.physicsManager.enabled = true;
     },
 
     onKeyDown (event) {

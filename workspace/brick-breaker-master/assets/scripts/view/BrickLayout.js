@@ -26,6 +26,7 @@ cc.Class({
                     }else {
                         brickNode.color = cc.color(255,255,0)
                     }
+                    brickNode.pos = levelPosition[j];
                     brickNode.x = this.padding + (i % this.cols) * (brickNode.width + this.spacing) + brickNode.width / 2;
                     brickNode.y = -this.padding - Math.floor(i / this.cols) * (brickNode.height + this.spacing) - brickNode.height / 2;
                 }

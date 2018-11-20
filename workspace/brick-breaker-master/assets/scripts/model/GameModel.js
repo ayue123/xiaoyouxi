@@ -6,6 +6,8 @@ cc.Class({
         bricksNumber:0,
         life:0,
         level:1,
+        surviveBricksNumber:0,
+        dropBricks:[],
         levelOnePosition:[],
         levelTwoPosition:[],
         levelThreePosition:[],
@@ -16,7 +18,7 @@ cc.Class({
         levelEightPosition:[],
         levelNinePosition:[],
         levelTenPosition:[],
-        surviveBricksNumber:0,
+
     },
 
     init(){
@@ -77,6 +79,18 @@ cc.Class({
         }else if(this.level == 10){
             this.initLevelTenPosition();
         }
+        this.dropBricks = this.getRandomBricks();
+        console.log(this.dropBricks)
+    },
+
+    getRandomBricks(){
+        var levelPosition = this.getLevelPosition();
+        var allBricks = levelPosition.length;
+        var randomBricks = [];
+        for(var i  =0;i<3;i++){
+            randomBricks[i] =levelPosition[parseInt(Math.random()*allBricks)]
+        }
+        return randomBricks;
     },
 
     getLevelPosition(){

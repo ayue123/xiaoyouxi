@@ -8,15 +8,17 @@ cc.Class({
     init(gameCtl) {
         this.gameCtl = gameCtl;
         this.node.position = cc.v2(360,270);//初始化位置
-        this.getComponent(cc.RigidBody).linearVelocity = cc.v2(600,600);//初始化速度
+        this.getComponent(cc.RigidBody).linearVelocity = cc.v2(500,500);//初始化速度
     },
 
     newInit(gameCtl,position){
         this.gameCtl = gameCtl;
         this.node.position = cc.v2(360,270);//初始化位置
-        this.getComponent(cc.RigidBody).linearVelocity = cc.v2(600,600);//初始化速度
+        this.getComponent(cc.RigidBody).linearVelocity = cc.v2(500,500);//初始化速度
     },
-
+    initGamCtl(gameCtl){
+        this.gameCtl = gameCtl;
+    },
     onBeginContact(contact, self, other) {
         switch (other.tag) {
             case 1://球碰到砖块

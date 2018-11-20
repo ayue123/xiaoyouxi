@@ -47,8 +47,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 2.2990142382209995,
-      "y": 2.2990142382209995,
+      "x": 0.4469148552288876,
+      "y": 0.4469148552288876,
       "z": 1
     },
     "_quat": {
@@ -842,8 +842,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 34,
-      "height": 33
+      "width": 25,
+      "height": 25
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -852,8 +852,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 360,
-      "y": 267,
+      "x": -32,
+      "y": -30,
       "z": 0
     },
     "_scale": {
@@ -1347,7 +1347,7 @@
     },
     "_enabled": true,
     "padding": 10,
-    "spacing": 10,
+    "spacing": 5,
     "cols": 10,
     "brickPrefab": {
       "__uuid__": "edbd9d67-e2ab-4be8-80b8-5afb06361626"
@@ -1594,7 +1594,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Slump",
+    "_name": "slump",
     "_objFlags": 0,
     "_parent": {
       "__id__": 22
@@ -1791,7 +1791,7 @@
       "__uuid__": "32b27e88-48ee-4c2a-b8e2-bcf59d2ce34b"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -1848,7 +1848,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 16.3,
+    "_radius": 12.3,
     "_id": "3e3QDdF1FLv6Lfzp/35RIO"
   },
   {
