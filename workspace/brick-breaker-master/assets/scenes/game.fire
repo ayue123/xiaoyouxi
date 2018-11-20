@@ -1722,7 +1722,7 @@
       "__id__": 40
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_density": 1,
     "_sensor": false,
     "_friction": 0.2,

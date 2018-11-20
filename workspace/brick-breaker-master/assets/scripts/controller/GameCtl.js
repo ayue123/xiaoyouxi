@@ -1,4 +1,5 @@
 const GameModel = require('GameModel');
+const Ball = require('Ball');
 cc.Class({
     extends: cc.Component,
 
@@ -32,13 +33,6 @@ cc.Class({
         this.gameView.initScore();
         this.ball.init(this);
 
-        //小球复制代码
-        // var newBallNode = cc.instantiate(this.ball.node);
-        // newBallNode.parent = this.ball.node.parent;
-        // var newBall = new Ball();
-        // newBall.node = newBallNode;
-        // newBall.newInit(this);
-
         this.paddle.init();
         this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.levelOnePosition);
         this.overPanel.init(this);
@@ -50,7 +44,16 @@ cc.Class({
         this.gameView.init(this);
         this.gameView.init(this);
         this.gameView.initLife(this.gameModel.life);
-        this.ball.init(this);
+
+        var ball = undefined;
+        for(var i = 0;i<this.paddle.node.parent._children.length;i++){
+            if(this.paddle.node.parent._children[i]._name == "ball"){
+                ball =this.paddle.node.parent._children[i];
+            }
+        }
+        var newBall = new Ball();
+        newBall.node = ball;
+        newBall.init(this);
         this.paddle.init();
         this.overPanel.init(this);
     },
@@ -85,7 +88,8 @@ cc.Class({
     },
 
     onBallContactBrick(ballNode, brickNode) {
-       if(brickNode.parent!=null){
+        console.log(brickNode.parent)
+        if(brickNode.parent!=null){
            brickNode.parent = null;
            this.gameModel.addScore(1);
            // this.gameModel.minusBrick(1);
@@ -101,16 +105,26 @@ cc.Class({
     },
 
     onBallContactGround(ballNode, groundNode) {
-        if(this.gameModel.life>1 && this.gameModel.surviveBricksNumber > 0){
-            this.gameModel.reduceLife();
-            this.gameView.updateLife(this.gameModel.life)
-            this.overPanel.updateGameModel(this.gameModel)
-            this.reBeginGame();
-        } else {
-            this.gameModel.reduceLife();
-            this.gameView.updateLife(this.gameModel.life)
-            this.overPanel.updateGameModel(this.gameModel)
-            this.stopGame();
+        var ballCount = 0;
+        for(var i = 0;i<ballNode.parent._children.length;i++){
+            if(ballNode.parent._children[i]._name == "ball"){
+                ballCount+=1;
+            }
+        }
+        if(ballCount<=1){
+            if(this.gameModel.life>1 && this.gameModel.surviveBricksNumber > 0){
+                this.gameModel.reduceLife();
+                this.gameView.updateLife(this.gameModel.life)
+                this.overPanel.updateGameModel(this.gameModel)
+                this.reBeginGame();
+            } else{
+                this.gameModel.reduceLife();
+                this.gameView.updateLife(this.gameModel.life)
+                this.overPanel.updateGameModel(this.gameModel)
+                this.stopGame();
+            }
+        }else{
+            ballNode.destroy();
         }
     },
 
@@ -121,6 +135,18 @@ cc.Class({
     onBallContactWall(ballNode, brickNode) {
 
     },
+
+    createNewBall(slumpNode){
+        //小球复制代码
+        var newBallNode = cc.instantiate(this.ball.node);
+        newBallNode.parent = this.ball.node.parent;
+        var newBall = new Ball();
+        newBall.node = newBallNode;
+        newBall.newInit(this);
+        slumpNode.destroy();
+    },
+
+
 
     onDestroy() {
         this.physicsManager.enabled = false;
