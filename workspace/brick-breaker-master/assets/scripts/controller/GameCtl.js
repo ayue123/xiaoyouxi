@@ -33,9 +33,11 @@ cc.Class({
         this.gameView.initLife(this.gameModel.life);
         this.gameView.initScore();
         // this.ball.init(this);
+        this.ball.node.pos =0;
         this.ball.node.position = cc.v2(-30,-30);
         this.ball.getComponent(cc.RigidBody).linearVelocity = cc.v2(0,0);
         this.ball.initGamCtl(this);
+
         var newBallNode = cc.instantiate(this.ball.node);
         newBallNode.parent = this.paddle.node.parent;
         newBallNode.pos = 1;
@@ -47,7 +49,6 @@ cc.Class({
         this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.levelOnePosition);
         this.overPanel.init(this);
         this.slump.initGamCtl(this);
-        console.log(this.paddle.node.parent._children)
     },
 
     reInit(){
@@ -120,7 +121,10 @@ cc.Class({
            var dropBricks =  this.gameModel.dropBricks;
            for(var i = 0;i<dropBricks.length;i++){
                if(brickNode.pos == dropBricks[i] ){
-                   this.createSlump();
+                   var newVec2 = this.node.convertToWorldSpaceAR(brickNode.position);
+                   console.log(brickNode.position)
+                   console.log(newVec2)
+                   this.createSlump(newVec2);
                    break;
                }
            }
@@ -130,10 +134,11 @@ cc.Class({
     onBallContactGround(ballNode, groundNode) {
         var ballCount = 0;
         for(var i = 0;i<ballNode.parent._children.length;i++){
-            if(ballNode.parent._children[i]._name == "ball"){
+            if(ballNode.parent._children[i]._name == "ball"&&ballNode.parent._children[i].pos == 1){
                 ballCount+=1;
             }
         }
+        console.log(ballCount)
         if(ballCount<=1){
             if(this.gameModel.life>1 && this.gameModel.surviveBricksNumber > 0){
                 this.gameModel.reduceLife();
@@ -162,21 +167,21 @@ cc.Class({
     createNewBall(slumpNode){
         //小球复制代码
         var newBallNode = cc.instantiate(this.ball.node);
-        newBallNode.parent = this.paddle.node.parent;
         newBallNode.pos = 1;
+        newBallNode.parent = this.paddle.node.parent;
         var newBall = new Ball();
         newBall.node = newBallNode;
         newBall.newInit(this);
         slumpNode.destroy();
     },
 
-    createSlump(){
+    createSlump(position){
         var newSlumpNode = cc.instantiate(this.slump.node);
         newSlumpNode.parent = this.paddle.node.parent;
         newSlumpNode.pos = 1;
         var newSlump = new Slump();
         newSlump.node = newSlumpNode;
-        newSlump.init(this);
+        newSlump.init(this,position);
     },
 
     onDestroy() {
