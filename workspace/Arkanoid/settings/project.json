@@ -8,12 +8,47 @@
   },
   "collision-matrix": [
     [
+      false,
       true,
+      true,
+      true,
+      null,
       true
     ],
     [
       true,
+      false,
+      null,
+      null,
       true
+    ],
+    [
+      true,
+      false,
+      false,
+      null,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      true,
+      false,
+      false
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
     ]
   ],
   "design-resolution-height": 640,
@@ -22,8 +57,12 @@
   "fit-height": true,
   "fit-width": false,
   "group-list": [
-    "default",
-    "paddle"
+    "ball",
+    "paddle",
+    "ground",
+    "brick",
+    "slump",
+    "wall"
   ],
   "simulator-orientation": false,
   "simulator-resolution": {
@@ -31,6 +70,5 @@
     "width": 960
   },
   "use-customize-simulator": false,
-  "use-project-simulator-setting": false,
-  "start-scene": "current"
+  "use-project-simulator-setting": false
 }

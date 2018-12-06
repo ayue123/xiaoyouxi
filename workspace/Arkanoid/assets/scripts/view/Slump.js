@@ -16,15 +16,16 @@ cc.Class({
     },
 
     onBeginContact(contact, self, other) {
-        if(this.node.pos == 1){
             switch (other.tag) {
                 case 3://下坠物碰到托盘
-                    this.gameCtl.createNewBall(this.node);
+                    this.gameCtl.createNewBall();
+                    this.gameCtl.destroySlump(self.node);
                     break;
                 case 2://下坠物碰到地面
-                    this.node.destroy();
+                    this.gameCtl.destroySlump(self.node);
+                    break;
+                case 1://碰到砖块
                     break;
             }
-        }
     },
 });

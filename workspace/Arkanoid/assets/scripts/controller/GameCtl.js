@@ -10,6 +10,7 @@ cc.Class({
         brickLayout: require('BrickLayout'),
         overPanel: require('OverPanel'),
         ballPrefab: cc.Prefab,
+        slumpPrefab: cc.Prefab,
     },
 
     onLoad: function () {
@@ -31,11 +32,7 @@ cc.Class({
         this.gameView.init(this);
         this.gameView.initLife(this.gameModel.life);
         this.gameView.initScore();
-        var ballNode = cc.instantiate(this.ballPrefab);
-        ballNode.parent = this.node;
-        var Ball = ballNode.getComponent('Ball')
-        Ball.init(this);
-
+        this.createNewBall();
 
 
         // this.ball.init(this);
@@ -64,7 +61,7 @@ cc.Class({
         this.gameView.init(this);
         this.gameView.init(this);
         this.gameView.initLife(this.gameModel.life);
-
+        this.createNewBall();
         // var ball = undefined;
         // for(var i = 0;i<this.paddle.node.parent._children.length;i++){
         //     if(this.paddle.node.parent._children[i]._name == "ball"){
@@ -137,16 +134,32 @@ cc.Class({
        //         }
        //     }
        // }
+
         brickNode.parent = null;
         this.gameModel.addScore(1);
-        this.gameModel.minusBrick(1);
+        // this.gameModel.minusBrick(1);
+        this.gameModel.minusSurviveBrick(1);
         this.gameView.updateScore(this.gameModel.score);
-        if (this.gameModel.bricksNumber <= 0) {
-            this.stopGame();
+        if (this.gameModel.surviveBricksNumber <= 0) {
+            // this.stopGame();
+            this.gameModel.addLevel();
+            this.overPanel.updateGameModel(this.gameModel);
+            ballNode.destroy();
+            this.reBeginGame();
+        }
+        var dropBricks =  this.gameModel.dropBricks;
+        for(var i = 0;i<dropBricks.length;i++){
+            if(brickNode.pos == dropBricks[i] ){
+                // var newVec2 = this.node.convertToWorldSpaceAR(brickNode.position);
+                this.createSlump(brickNode.position);
+                break;
+            }
         }
     },
 
+
     onBallContactGround(ballNode, groundNode) {
+
         // var ballCount = 0;
         // for(var i = 0;i<ballNode.parent._children.length;i++){
         //     if(ballNode.parent._children[i]._name == "ball"&&ballNode.parent._children[i].pos == 1){
@@ -169,7 +182,25 @@ cc.Class({
         // }else{
         //     ballNode.destroy();
         // }
-        this.stopGame();
+
+        if(this.gameModel.ballCount<=1){
+            if(this.gameModel.life>1 && this.gameModel.surviveBricksNumber > 0){
+                this.gameModel.reduceLife();
+                this.gameView.updateLife(this.gameModel.life)
+                this.overPanel.updateGameModel(this.gameModel)
+                this.reBeginGame();
+            } else{
+                this.gameModel.reduceLife();
+                this.gameView.updateLife(this.gameModel.life)
+                this.overPanel.updateGameModel(this.gameModel)
+                this.stopGame();
+            }
+            ballNode.destroy();
+            this.gameModel.reduceBallCount();
+        }else{
+            ballNode.destroy();
+            this.gameModel.reduceBallCount();
+        }
     },
 
     onBallContactPaddle(ballNode, paddleNode) {
@@ -180,25 +211,32 @@ cc.Class({
 
     },
 
-    // createNewBall(slumpNode){
-    //     //小球复制代码
-    //     var newBallNode = cc.instantiate(this.ball.node);
-    //     newBallNode.pos = 1;
-    //     newBallNode.parent = this.paddle.node.parent;
-    //     var newBall = new Ball();
-    //     newBall.node = newBallNode;
-    //     newBall.newInit(this);
-    //     slumpNode.destroy();
-    // },
-    //
-    // createSlump(position){
-    //     var newSlumpNode = cc.instantiate(this.slump.node);
-    //     newSlumpNode.parent = this.paddle.node.parent;
-    //     newSlumpNode.pos = 1;
-    //     var newSlump = new Slump();
-    //     newSlump.node = newSlumpNode;
-    //     newSlump.init(this,position);
-    // },
+    createNewBall(){
+        //小球复制代码
+        var ballNode = cc.instantiate(this.ballPrefab);
+        ballNode.parent = this.paddle.node.parent;
+        var Ball = ballNode.getComponent('Ball')
+        Ball.init(this,this.paddle.node.position);
+        this.gameModel.addBallCount();
+    },
+
+    createSlump(position){
+        // var newSlumpNode = cc.instantiate(this.slump.node);
+        // newSlumpNode.parent = this.paddle.node.parent;
+        // newSlumpNode.pos = 1;
+        // var newSlump = new Slump();
+        // newSlump.node = newSlumpNode;
+        // newSlump.init(this,position);
+        var slumpNode = cc.instantiate(this.slumpPrefab);
+        slumpNode.parent = this.brickLayout.node;
+        var Slump = slumpNode.getComponent('Slump')
+        console.log(position)
+        Slump.init(this,position);
+    },
+
+    destroySlump(slumpNode){
+        slumpNode.destroy();
+    },
 
     onDestroy() {
         this.physicsManager.enabled = false;
@@ -210,7 +248,7 @@ cc.Class({
 
     onKeyDown (event) {
         switch(event.keyCode) {
-            case cc.KEY.back:
+            case cc.macro.KEY.back:
                 this.overPanel.showReBegin(this.gameModel.score, this.gameModel.life);
                 break;
         }

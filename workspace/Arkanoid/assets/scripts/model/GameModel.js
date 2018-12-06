@@ -6,6 +6,7 @@ cc.Class({
         bricksNumber:0,
         life:0,
         level:1,
+        ballCount:0,
         surviveBricksNumber:0,
         dropBricks:[],
         levelOnePosition:[],
@@ -55,6 +56,14 @@ cc.Class({
 
     addLevel(){
         this.level +=1;
+    },
+
+    addBallCount(){
+        this.ballCount+=1;
+    },
+
+    reduceBallCount(){
+        this.ballCount-=1;
     },
 
     initLevelPosition(){
