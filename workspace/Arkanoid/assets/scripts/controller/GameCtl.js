@@ -135,7 +135,13 @@ cc.Class({
        //     }
        // }
 
+        if(brickNode.parent == null){
+            console.log("ffffffffffffff");
+            return;
+        }
+
         brickNode.parent = null;
+        brickNode.destroy();
         this.gameModel.addScore(1);
         // this.gameModel.minusBrick(1);
         this.gameModel.minusSurviveBrick(1);
@@ -144,7 +150,7 @@ cc.Class({
             // this.stopGame();
             this.gameModel.addLevel();
             this.overPanel.updateGameModel(this.gameModel);
-            ballNode.destroy();
+            this.destroyBall(ballNode);
             this.reBeginGame();
         }
         var dropBricks =  this.gameModel.dropBricks;
@@ -195,11 +201,9 @@ cc.Class({
                 this.overPanel.updateGameModel(this.gameModel)
                 this.stopGame();
             }
-            ballNode.destroy();
-            this.gameModel.reduceBallCount();
+            this.destroyBall(ballNode);
         }else{
-            ballNode.destroy();
-            this.gameModel.reduceBallCount();
+            this.destroyBall(ballNode);
         }
     },
 
@@ -230,12 +234,18 @@ cc.Class({
         var slumpNode = cc.instantiate(this.slumpPrefab);
         slumpNode.parent = this.brickLayout.node;
         var Slump = slumpNode.getComponent('Slump')
-        console.log(position)
         Slump.init(this,position);
     },
 
     destroySlump(slumpNode){
         slumpNode.destroy();
+    },
+
+
+    destroyBall(ballNode){
+        ballNode.parent = null;
+        ballNode.destroy();
+        this.gameModel.reduceBallCount();
     },
 
     onDestroy() {

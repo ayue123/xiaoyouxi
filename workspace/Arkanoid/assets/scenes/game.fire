@@ -58,7 +58,7 @@
       "z": 0,
       "w": 1
     },
-    "_localZOrder": 32,
+    "_localZOrder": 2,
     "groupIndex": 0,
     "autoReleaseAssets": false,
     "_id": "2ef97242-9501-4637-ab4d-d2e235f1f114"
@@ -139,7 +139,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 95,
+    "_localZOrder": 3,
     "groupIndex": 0,
     "_id": "9fb39NGcOpF/or/pWJp+gH8"
   },
@@ -947,7 +947,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 96,
+    "_localZOrder": 10,
     "groupIndex": 0,
     "_id": "1d482RdO4lH1bNt0a9Ex2/5"
   },
@@ -1619,7 +1619,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 97,
+    "_localZOrder": 15,
     "groupIndex": 0,
     "_id": "33ef7r2ELtOUoHhY9mB09QU"
   },
