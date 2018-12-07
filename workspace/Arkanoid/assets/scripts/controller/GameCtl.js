@@ -135,8 +135,8 @@ cc.Class({
        //     }
        // }
 
+        //处理因为并发问题引起的砖块未打干净而结束计数的bug
         if(brickNode.parent == null){
-            console.log("ffffffffffffff");
             return;
         }
 
@@ -146,12 +146,14 @@ cc.Class({
         // this.gameModel.minusBrick(1);
         this.gameModel.minusSurviveBrick(1);
         this.gameView.updateScore(this.gameModel.score);
+        //本关结束
         if (this.gameModel.surviveBricksNumber <= 0) {
             // this.stopGame();
             this.gameModel.addLevel();
             this.overPanel.updateGameModel(this.gameModel);
             this.destroyBall(ballNode);
             this.reBeginGame();
+            this.destroyAllBall(ballNode);
         }
         var dropBricks =  this.gameModel.dropBricks;
         for(var i = 0;i<dropBricks.length;i++){
@@ -246,6 +248,16 @@ cc.Class({
         ballNode.parent = null;
         ballNode.destroy();
         this.gameModel.reduceBallCount();
+    },
+
+    destroyAllBall(ballNode){
+        var ballParentChildren = this.paddle.node.parent._children;
+        for (var i= 0;i<ballParentChildren.length;i++){
+            var node = ballParentChildren[i];
+            if(node._name == "ball"){
+                this.destroyBall(node);
+            }
+        }
     },
 
     onDestroy() {
