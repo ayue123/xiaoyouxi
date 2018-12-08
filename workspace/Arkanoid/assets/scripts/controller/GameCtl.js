@@ -11,6 +11,16 @@ cc.Class({
         overPanel: require('OverPanel'),
         ballPrefab: cc.Prefab,
         slumpPrefab: cc.Prefab,
+        // 得分音效资源
+        scoreAudio: {
+            default: null,
+            type: cc.AudioClip
+        },
+        // 跳跃音效资源
+        collisionAudio: {
+            default: null,
+            type: cc.AudioClip
+        },
     },
 
     onLoad: function () {
@@ -48,12 +58,10 @@ cc.Class({
         // newBall.node = newBallNode;
         // newBall.newInit(this);
 
-
-
         this.paddle.init();
         this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.levelOnePosition);
         this.overPanel.init(this);
-        // this.slump.initGamCtl(this);
+        console.log(this.paddle)
     },
 
     reInit(){
@@ -139,7 +147,8 @@ cc.Class({
         if(brickNode.parent == null){
             return;
         }
-
+        // 播放得分音效
+        cc.audioEngine.playEffect(this.scoreAudio, false);
         brickNode.parent = null;
         brickNode.destroy();
         this.gameModel.addScore(1);
@@ -210,11 +219,13 @@ cc.Class({
     },
 
     onBallContactPaddle(ballNode, paddleNode) {
-
+        // 播放碰撞音效
+        cc.audioEngine.playEffect(this.collisionAudio, false);
     },
 
     onBallContactWall(ballNode, brickNode) {
-
+        // 播放碰撞音效
+        cc.audioEngine.playEffect(this.collisionAudio, false);
     },
 
     createNewBall(){

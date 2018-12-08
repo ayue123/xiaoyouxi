@@ -779,6 +779,12 @@
     "slumpPrefab": {
       "__uuid__": "c73d353d-a38a-41af-b220-3bf633edc2cd"
     },
+    "scoreAudio": {
+      "__uuid__": "afe02093-8f42-4679-a711-473215d83061"
+    },
+    "collisionAudio": {
+      "__uuid__": "d5a30676-8122-43b4-8775-8b0017268af0"
+    },
     "_id": "2eWf1a2yVLF4DS0CvG2nbE"
   },
   {
@@ -842,7 +848,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 177,
+      "width": 180,
       "height": 24
     },
     "_anchorPoint": {
@@ -1417,7 +1423,7 @@
       "__uuid__": "95332c02-5842-46a2-9dab-e40b8172c27c"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
