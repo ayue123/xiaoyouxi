@@ -11,7 +11,6 @@ cc.Class({
     },
 
     start () {
-
         if (typeof wx === 'undefined') {
             return;
         }
@@ -28,7 +27,6 @@ cc.Class({
                 this.initFriendRankInfo();
             }
             if(data.type =='updateMaxScore'){
-                console.log("ddd")
                this.updateUserMaxScore;
             }
         });
@@ -61,8 +59,6 @@ cc.Class({
 
     //添加玩家头像名字
     addUserInfo(user){
-        console.log(this.userRankInfo.children)
-        console.log(this.userRankInfo.children.length)
         if(this.userRankInfo.children.length<=0) {
             let node = cc.instantiate(this.prefab);
             node.parent = this.userRankInfo;
@@ -124,8 +120,9 @@ cc.Class({
         wx.getFriendCloudStorage({
             keyList: ["score"], // 你要获取的、托管在微信后台都key
             success: res => {
-                for (let i = 0; i < res.data.length; ++i) {
-                    this.createUserBlock(res.data[i]);
+                let userArr = this.rankUserScore(res);
+                for (let i = 0; i < userArr.length; ++i) {
+                    this.createUserBlock(userArr[i]);
                 }
             }
         });
@@ -149,6 +146,19 @@ cc.Class({
         //set score
         let score = node.getChildByName('score').getComponent(cc.Label);
         score.string = user.KVDataList[0].value || 0;
+    },
+    //排行榜排序
+    rankUserScore(res){
+        let userArr = [];
+        for (let i = 0; i < res.data.length; ++i) {
+            userArr.push(res.data[i]);
+        }
+        userArr.sort(this.rank);
+        return userArr;
+    },
+    //排序算法
+    rank(usera,userb){
+        return userb.KVDataList[0].value - usera.KVDataList[0].value;
     },
 
 });

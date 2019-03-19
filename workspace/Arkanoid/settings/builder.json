@@ -1,4 +1,19 @@
 {
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
   "encryptJs": true,
   "excludeScenes": [],
   "fb-instant-games": {},
@@ -24,17 +39,11 @@
   "webOrientation": "auto",
   "wechatgame": {
     "REMOTE_SERVER_ROOT": "",
-    "appid": "",
+    "appid": "wxce1bb384f5bde4c8",
     "isSubdomain": false,
     "orientation": "portrait",
     "subContext": "wx-open-data-project"
   },
   "xxteaKey": "f4ef681c-8fa6-40",
-  "zipCompressJs": true,
-  "includeAnySDK": false,
-  "oauthLoginServer": "",
-  "appKey": "",
-  "appSecret": "",
-  "privateKey": "",
-  "jailbreakPlatform": false
+  "zipCompressJs": true
 }
