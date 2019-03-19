@@ -9,7 +9,7 @@ cc.Class({
         bricksNumber: 0,
     },
 
-
+    //绘制砖块
     init(bricksNumber,levelPosition) {
         this.node.removeAllChildren();
         this.bricksNumber = bricksNumber;

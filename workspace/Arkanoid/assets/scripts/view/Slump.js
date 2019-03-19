@@ -5,6 +5,7 @@ cc.Class({
         gameCtl:undefined,
     },
 
+    //初始化随机砖块
     init(gameCtl,position) {
         this.gameCtl = gameCtl;
         this.node.position = position;//初始化位置
@@ -14,7 +15,7 @@ cc.Class({
     initGamCtl(gameCtl){
         this.gameCtl = gameCtl;
     },
-
+    //随机砖块撞击处理
     onBeginContact(contact, self, other) {
             switch (other.tag) {
                 case 3://下坠物碰到托盘

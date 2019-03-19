@@ -15,17 +15,17 @@ cc.Class({
         this.gameCtl = gameCtl;
         this.node.active = false;
     },
-
+    //机会用尽展示界面
     show(score,isWin){
         this.node.active = true;
         if(isWin){
-            this.resultLabel.string = 'YOU WIN!';
+            this.resultLabel.string = '开始下一关!';
         }else{
-            this.resultLabel.string = 'YOU LOSE!';
+            this.resultLabel.string = '重新开始!';
         }
         this.scoreLabel.string = score+'';
     },
-
+    //每一关结束展示界面
     showReBegin(score,life){
         this.node.active = true;
         this.resultLabel.string = 'life:'+life;
@@ -36,13 +36,18 @@ cc.Class({
         this.gameModel = gameModel;
     },
 
+    //展示界面点击处理逻辑
     onBtnRestart(){
         if(this.gameModel.life>0&& this.gameModel.surviveBricksNumber > 0){
             this.gameCtl.reStartGame();
         }else if(this.gameModel.life>0&& this.gameModel.surviveBricksNumber <= 0){
-            this.gameModel.initLevelPosition();
-            this.gameCtl.reStartGame();
-            this.gameCtl.reInitLevelPosition(this.gameModel.getLevelPosition());
+            var isLevelOver = this.gameModel.initLevelPosition();
+            if(isLevelOver!=9999){
+                this.gameCtl.reStartGame();
+                this.gameCtl.reInitLevelPosition(this.gameModel.getLevelPosition());
+            }else {
+                this.gameCtl.startGame();
+            }
         } else{
             this.gameCtl.startGame();
         }

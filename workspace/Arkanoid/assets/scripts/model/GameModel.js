@@ -65,7 +65,7 @@ cc.Class({
     reduceBallCount(){
         this.ballCount-=1;
     },
-
+    //初始化关
     initLevelPosition(){
         if(this.level == 1){
             this.initLevelOnePosition();
@@ -87,11 +87,14 @@ cc.Class({
             this.initLevelNinePosition();
         }else if(this.level == 10){
             this.initLevelTenPosition();
+        }else {
+            return 9999;
         }
+
         this.dropBricks = this.getRandomBricks();
-        console.log(this.dropBricks)
     },
 
+    //获取随机砖块
     getRandomBricks(){
         var levelPosition = this.getLevelPosition();
         var allBricks = levelPosition.length;
@@ -101,7 +104,7 @@ cc.Class({
         }
         return randomBricks;
     },
-
+    //获取需要被填充的砖块
     getLevelPosition(){
         if(this.level == 1){
             return this.levelOnePosition
@@ -123,6 +126,8 @@ cc.Class({
             return this.levelNinePosition;
         }else if(this.level == 10){
             return this.levelTenPosition;
+        }else{
+            return 9999;
         }
     },
 
