@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "Brick",
+    "_name": "Brick0",
     "_objFlags": 0,
     "_native": "",
     "data": {
@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Brick",
+    "_name": "Brick0",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -42,8 +42,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 55,
-      "height": 25
+      "width": 58,
+      "height": 26
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -73,7 +73,6 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 87,
     "groupIndex": 3,
     "_id": ""
   },
@@ -85,10 +84,8 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "ebe47ea2-7106-4f06-9992-a1766f6bcf05"
+      "__uuid__": "ec774697-1167-4aee-ba7e-095b5ccb57b1"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -103,7 +100,9 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_id": "e4o6Ds7jVL0rI75a/wq+S8"
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_id": ""
   },
   {
     "__type__": "cc.RigidBody",
@@ -127,7 +126,8 @@
     "_fixedRotation": false,
     "enabledContactListener": false,
     "bullet": false,
-    "_id": "68Fq7yqFhFlYEtKl+KsR/Z"
+    "awakeOnLoad": true,
+    "_id": ""
   },
   {
     "__type__": "cc.PhysicsBoxCollider",
@@ -153,7 +153,7 @@
       "width": 39.6,
       "height": 15
     },
-    "_id": "59d5W871pEb5DgwBTJmq8i"
+    "_id": ""
   },
   {
     "__type__": "cc.PrefabInfo",

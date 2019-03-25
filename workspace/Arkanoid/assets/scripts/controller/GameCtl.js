@@ -29,13 +29,15 @@ cc.Class({
     onLoad: function () {
         this.physicsManager = cc.director.getPhysicsManager();
         this.gameModel = new GameModel();
-        this.init();
         this.overPanel.updateGameModel(this.gameModel);
-        this.reBeginGame();
+        this.startGame();
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
+    },
+    update:function () {
 
     },
+
 
     startGame(){
         this.init();
@@ -52,10 +54,11 @@ cc.Class({
         this.gameView.init(this);
         this.gameView.initLife(this.gameModel.life);
         this.gameView.initScore();
+        this.gameView.initLevel(this.gameModel.level);
         this.paddle.init();
-        this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.levelOnePosition);
+        this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.getLevelPosition(),this.gameModel.getLevelSilveryPosition());
         this.overPanel.init(this);
-
+        this.updatePaddle(true);
     },
     //部分属性重新初始化（在玩家仍然有机会时初始化调用）
     reInit(){
@@ -63,15 +66,17 @@ cc.Class({
         this.gameView.init(this);
         this.gameView.init(this);
         this.gameView.initLife(this.gameModel.life);
+        this.gameView.initLevel(this.gameModel.level);
         this.createNewBall();
         this.paddle.init();
         this.overPanel.init(this);
+        this.updatePaddle(true);
     },
-
-    reInitLevelPosition(levelPosition){
-        this.brickLayout.init(this.gameModel.bricksNumber,levelPosition);
+    //重新绘制关卡
+    reInitLevelPosition(){
+        this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.getLevelPosition(),this.gameModel.getLevelSilveryPosition());
     },
-
+    //重新开始游戏，用于还有机会的情况下
     reStartGame(levelPosition){
         this.destroyAllBall();
         this.reInit(levelPosition);
@@ -87,45 +92,49 @@ cc.Class({
     //结束游戏
     stopGame() {
         this.physicsManager.enabled = false;
-        this.overPanel.show(this.gameModel.score, this.gameModel.surviveBricksNumber === 0);
+        this.overPanel.show(this.gameModel.score, this.gameModel.surviveBricksNumber === 0,this.gameModel.level);
         this.startBackGround.active = true;
         this.setUserScorePassage(this.gameModel.score);
     },
     //重新开始游戏（在玩家还有机会时调用）
     reBeginGame(){
         this.physicsManager.enabled = false;
-        this.overPanel.showReBegin(this.gameModel.score, this.gameModel.life);
+        this.overPanel.showReBegin(this.gameModel.score, this.gameModel.life,this.gameModel.level);
         this.startBackGround.active = true;
         this.setUserScorePassage(this.gameModel.score);
     },
     //小球撞击砖块处理
     onBallContactBrick(ballNode, brickNode) {
-
         //处理因为并发问题引起的砖块未打干净而结束计数的bug
         if(brickNode.parent == null){
             return;
         }
         // 播放得分音效
         cc.audioEngine.playEffect(this.scoreAudio, false);
-        brickNode.parent = null;
-        brickNode.destroy();
-        this.gameModel.addScore(1);
-        // this.gameModel.minusBrick(1);
-        this.gameModel.minusSurviveBrick(1);
-        this.gameView.updateScore(this.gameModel.score);
-        //本关结束
-        if (this.gameModel.surviveBricksNumber <= 0) {
-            this.gameModel.addLevel();
-            this.overPanel.updateGameModel(this.gameModel);
-            this.destroyBall(ballNode);
-            this.reBeginGame();
-            this.destroyAllBall();
-        }
-        var dropBricks =  this.gameModel.dropBricks;
-        for(var i = 0;i<dropBricks.length;i++){
-            if(brickNode.pos == dropBricks[i] ){
-                this.createSlump(brickNode.position);
-                break;
+        if(brickNode.life>1){
+            brickNode.life = brickNode.life-1;
+        }else{
+            brickNode.parent = null;
+            brickNode.destroy();
+            this.gameModel.addScore(1);
+            // this.gameModel.minusBrick(1);
+            this.gameModel.minusSurviveBrick(1);
+            this.gameView.updateScore(this.gameModel.score);
+            //本关结束
+            if (this.gameModel.surviveBricksNumber <= 0) {
+                this.gameModel.addLevel();
+                this.overPanel.updateGameModel(this.gameModel);
+                this.destroyBall(ballNode);
+                this.reBeginGame();
+                this.destroyAllBall();
+                this.gameView.updateLevel(this.gameModel.level);
+            }
+            var dropBricks =  this.gameModel.dropBricks;
+            for(var i = 0;i<dropBricks.length;i++){
+                if(brickNode.pos == dropBricks[i] ){
+                    this.createSlump(brickNode.position,i);
+                    break;
+                }
             }
         }
     },
@@ -169,10 +178,19 @@ cc.Class({
         this.gameModel.addBallCount();
     },
     //创建掉落砖块
-    createSlump(position){
+    createSlump(position,i){
         var slumpNode = cc.instantiate(this.slumpPrefab);
         slumpNode.parent = this.brickLayout.node;
         var Slump = slumpNode.getComponent('Slump')
+        if(i%3 ==1){
+            slumpNode.color = cc.color(255,0,0);//红
+            slumpNode.type = 1;
+        }else if(i%3 ==2){
+            slumpNode.color = cc.color(0,255,255);//绿
+            slumpNode.type = 2;
+        }else{
+            slumpNode.type = 0;
+        }
         Slump.init(this,position);
     },
     //销毁掉落砖块
@@ -196,6 +214,51 @@ cc.Class({
             }
         }
     },
+    //更换托盘
+    updatePaddle(active){
+        if (active == true){
+            if(this.paddle.node.width<100){
+                let collider = this.paddle.node.getComponent(cc.PhysicsPolygonCollider);
+                for(let i = 0;i<collider.points.length;i++){
+                    collider.points[i].x = collider.points[i].x*2;
+                }
+                collider.apply()
+                this.paddle.node.width = this.paddle.node.width*2
+            }
+        }else{
+            if(this.paddle.node.width>100) {
+                let collider = this.paddle.node.getComponent(cc.PhysicsPolygonCollider);
+                for (let i = 0; i < collider.points.length; i++) {
+                    collider.points[i].x = collider.points[i].x / 2;
+                }
+                collider.apply()
+                this.paddle.node.width = this.paddle.node.width /2
+                this.paddleSchedule();
+            }
+        }
+    },
+    //托盘恢复计时器
+    paddleSchedule(){
+        this.schedule(function() {
+            this.updatePaddle(true);
+        }, 5);
+    },
+    //更新砖块为有碰撞回调，有无碰撞效果
+    updateBrick(active){
+        if(active == true){
+            this.brickLayout.updateBrickSensorTrue();
+            this.brickSchedule();
+        }else{
+            this.brickLayout.updateBrickSensorFalse()
+        }
+    },
+    //砖块碰撞效果恢复计时器
+    brickSchedule(){
+        this.schedule(function() {
+            this.updateBrick(false);
+        }, 5);
+    },
+
 
     //排行榜按钮
     onBtnRank(){

@@ -9,7 +9,8 @@ cc.Class({
 
     properties: {
         scoreLabel: cc.Label,
-        lifeLable: cc.Label
+        lifeLable: cc.Label,
+        levelLable: cc.Label
     },
 
     init: function init(gameCtl) {
@@ -21,11 +22,17 @@ cc.Class({
     initLife: function initLife(life) {
         this.lifeLable.string = life;
     },
+    initLevel: function initLevel(level) {
+        this.levelLable.string = level;
+    },
     updateScore: function updateScore(score) {
         this.scoreLabel.string = score;
     },
     updateLife: function updateLife(life) {
         this.lifeLable.string = life;
+    },
+    updateLevel: function updateLevel(level) {
+        this.levelLable.string = level;
     }
 });
 

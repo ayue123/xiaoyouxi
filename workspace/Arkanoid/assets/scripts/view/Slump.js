@@ -19,7 +19,13 @@ cc.Class({
     onBeginContact(contact, self, other) {
             switch (other.tag) {
                 case 3://下坠物碰到托盘
-                    this.gameCtl.createNewBall();
+                    if(this.node.type ==1){
+                        this.gameCtl.updatePaddle(false);
+                    }else if(this.node.type ==2){
+                        this.gameCtl.updateBrick(true);
+                    }else{
+                        this.gameCtl.createNewBall();
+                    }
                     this.gameCtl.destroySlump(self.node);
                     break;
                 case 2://下坠物碰到地面

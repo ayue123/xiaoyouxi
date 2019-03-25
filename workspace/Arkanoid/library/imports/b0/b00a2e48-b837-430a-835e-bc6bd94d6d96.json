@@ -76,7 +76,6 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 76,
     "groupIndex": 0,
     "_id": ""
   },
@@ -88,8 +87,6 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
     "_spriteFrame": {
       "__uuid__": "32b27e88-48ee-4c2a-b8e2-bcf59d2ce34b"
     },
@@ -106,7 +103,9 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_id": "4e5laCgPBNaK+T+0YUN3+W"
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_id": ""
   },
   {
     "__type__": "cc.RigidBody",
@@ -130,7 +129,8 @@
     "_fixedRotation": false,
     "enabledContactListener": true,
     "bullet": false,
-    "_id": "e0ynHsAvZMIK/AijcqDHcj"
+    "awakeOnLoad": true,
+    "_id": ""
   },
   {
     "__type__": "cc.PhysicsCircleCollider",
@@ -152,7 +152,7 @@
       "y": 0
     },
     "_radius": 12.3,
-    "_id": "3b7opr3vZC/rH5ANqnu9Dc"
+    "_id": ""
   },
   {
     "__type__": "9b280YbFuZJv4QPGPL8e8iv",
@@ -162,7 +162,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_id": "7fuIfDj+VMdLrbw0jObbcA"
+    "_id": ""
   },
   {
     "__type__": "cc.PrefabInfo",

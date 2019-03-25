@@ -16,20 +16,20 @@ cc.Class({
         this.node.active = false;
     },
     //机会用尽展示界面
-    show(score,isWin){
+    show(score,isWin,level){
         this.node.active = true;
         if(isWin){
             this.resultLabel.string = '开始下一关!';
         }else{
             this.resultLabel.string = '重新开始!';
         }
-        this.scoreLabel.string = score+'';
+        this.scoreLabel.string = "score:"+score;
     },
     //每一关结束展示界面
-    showReBegin(score,life){
+    showReBegin(score,life,level){
         this.node.active = true;
         this.resultLabel.string = 'life:'+life;
-        this.scoreLabel.string = 'score:'+score;
+        this.scoreLabel.string = 'score:'+score+"\n"+" level:"+level;
     },
 
     updateGameModel(gameModel){
@@ -44,7 +44,7 @@ cc.Class({
             var isLevelOver = this.gameModel.initLevelPosition();
             if(isLevelOver!=9999){
                 this.gameCtl.reStartGame();
-                this.gameCtl.reInitLevelPosition(this.gameModel.getLevelPosition());
+                this.gameCtl.reInitLevelPosition();
             }else {
                 this.gameCtl.startGame();
             }
