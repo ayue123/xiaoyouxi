@@ -34,12 +34,15 @@ cc.Class({
                             brickNode.color = cc.color(255,0,0);//红
                         }
                         brickNode.life = 1;
+                        brickNode.isSilvery = 0;
                     }else{
                         for(let a=0;a<levelSilveryPosition.length;a++){
                             if(i==levelSilveryPosition[a]){
                                 brickNode.color = cc.color(50,100,255);//淡蓝色
                                 //设置砖块生命值
                                 brickNode.life = 5;
+                                //是否为银色砖块，用于取消物理撞击效果用
+                                brickNode.isSilvery = 1;
                                 break;
                             }else{
                                 if(i%4 == 0){
@@ -53,6 +56,7 @@ cc.Class({
                                     brickNode.color = cc.color(255,0,0);//红
                                 }
                                 brickNode.life = 1;
+                                brickNode.isSilvery = 0;
                             }
                         }
                     }
@@ -71,7 +75,7 @@ cc.Class({
         for(let i =0;i<this.node.children.length;i++){
             let beforeNode = this.node.children[i];
             if(beforeNode._name == "Brick"){
-                if(beforeNode.life<5){
+                if(beforeNode.isSilvery ==0){
                     let collider = beforeNode.getComponent(cc.PhysicsBoxCollider);
                     collider.sensor = true;
                     collider.apply()
@@ -84,7 +88,7 @@ cc.Class({
         for(let i =0;i<this.node.children.length;i++){
             let beforeNode = this.node.children[i];
             if(beforeNode._name == "Brick"){
-                if(beforeNode.life<5){
+                if(beforeNode.isSilvery ==0){
                     let collider = beforeNode.getComponent(cc.PhysicsBoxCollider);
                     collider.sensor = false;
                     collider.apply()

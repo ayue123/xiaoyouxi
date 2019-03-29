@@ -63,7 +63,7 @@ cc.Class({
     },
 
     initLevel(){
-        this.level = 6;
+        this.level = 1;
     },
 
     initLife(){
@@ -96,6 +96,9 @@ cc.Class({
 
     reduceBallCount(){
         this.ballCount-=1;
+        if(this.ballCount<=0){
+            this.ballCount = 0;
+        }
     },
     //初始化关
     initLevelPosition(){
@@ -172,7 +175,7 @@ cc.Class({
         var levelPosition = this.getLevelPosition();
         var allBricks = levelPosition.length;
         var randomBricks = [];
-        for(var i  =1;i<=12;i++){
+        for(var i  =1;i<=15;i++){
             randomBricks[i] =levelPosition[parseInt(Math.random()*allBricks)]
         }
         return randomBricks;

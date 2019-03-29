@@ -24,6 +24,9 @@ cc.Class({
         startBackGround:cc.Node,
         wxSubContextView: cc.Node,
         wxBackGround:cc.Node,
+        allSkillBall:[],
+        allBall:[],
+        allSlump:[],
     },
 
     onLoad: function () {
@@ -33,6 +36,7 @@ cc.Class({
         this.startGame();
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
+
     },
     update:function () {
 
@@ -58,7 +62,6 @@ cc.Class({
         this.paddle.init();
         this.brickLayout.init(this.gameModel.bricksNumber,this.gameModel.getLevelPosition(),this.gameModel.getLevelSilveryPosition());
         this.overPanel.init(this);
-        this.updatePaddle(true);
     },
     //部分属性重新初始化（在玩家仍然有机会时初始化调用）
     reInit(){
@@ -70,7 +73,9 @@ cc.Class({
         this.createNewBall();
         this.paddle.init();
         this.overPanel.init(this);
-        this.updatePaddle(true);
+        this.updatePaddleShort(true);
+        this.updatePaddleLong(false);
+        this.updateBrick(false);
     },
     //重新绘制关卡
     reInitLevelPosition(){
@@ -91,6 +96,7 @@ cc.Class({
     },
     //结束游戏
     stopGame() {
+        this.unscheduleAllCallbacks();
         this.physicsManager.enabled = false;
         this.overPanel.show(this.gameModel.score, this.gameModel.surviveBricksNumber === 0,this.gameModel.level);
         this.startBackGround.active = true;
@@ -98,6 +104,7 @@ cc.Class({
     },
     //重新开始游戏（在玩家还有机会时调用）
     reBeginGame(){
+        this.unscheduleAllCallbacks();
         this.physicsManager.enabled = false;
         this.overPanel.showReBegin(this.gameModel.score, this.gameModel.life,this.gameModel.level);
         this.startBackGround.active = true;
@@ -173,23 +180,70 @@ cc.Class({
         //小球复制代码
         var ballNode = cc.instantiate(this.ballPrefab);
         ballNode.parent = this.paddle.node.parent;
+        ballNode.isSkill = 0;
+        if(this.allBall.length>0){
+            if(this.allBall[0]!=null){
+                if(this.allBall[0]._color!=null){
+                    ballNode.color = this.allBall[0].color;
+                }
+            }
+        }
         var Ball = ballNode.getComponent('Ball')
         Ball.init(this,this.paddle.node.position);
         this.gameModel.addBallCount();
+    },
+    //创建技能小球计时器
+    createSkillBallFactory(){
+        this.schedule(this.createSkillBall, 0.2,20,0.1);
+    },
+    //创建技能小球
+    createSkillBall(){
+        //小球复制代码
+        var ballNode1 = cc.instantiate(this.ballPrefab);
+        let collider1 = ballNode1.getComponent(cc.PhysicsCircleCollider);
+        collider1.radius = 6;
+        collider1.apply()
+        ballNode1.isSkill = 1;
+        ballNode1.parent = this.paddle.node.parent;
+        ballNode1.color = cc.color(209,10,247);
+        var Ball1 = ballNode1.getComponent('Ball')
+
+        var ballNode = cc.instantiate(this.ballPrefab);
+        let collider = ballNode.getComponent(cc.PhysicsCircleCollider);
+        collider.radius = 6;
+        collider.apply()
+        ballNode.isSkill = 1;
+        ballNode.parent = this.paddle.node.parent;
+        ballNode.color = cc.color(209,10,247);
+        var Ball = ballNode.getComponent('Ball')
+
+        Ball1.initSkillBall(this,this.paddle.node.position,"left");
+        Ball.initSkillBall(this,this.paddle.node.position,"right");
+    },
+    //处理技能小球
+    destroySkillBall(ballNode){
+        ballNode.parent = null;
+        ballNode.destroy();
     },
     //创建掉落砖块
     createSlump(position,i){
         var slumpNode = cc.instantiate(this.slumpPrefab);
         slumpNode.parent = this.brickLayout.node;
         var Slump = slumpNode.getComponent('Slump')
-        if(i%3 ==1){
+        if(i%5 ==1){
             slumpNode.color = cc.color(255,0,0);//红
             slumpNode.type = 1;
-        }else if(i%3 ==2){
+        }else if(i%5 ==2){
             slumpNode.color = cc.color(0,255,255);//绿
             slumpNode.type = 2;
+        }else if(i%5 ==3){
+            slumpNode.color = cc.color(209,10,247);//紫
+            slumpNode.type = 3;
+        }else if(i%5 ==4){
+            slumpNode.color = cc.color(0,0,255);//蓝
+            slumpNode.type = 4;
         }else{
-            slumpNode.type = 0;
+            slumpNode.type = 0;//黄
         }
         Slump.init(this,position);
     },
@@ -204,59 +258,127 @@ cc.Class({
         ballNode.destroy();
         this.gameModel.reduceBallCount();
     },
-    //销毁全部小球（游戏结束时调用）
+    //销毁全部小球和掉落物（游戏结束时调用(包括有机会时)）
     destroyAllBall(){
+        if(this.allSkillBall.length>0){
+            for(let j = 0;j<this.allSkillBall.length;j++){
+                let skillBallNode = this.allSkillBall[j];
+                this.destroySkillBall(skillBallNode);
+            }
+            this.allSkillBall = [];
+        }
+
         var ballParentChildren = this.paddle.node.parent._children;
         for (var i= 0;i<ballParentChildren.length;i++){
             var node = ballParentChildren[i];
             if(node._name == "ball"){
-                this.destroyBall(node);
+                if(node.isSkill == 0){
+                    this.destroyBall(node);
+                }
             }
+        }
+        this.allBall = [];
+
+        if(this.allSlump.length>0){
+            for(let j = 0;j<this.allSlump.length;j++){
+                let slumpNode = this.allSlump[j];
+                this.destroySlump(slumpNode);
+            }
+            this.allSlump = [];
         }
     },
     //更换托盘
-    updatePaddle(active){
+    updatePaddleShort(active){
         if (active == true){
             if(this.paddle.node.width<100){
                 let collider = this.paddle.node.getComponent(cc.PhysicsPolygonCollider);
                 for(let i = 0;i<collider.points.length;i++){
-                    collider.points[i].x = collider.points[i].x*2;
+                    collider.points[i].x = collider.points[i].x*1.5;
                 }
                 collider.apply()
-                this.paddle.node.width = this.paddle.node.width*2
+                this.paddle.node.width =  this.paddle.node.width*1.5
             }
         }else{
             if(this.paddle.node.width>100) {
                 let collider = this.paddle.node.getComponent(cc.PhysicsPolygonCollider);
                 for (let i = 0; i < collider.points.length; i++) {
-                    collider.points[i].x = collider.points[i].x / 2;
+                    collider.points[i].x = collider.points[i].x/1.5;
                 }
                 collider.apply()
-                this.paddle.node.width = this.paddle.node.width /2
-                this.paddleSchedule();
+                this.paddle.node.width = this.paddle.node.width/1.5
+                this.paddleShortSchedule();
             }
         }
     },
     //托盘恢复计时器
-    paddleSchedule(){
-        this.schedule(function() {
-            this.updatePaddle(true);
-        }, 5);
+    paddleShortSchedule(){
+        this.scheduleOnce(function() {
+            this.updatePaddleShort(true);
+        }, 10);
+    },
+
+    //更换托盘
+    updatePaddleLong(active){
+        if (active == true){
+            if(this.paddle.node.width<150){
+                let collider = this.paddle.node.getComponent(cc.PhysicsPolygonCollider);
+                for(let i = 0;i<collider.points.length;i++){
+                    collider.points[i].x = collider.points[i].x*1.5;
+                }
+                collider.apply()
+                this.paddle.node.width = this.paddle.node.width*1.5
+                this.paddleLongSchedule();
+            }
+        }else{
+            if(this.paddle.node.width>150) {
+                let collider = this.paddle.node.getComponent(cc.PhysicsPolygonCollider);
+                for (let i = 0; i < collider.points.length; i++) {
+                    collider.points[i].x = collider.points[i].x/1.5;
+                }
+                collider.apply()
+                this.paddle.node.width = this.paddle.node.width/1.5
+
+            }
+        }
+    },
+    //托盘恢复计时器
+    paddleLongSchedule(){
+        this.scheduleOnce(function() {
+            this.updatePaddleLong(false);
+        }, 10);
     },
     //更新砖块为有碰撞回调，有无碰撞效果
     updateBrick(active){
         if(active == true){
             this.brickLayout.updateBrickSensorTrue();
+            var ballParentNode = this.paddle.node.parent;
+            var ballNodes = ballParentNode.children;
+            for(let i = 0;i<ballNodes.length;i++){
+                if(ballNodes[i].name == "ball"){
+                    if(ballNodes[i].isSkill == 0) {
+                        ballNodes[i].color = cc.color(255, 255, 0);
+                    }
+                }
+            }
             this.brickSchedule();
         }else{
             this.brickLayout.updateBrickSensorFalse()
+            var ballParentNode = this.paddle.node.parent;
+            var ballNodes = ballParentNode.children;
+            for(let i = 0;i<ballNodes.length;i++){
+                if(ballNodes[i].name == "ball"){
+                    if(ballNodes[i].isSkill == 0) {
+                        ballNodes[i].color = cc.color(255,255,255);
+                    }
+                }
+            }
         }
     },
     //砖块碰撞效果恢复计时器
     brickSchedule(){
-        this.schedule(function() {
+        this.scheduleOnce(function() {
             this.updateBrick(false);
-        }, 5);
+        }, 10);
     },
 
 

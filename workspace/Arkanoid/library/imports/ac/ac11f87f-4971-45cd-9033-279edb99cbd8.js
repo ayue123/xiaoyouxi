@@ -66,7 +66,7 @@ cc.Class({
         this.score = 0;
     },
     initLevel: function initLevel() {
-        this.level = 6;
+        this.level = 1;
     },
     initLife: function initLife() {
         this.life = 3;
@@ -91,6 +91,9 @@ cc.Class({
     },
     reduceBallCount: function reduceBallCount() {
         this.ballCount -= 1;
+        if (this.ballCount <= 0) {
+            this.ballCount = 0;
+        }
     },
 
     //初始化关
@@ -168,7 +171,7 @@ cc.Class({
         var levelPosition = this.getLevelPosition();
         var allBricks = levelPosition.length;
         var randomBricks = [];
-        for (var i = 1; i <= 12; i++) {
+        for (var i = 1; i <= 15; i++) {
             randomBricks[i] = levelPosition[parseInt(Math.random() * allBricks)];
         }
         return randomBricks;
