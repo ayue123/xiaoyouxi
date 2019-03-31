@@ -4,6 +4,12 @@ cc._RF.push(module, '358d9EhVLdLBq90jar8NmZc', 'Slump', __filename);
 
 "use strict";
 
+/*
+ * @Author: ayue 
+ * @Date: 2019-03-30 20:20:44 
+ * @Last Modified by:   ayue 
+ * @Last Modified time: 2019-03-30 20:20:44 
+ */
 cc.Class({
     extends: cc.Component,
 

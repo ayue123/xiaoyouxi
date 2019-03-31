@@ -4,6 +4,13 @@ cc._RF.push(module, 'a337308uxxJva7vh8G06q7Z', 'GameCtl');
 
 'use strict';
 
+/*
+ * @Author: ayue 
+ * @Date: 2019-03-30 20:18:41 
+ * @Last Modified by:   ayue 
+ * @Last Modified time: 2019-03-30 20:18:41 
+ */
+
 var GameModel = require('GameModel');
 var Ball = require("Ball");
 var Slump = require('Slump');
@@ -256,7 +263,7 @@ cc.Class({
             slumpNode.color = cc.color(209, 10, 247); //紫
             slumpNode.type = 3;
         } else if (i % 5 == 4) {
-            slumpNode.color = cc.color(0, 0, 255); //蓝
+            slumpNode.color = cc.color(231, 129, 0); //橙
             slumpNode.type = 4;
         } else {
             slumpNode.type = 0; //黄

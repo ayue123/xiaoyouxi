@@ -1,65 +1,162 @@
-2019-03-29T02:50:57.814Z - normal: Load ~/.CocosCreator/settings.json
-2019-03-29T02:50:58.966Z - normal: Initializing Asset Database
-2019-03-29T02:50:58.970Z - normal: checking language setting...
-2019-03-29T02:50:58.970Z - normal: Language: zh
-2019-03-29T02:50:59.874Z - success: preview server running at http://localhost:7456
-2019-03-29T02:50:59.877Z - success: protocol editor-framework registered
-2019-03-29T02:50:59.877Z - success: protocol app registered
-2019-03-29T02:50:59.877Z - success: protocol theme registered
-2019-03-29T02:50:59.877Z - success: protocol packages registered
-2019-03-29T02:50:59.877Z - success: protocol uuid registerred
-2019-03-29T02:50:59.877Z - success: protocol db registerred
-2019-03-29T02:50:59.877Z - success: protocol thumbnail registerred
-2019-03-29T02:50:59.877Z - success: protocol unpack registerred
-2019-03-29T02:50:59.878Z - success: protocol disable-commonjs registerred
-2019-03-29T02:51:00.032Z - normal: connected!
-2019-03-29T02:51:00.033Z - normal: Check project D:\cocosCreator\workspace\Arkanoid
-2019-03-29T02:51:00.035Z - normal: Initializing project D:\cocosCreator\workspace\Arkanoid
-2019-03-29T02:51:00.574Z - normal: Initializing Cocos2d
-2019-03-29T02:51:01.504Z - normal: Initializing engine extends
-2019-03-29T02:51:01.528Z - success: asset-db-debugger loaded
-2019-03-29T02:51:01.529Z - success: baidu-adapter loaded
-2019-03-29T02:51:01.531Z - success: code-editor loaded
-2019-03-29T02:51:01.532Z - success: color-picker loaded
-2019-03-29T02:51:01.660Z - success: fb-audience-network loaded
-2019-03-29T02:51:01.744Z - success: fb-live-stream loaded
-2019-03-29T02:51:01.753Z - success: google-play-instant loaded
-2019-03-29T02:51:01.763Z - success: huawei-runtime loaded
-2019-03-29T02:51:01.768Z - success: jsb-adapter loaded
-2019-03-29T02:51:01.781Z - success: oppo-runtime loaded
-2019-03-29T02:51:01.787Z - success: package-manager loaded
-2019-03-29T02:51:01.969Z - success: qqplay-adapter loaded
-2019-03-29T02:51:01.971Z - success: runtime-dev-tools loaded
-2019-03-29T02:51:01.976Z - success: sdkbox loaded
-2019-03-29T02:51:01.979Z - success: tester loaded
-2019-03-29T02:51:01.981Z - success: ui-grid loaded
-2019-03-29T02:51:01.984Z - success: ui-kit-preview-extra loaded
-2019-03-29T02:51:01.985Z - success: ui-kit-preview loaded
-2019-03-29T02:51:01.987Z - success: ui-kit loaded
-2019-03-29T02:51:01.988Z - success: ui-tree loaded
-2019-03-29T02:51:01.994Z - success: vivo-runtime loaded
-2019-03-29T02:51:01.994Z - success: weapp-adapter loaded
-2019-03-29T02:51:02.039Z - success: assets loaded
-2019-03-29T02:51:02.042Z - success: builder loaded
-2019-03-29T02:51:02.401Z - success: cocos-services loaded
-2019-03-29T02:51:02.404Z - success: console loaded
-2019-03-29T02:51:02.447Z - success: fb-instant-games loaded
-2019-03-29T02:51:02.449Z - success: google-instant-games loaded
-2019-03-29T02:51:02.453Z - success: hierarchy loaded
-2019-03-29T02:51:02.456Z - success: inspector loaded
-2019-03-29T02:51:02.457Z - success: keystore loaded
-2019-03-29T02:51:02.462Z - success: node-library loaded
-2019-03-29T02:51:02.463Z - success: package-asset loaded
-2019-03-29T02:51:02.465Z - success: preferences loaded
-2019-03-29T02:51:02.466Z - success: project-exporter loaded
-2019-03-29T02:51:02.468Z - success: project-importer loaded
-2019-03-29T02:51:02.469Z - success: project-settings loaded
-2019-03-29T02:51:02.474Z - success: scene loaded
-2019-03-29T02:51:02.476Z - success: simulator-debugger loaded
-2019-03-29T02:51:02.478Z - success: sprite-editor loaded
-2019-03-29T02:51:02.482Z - success: store loaded
-2019-03-29T02:51:02.489Z - success: timeline loaded
-2019-03-29T02:51:04.047Z - normal: Loading packages
-2019-03-29T02:51:04.053Z - normal: Watching packages
-2019-03-29T02:51:04.451Z - info: Cocos Services load base data!
-2019-03-29T02:51:04.828Z - normal: Run Application
+2019-03-31T07:49:12.812Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-31T07:49:13.976Z - normal: Initializing Asset Database
+2019-03-31T07:49:14.000Z - normal: checking language setting...
+2019-03-31T07:49:14.000Z - normal: Language: zh
+2019-03-31T07:49:14.819Z - success: preview server running at http://localhost:7456
+2019-03-31T07:49:14.822Z - success: protocol editor-framework registered
+2019-03-31T07:49:14.822Z - success: protocol app registered
+2019-03-31T07:49:14.822Z - success: protocol theme registered
+2019-03-31T07:49:14.822Z - success: protocol packages registered
+2019-03-31T07:49:14.822Z - success: protocol uuid registerred
+2019-03-31T07:49:14.822Z - success: protocol db registerred
+2019-03-31T07:49:14.823Z - success: protocol thumbnail registerred
+2019-03-31T07:49:14.823Z - success: protocol unpack registerred
+2019-03-31T07:49:14.823Z - success: protocol disable-commonjs registerred
+2019-03-31T07:49:15.583Z - normal: connected!
+2019-03-31T07:49:15.586Z - normal: Check project D:\work\cocosCreator\workspace\Arkanoid
+2019-03-31T07:49:15.590Z - normal: Initializing project D:\work\cocosCreator\workspace\Arkanoid
+2019-03-31T07:49:16.081Z - normal: Initializing Cocos2d
+2019-03-31T07:49:16.967Z - normal: Initializing engine extends
+2019-03-31T07:49:16.993Z - success: asset-db-debugger loaded
+2019-03-31T07:49:16.997Z - success: baidu-adapter loaded
+2019-03-31T07:49:17.002Z - success: code-editor loaded
+2019-03-31T07:49:17.004Z - success: color-picker loaded
+2019-03-31T07:49:17.113Z - success: fb-audience-network loaded
+2019-03-31T07:49:17.193Z - success: fb-live-stream loaded
+2019-03-31T07:49:17.200Z - success: google-play-instant loaded
+2019-03-31T07:49:17.208Z - success: huawei-runtime loaded
+2019-03-31T07:49:17.214Z - success: jsb-adapter loaded
+2019-03-31T07:49:17.227Z - success: oppo-runtime loaded
+2019-03-31T07:49:17.233Z - success: package-manager loaded
+2019-03-31T07:49:17.370Z - success: qqplay-adapter loaded
+2019-03-31T07:49:17.371Z - success: runtime-dev-tools loaded
+2019-03-31T07:49:17.375Z - success: sdkbox loaded
+2019-03-31T07:49:17.378Z - success: tester loaded
+2019-03-31T07:49:17.380Z - success: ui-grid loaded
+2019-03-31T07:49:17.382Z - success: ui-kit-preview-extra loaded
+2019-03-31T07:49:17.383Z - success: ui-kit-preview loaded
+2019-03-31T07:49:17.384Z - success: ui-kit loaded
+2019-03-31T07:49:17.385Z - success: ui-tree loaded
+2019-03-31T07:49:17.389Z - success: vivo-runtime loaded
+2019-03-31T07:49:17.390Z - success: weapp-adapter loaded
+2019-03-31T07:49:17.431Z - success: assets loaded
+2019-03-31T07:49:17.434Z - success: builder loaded
+2019-03-31T07:49:17.755Z - success: cocos-services loaded
+2019-03-31T07:49:17.759Z - success: console loaded
+2019-03-31T07:49:17.802Z - success: fb-instant-games loaded
+2019-03-31T07:49:17.803Z - success: google-instant-games loaded
+2019-03-31T07:49:17.807Z - success: hierarchy loaded
+2019-03-31T07:49:17.809Z - success: inspector loaded
+2019-03-31T07:49:17.810Z - success: keystore loaded
+2019-03-31T07:49:17.814Z - success: node-library loaded
+2019-03-31T07:49:17.816Z - success: package-asset loaded
+2019-03-31T07:49:17.817Z - success: preferences loaded
+2019-03-31T07:49:17.819Z - success: project-exporter loaded
+2019-03-31T07:49:17.820Z - success: project-importer loaded
+2019-03-31T07:49:17.822Z - success: project-settings loaded
+2019-03-31T07:49:17.825Z - success: scene loaded
+2019-03-31T07:49:17.827Z - success: simulator-debugger loaded
+2019-03-31T07:49:17.829Z - success: sprite-editor loaded
+2019-03-31T07:49:17.838Z - success: store loaded
+2019-03-31T07:49:17.844Z - success: timeline loaded
+2019-03-31T07:49:20.067Z - normal: Loading packages
+2019-03-31T07:49:20.072Z - normal: Watching packages
+2019-03-31T07:49:20.604Z - normal: Run Application
+2019-03-31T07:49:22.000Z - info: Cocos Services load base data!
+2019-03-31T10:23:18.710Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "D:\\work\\cocosCreator\\workspace\\Arkanoid\\build",
+  "debug": false,
+  "dest": "D:\\work\\cocosCreator\\workspace\\Arkanoid\\build\\wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": false,
+    "landscapeRight": false,
+    "portrait": true,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.brickbreakermaster",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "2ef97242-9501-4637-ab4d-d2e235f1f114"
+  ],
+  "sourceMaps": false,
+  "startScene": "2ef97242-9501-4637-ab4d-d2e235f1f114",
+  "template": "link",
+  "title": "BrickBreaker",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wxce1bb384f5bde4c8",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": "wx-open-data-project"
+  },
+  "xxteaKey": "f4ef681c-8fa6-40",
+  "zipCompressJs": true,
+  "project": "D:\\work\\cocosCreator\\workspace\\Arkanoid",
+  "projectName": "BrickBreaker",
+  "debugBuildWorker": false
+}
+2019-03-31T10:23:18.714Z - normal: Building D:\work\cocosCreator\workspace\Arkanoid
+2019-03-31T10:23:18.714Z - normal: Destination D:\work\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-03-31T10:23:19.278Z - normal: Delete D:\work\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\work\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\work\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\work\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-03-31T10:23:24.378Z - normal: Start building assets
+2019-03-31T10:23:24.379Z - normal: Start spawn build-worker
+2019-03-31T10:23:25.131Z - normal: Finish spawn build-worker
+2019-03-31T10:23:25.131Z - normal: Start init build-worker
+2019-03-31T10:23:28.705Z - normal: Finish init build-worker
+2019-03-31T10:23:28.705Z - normal: Start build-assets in worker
+2019-03-31T10:23:29.705Z - normal: Finish build-assets in worker
+2019-03-31T10:23:29.710Z - normal: Finish building assets
+2019-03-31T10:23:29.725Z - normal: Start building plugin scripts
+2019-03-31T10:23:29.766Z - normal: Generating main.js from D:\work\cocosCreator\CocosCreator\resources\static\build-templates\shares\main.js
+2019-03-31T10:23:31.755Z - normal: Built to "D:\work\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-03-31T10:23:39.804Z - normal: Initializing...
+
+2019-03-31T10:23:39.811Z - normal: idePortFile: C:\Users\ayue\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2019-03-31T10:23:40.873Z - normal: starting ide...
+
+2019-03-31T10:24:21.700Z - normal: IDE server has started, listening on http://127.0.0.1:16446
+
+2019-03-31T10:24:21.736Z - normal: initialization finished
+
+2019-03-31T10:24:22.825Z - normal: open IDE success
+
+2019-03-31T11:08:11.554Z - info: shutdown preview server

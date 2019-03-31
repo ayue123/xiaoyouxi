@@ -4,6 +4,12 @@ cc._RF.push(module, '62398FSMJtHJ55jmSoqf4WF', 'BrickLayout');
 
 "use strict";
 
+/*
+ * @Author: ayue 
+ * @Date: 2019-03-30 20:19:04 
+ * @Last Modified by:   ayue 
+ * @Last Modified time: 2019-03-30 20:19:04 
+ */
 cc.Class({
     extends: cc.Component,
 

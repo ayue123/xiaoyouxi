@@ -4,6 +4,12 @@ cc._RF.push(module, 'e4735UW3lFPMoW0rK22obsG', 'GameView');
 
 'use strict';
 
+/*
+ * @Author: ayue 
+ * @Date: 2019-03-30 20:19:11 
+ * @Last Modified by:   ayue 
+ * @Last Modified time: 2019-03-30 20:19:11 
+ */
 cc.Class({
     extends: cc.Component,
 
