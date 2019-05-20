@@ -45,18 +45,6 @@ window.boot = function () {
                 }
             }
         }
-
-        var subpackages = settings.subpackages;
-        for (var subId in subpackages) {
-            var uuidArray = subpackages[subId].uuids;
-            if (uuidArray) {
-                for (var k = 0, l = uuidArray.length; k < l; k++) {
-                    if (typeof uuidArray[k] === 'number') {
-                        uuidArray[k] = uuids[uuidArray[k]];
-                    }
-                }
-            }
-        }
     }
 
     function setLoadingDisplay () {
