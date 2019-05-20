@@ -4,6 +4,12 @@ cc._RF.push(module, '60425zRIQ5LNIZ6KmZ5p/LN', 'OverPanel');
 
 'use strict';
 
+/*
+ * @Author: ayue 
+ * @Date: 2019-03-30 20:20:24 
+ * @Last Modified by:   ayue 
+ * @Last Modified time: 2019-03-30 20:20:24 
+ */
 var GameModel = require('GameModel');
 cc.Class({
     extends: cc.Component,

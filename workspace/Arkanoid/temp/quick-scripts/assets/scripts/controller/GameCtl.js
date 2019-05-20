@@ -4,6 +4,13 @@ cc._RF.push(module, 'a337308uxxJva7vh8G06q7Z', 'GameCtl', __filename);
 
 'use strict';
 
+/*
+ * @Author: ayue 
+ * @Date: 2019-03-30 20:18:41 
+ * @Last Modified by: ayue
+ * @Last Modified time: 2019-05-20 16:03:59
+ */
+
 var GameModel = require('GameModel');
 var Ball = require("Ball");
 var Slump = require('Slump');
@@ -207,7 +214,7 @@ cc.Class({
 
     //创建技能小球计时器
     createSkillBallFactory: function createSkillBallFactory() {
-        this.schedule(this.createSkillBall, 0.2, 20, 0.1);
+        this.schedule(this.createSkillBall, 0.3, 20, 0.1);
     },
 
     //创建技能小球
@@ -221,6 +228,7 @@ cc.Class({
         ballNode1.parent = this.paddle.node.parent;
         ballNode1.color = cc.color(209, 10, 247);
         var Ball1 = ballNode1.getComponent('Ball');
+        Ball1.node.width = 12;
 
         var ballNode = cc.instantiate(this.ballPrefab);
         var collider = ballNode.getComponent(cc.PhysicsCircleCollider);
@@ -230,6 +238,7 @@ cc.Class({
         ballNode.parent = this.paddle.node.parent;
         ballNode.color = cc.color(209, 10, 247);
         var Ball = ballNode.getComponent('Ball');
+        Ball.node.width = 12;
 
         Ball1.initSkillBall(this, this.paddle.node.position, "left");
         Ball.initSkillBall(this, this.paddle.node.position, "right");
@@ -256,7 +265,7 @@ cc.Class({
             slumpNode.color = cc.color(209, 10, 247); //紫
             slumpNode.type = 3;
         } else if (i % 5 == 4) {
-            slumpNode.color = cc.color(0, 0, 255); //蓝
+            slumpNode.color = cc.color(231, 129, 0); //橙
             slumpNode.type = 4;
         } else {
             slumpNode.type = 0; //黄

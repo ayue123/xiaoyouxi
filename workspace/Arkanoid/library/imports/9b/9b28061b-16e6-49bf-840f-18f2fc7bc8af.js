@@ -4,6 +4,12 @@ cc._RF.push(module, '9b280YbFuZJv4QPGPL8e8iv', 'Ball');
 
 "use strict";
 
+/*
+ * @Author: ayue 
+ * @Date: 2019-03-30 20:18:59 
+ * @Last Modified by:   ayue 
+ * @Last Modified time: 2019-03-30 20:18:59 
+ */
 cc.Class({
     extends: cc.Component,
 

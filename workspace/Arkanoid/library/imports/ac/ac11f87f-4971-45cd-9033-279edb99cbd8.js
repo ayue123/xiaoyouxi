@@ -4,6 +4,13 @@ cc._RF.push(module, 'ac11fh/SXFFzZAzJ57bmcvY', 'GameModel');
 
 "use strict";
 
+/*
+ * @Author: ayue 
+ * @Date: 2019-03-30 20:18:54 
+ * @Last Modified by:   ayue 
+ * @Last Modified time: 2019-03-30 20:18:54 
+ */
+
 cc.Class({
     extends: cc.Component,
 

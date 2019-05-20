@@ -4,6 +4,12 @@ cc._RF.push(module, '4dc82c1qO9KbZBsMZGbHlMV', 'Paddle');
 
 "use strict";
 
+/*
+ * @Author: ayue 
+ * @Date: 2019-03-30 20:20:49 
+ * @Last Modified by:   ayue 
+ * @Last Modified time: 2019-03-30 20:20:49 
+ */
 cc.Class({
     extends: cc.Component,
 
