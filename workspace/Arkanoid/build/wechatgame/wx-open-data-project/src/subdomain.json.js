@@ -472,8 +472,8 @@ module.exports = [
           "_useOriginalSize": false,
           "_string": "Label",
           "_N$string": "Label",
-          "_fontSize": 25,
-          "_lineHeight": 30,
+          "_fontSize": 20,
+          "_lineHeight": 20,
           "_N$horizontalAlign": 1,
           "_N$verticalAlign": 1
         }
@@ -493,8 +493,8 @@ module.exports = [
       },
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 61.17,
-        "height": 30
+        "width": 48.94,
+        "height": 20
       },
       "_anchorPoint": {
         "__type__": "cc.Vec2",
@@ -616,6 +616,8 @@ module.exports = [
           "_useOriginalSize": false,
           "_string": "score",
           "_N$string": "score",
+          "_fontSize": 25,
+          "_lineHeight": 25,
           "_N$horizontalAlign": 1,
           "_N$verticalAlign": 1
         }
@@ -636,13 +638,12 @@ module.exports = [
       },
       "_contentSize": {
         "__type__": "cc.Size",
-        "width": 97.81,
-        "height": 40
+        "width": 61.13,
+        "height": 25
       },
       "_position": {
         "__type__": "cc.Vec3",
-        "x": 95,
-        "y": -1
+        "x": 120
       },
       "_scale": {
         "__type__": "cc.Vec3",

@@ -2,7 +2,7 @@
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:59 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-05-20 15:51:18
+ * @Last Modified time: 2019-05-22 10:44:13
  */
 cc.Class({
     extends: cc.Component,
@@ -50,11 +50,21 @@ cc.Class({
                 break;
             case 3://球碰到托盘
                 this.gameCtl.onBallContactPaddle(self.node, other.node);
+                if(this.getComponent(cc.RigidBody).linearVelocity.x<100&&this.getComponent(cc.RigidBody).linearVelocity.x>0){
+                    this.getComponent(cc.RigidBody).linearVelocity = cc.v2(150,this.getComponent(cc.RigidBody).linearVelocity.y);
+                }else if(this.getComponent(cc.RigidBody).linearVelocity.x>-100&&this.getComponent(cc.RigidBody).linearVelocity.x<0){
+                    this.getComponent(cc.RigidBody).linearVelocity = cc.v2(-150,this.getComponent(cc.RigidBody).linearVelocity.y);
+                }
                 break;
             case 4://球碰到墙
                 this.gameCtl.onBallContactWall(self.node, other.node);
                 if (self.node.isSkill == 1) {
                     this.gameCtl.destroySkillBall(self.node);
+                }
+                if(this.getComponent(cc.RigidBody).linearVelocity.y<150&&this.getComponent(cc.RigidBody).linearVelocity.y>0){
+                    this.getComponent(cc.RigidBody).linearVelocity = cc.v2(this.getComponent(cc.RigidBody).linearVelocity.x,250);
+                }else if(this.getComponent(cc.RigidBody).linearVelocity.y>-150&&this.getComponent(cc.RigidBody).linearVelocity.y<0){
+                    this.getComponent(cc.RigidBody).linearVelocity = cc.v2(this.getComponent(cc.RigidBody).linearVelocity.x,-250);
                 }
                 break;
         }

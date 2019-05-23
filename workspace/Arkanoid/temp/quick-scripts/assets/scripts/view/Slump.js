@@ -7,8 +7,8 @@ cc._RF.push(module, '358d9EhVLdLBq90jar8NmZc', 'Slump', __filename);
 /*
  * @Author: ayue 
  * @Date: 2019-03-30 20:20:44 
- * @Last Modified by:   ayue 
- * @Last Modified time: 2019-03-30 20:20:44 
+ * @Last Modified by: ayue
+ * @Last Modified time: 2019-05-22 12:30:36
  */
 cc.Class({
     extends: cc.Component,
@@ -21,7 +21,7 @@ cc.Class({
     init: function init(gameCtl, position) {
         this.gameCtl = gameCtl;
         this.node.position = position; //初始化位置
-        this.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, -300); //初始化速度
+        this.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, -200); //初始化速度
         this.gameCtl.allSlump.push(this.node);
     },
     initGamCtl: function initGamCtl(gameCtl) {

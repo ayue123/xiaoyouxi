@@ -108,8 +108,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 61.17,
-      "height": 30
+      "width": 48.94,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -153,8 +153,8 @@
     "_useOriginalSize": false,
     "_string": "Label",
     "_N$string": "Label",
-    "_fontSize": 25,
-    "_lineHeight": 30,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -399,8 +399,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 97.81,
-      "height": 40
+      "width": 61.13,
+      "height": 25
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -409,8 +409,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 95,
-      "y": -1,
+      "x": 120,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -444,8 +444,8 @@
     "_useOriginalSize": false,
     "_string": "score",
     "_N$string": "score",
-    "_fontSize": 40,
-    "_lineHeight": 40,
+    "_fontSize": 25,
+    "_lineHeight": 25,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,

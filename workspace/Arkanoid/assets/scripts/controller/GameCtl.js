@@ -2,7 +2,7 @@
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-05-20 16:05:27
+ * @Last Modified time: 2019-05-22 14:32:19
  */
 
 const GameModel = require('GameModel');
@@ -205,8 +205,8 @@ cc.Class({
     },
     //创建技能小球
     createSkillBall() {
-        //小球复制代码
-        var ballNode1 = cc.instantiate(this.ballPrefab);
+            //小球复制代码
+        let ballNode1 = cc.instantiate(this.ballPrefab);
         let collider1 = ballNode1.getComponent(cc.PhysicsCircleCollider);
         collider1.radius = 6;
         collider1.apply()
@@ -214,17 +214,17 @@ cc.Class({
         ballNode1.parent = this.paddle.node.parent;
         ballNode1.color = cc.color(209, 10, 247);
         var Ball1 = ballNode1.getComponent('Ball')
-        Ball1.node.width=15;
+        Ball1.node.width=10;
 
-        var ballNode = cc.instantiate(this.ballPrefab);
-        let collider = ballNode.getComponent(cc.PhysicsCircleCollider);
+        let ballNode2 = cc.instantiate(this.ballPrefab);
+        let collider = ballNode2.getComponent(cc.PhysicsCircleCollider);
         collider.radius = 6;
         collider.apply()
-        ballNode.isSkill = 1;
-        ballNode.parent = this.paddle.node.parent;
-        ballNode.color = cc.color(209, 10, 247);
-        var Ball = ballNode.getComponent('Ball')
-        Ball.node.width =15;
+        ballNode2.isSkill = 1;
+        ballNode2.parent = this.paddle.node.parent;
+        ballNode2.color = cc.color(209, 10, 247);
+        var Ball = ballNode2.getComponent('Ball')
+        Ball.node.width =10;
 
         Ball1.initSkillBall(this, this.paddle.node.position, "left");
         Ball.initSkillBall(this, this.paddle.node.position, "right");
@@ -390,7 +390,6 @@ cc.Class({
             this.updateBrick(false);
         }, 10);
     },
-
 
     //排行榜按钮
     onBtnRank() {

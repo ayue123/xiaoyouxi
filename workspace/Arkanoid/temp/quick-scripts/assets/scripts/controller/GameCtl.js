@@ -8,7 +8,7 @@ cc._RF.push(module, 'a337308uxxJva7vh8G06q7Z', 'GameCtl', __filename);
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-05-20 16:03:59
+ * @Last Modified time: 2019-05-22 14:32:19
  */
 
 var GameModel = require('GameModel');
@@ -228,17 +228,17 @@ cc.Class({
         ballNode1.parent = this.paddle.node.parent;
         ballNode1.color = cc.color(209, 10, 247);
         var Ball1 = ballNode1.getComponent('Ball');
-        Ball1.node.width = 12;
+        Ball1.node.width = 10;
 
-        var ballNode = cc.instantiate(this.ballPrefab);
-        var collider = ballNode.getComponent(cc.PhysicsCircleCollider);
+        var ballNode2 = cc.instantiate(this.ballPrefab);
+        var collider = ballNode2.getComponent(cc.PhysicsCircleCollider);
         collider.radius = 6;
         collider.apply();
-        ballNode.isSkill = 1;
-        ballNode.parent = this.paddle.node.parent;
-        ballNode.color = cc.color(209, 10, 247);
-        var Ball = ballNode.getComponent('Ball');
-        Ball.node.width = 12;
+        ballNode2.isSkill = 1;
+        ballNode2.parent = this.paddle.node.parent;
+        ballNode2.color = cc.color(209, 10, 247);
+        var Ball = ballNode2.getComponent('Ball');
+        Ball.node.width = 10;
 
         Ball1.initSkillBall(this, this.paddle.node.position, "left");
         Ball.initSkillBall(this, this.paddle.node.position, "right");
