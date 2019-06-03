@@ -8,7 +8,7 @@ cc._RF.push(module, 'a337308uxxJva7vh8G06q7Z', 'GameCtl', __filename);
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-05-22 14:32:19
+ * @Last Modified time: 2019-06-03 11:05:54
  */
 
 var GameModel = require('GameModel');
@@ -459,7 +459,6 @@ cc.Class({
         //
         // })
         // }
-
         this.wxSubContextView.active = true;
         this.wxBackGround.active = true;
         var a = wx.getOpenDataContext().postMessage({

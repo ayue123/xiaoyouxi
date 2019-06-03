@@ -2,7 +2,7 @@
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-05-22 14:32:19
+ * @Last Modified time: 2019-06-03 11:05:54
  */
 
 const GameModel = require('GameModel');
@@ -43,6 +43,7 @@ cc.Class({
         this.startGame();
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
+       
 
     },
     update: function () {
@@ -434,7 +435,6 @@ cc.Class({
         //
         // })
         // }
-
         this.wxSubContextView.active = true;
         this.wxBackGround.active = true;
         let a = wx.getOpenDataContext().postMessage({
@@ -476,6 +476,7 @@ cc.Class({
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
     },
+    
 
 
 });
