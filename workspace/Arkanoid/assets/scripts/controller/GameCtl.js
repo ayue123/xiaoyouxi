@@ -477,6 +477,87 @@ cc.Class({
         this.wxBackGround.active = false;
     },
     
+   // login(){
+    //     var isUserInfo = false;
+    //     var newUserInfo  = null;
+    //     wx.getSetting({
+    //         success (res) {
+    //           console.log(res.authSetting)
+    //           isUserInfo = res.authSetting['scope.userInfo'];
+    //           console.log(isUserInfo);
+    //           if(!isUserInfo){
+    //             let button = wx.createUserInfoButton({
+    //                 type: 'text',
+    //                 text: '获取用户信息',
+    //                 style: {
+    //                   left: 100,
+    //                   top: 525,
+    //                   width: 200,
+    //                   height: 40,
+    //                   lineHeight: 40,
+    //                   backgroundColor: '#ff0000',
+    //                   color: '#ffffff',
+    //                   textAlign: 'center',
+    //                   fontSize: 16,
+    //                   borderRadius: 4
+    //                 }
+    //               })
+    //               button.onTap((res) => {
+    //                 console.log(res)
+    //                 button.destroy();
+    //               })
+    //           }else{
+    //             wx.getUserInfo({
+    //                 success: function(res) {
+    //                   var userInfo = res.userInfo
+    //                   var nickName = userInfo.nickName
+    //                   var avatarUrl = userInfo.avatarUrl
+    //                   var gender = userInfo.gender //性别 0：未知、1：男、2：女
+    //                   var province = userInfo.province
+    //                   var city = userInfo.city
+    //                   var country = userInfo.country
+    //                   newUserInfo = userInfo
+    //                   console.log(userInfo);
+    //                   console.log(newUserInfo);
 
+    //                   //发起网络请求
+    //                     wx.request({
+    //                         url: 'https://api.weixin.qq.com/sns/jscode2session',
+    //                         data:{
+    //                             appid:AppId,
+    //                             secret:AppSecret,
+    //                             js_code:res.code,
+    //                             grant_type:'authorization_code'
+    //                         },
+    //                         header: {  
+    //                             "Content-Type": "application/x-www-form-urlencoded"
+    //                         }, 
+    //                         method: 'GET', 
+    //                         success: function(res){
+    //                             var pc = new WXBizDataCrypt(AppId, res.data.session_key)
+    //                             wx.getUserInfo({
+    //                             success: function (res) {
+    //                                 var data = pc.decryptData(res.encryptedData , res.iv)
+    //                                 console.log('解密后 data: ', data)
+    //                             }
+    //                             })
+    //                         },
+    //                         fail: function(res) {},
+    //                         complete: function(res) {}
+    //                     });
+    //                 }
+    //               })
+    //           }
+    //           // res.authSetting = {
+    //           //   "scope.userInfo": true,
+    //           //   "scope.userLocation": true
+    //           // }
+              
+    //         }
+            
+    //       })
+
+        
+    // },
 
 });

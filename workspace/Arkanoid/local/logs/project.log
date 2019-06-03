@@ -1,69 +1,69 @@
-2019-06-03T02:41:26.295Z - normal: Load ~/.CocosCreator/settings.json
-2019-06-03T02:41:27.470Z - normal: Initializing Asset Database
-2019-06-03T02:41:27.487Z - normal: checking language setting...
-2019-06-03T02:41:27.487Z - normal: Language: zh
-2019-06-03T02:41:28.407Z - success: preview server running at http://localhost:7457
-2019-06-03T02:41:28.407Z - success: protocol editor-framework registered
-2019-06-03T02:41:28.408Z - success: protocol app registered
-2019-06-03T02:41:28.408Z - success: protocol theme registered
-2019-06-03T02:41:28.408Z - success: protocol packages registered
-2019-06-03T02:41:28.408Z - success: protocol uuid registerred
-2019-06-03T02:41:28.408Z - success: protocol db registerred
-2019-06-03T02:41:28.408Z - success: protocol thumbnail registerred
-2019-06-03T02:41:28.408Z - success: protocol unpack registerred
-2019-06-03T02:41:28.408Z - success: protocol disable-commonjs registerred
-2019-06-03T02:41:28.485Z - normal: connected!
-2019-06-03T02:41:28.486Z - normal: Check project D:\cocosCreator\workspace\Arkanoid
-2019-06-03T02:41:28.488Z - normal: Initializing project D:\cocosCreator\workspace\Arkanoid
-2019-06-03T02:41:29.030Z - normal: Initializing Cocos2d
-2019-06-03T02:41:30.032Z - normal: Initializing engine extends
-2019-06-03T02:41:30.055Z - success: asset-db-debugger loaded
-2019-06-03T02:41:30.056Z - success: baidu-adapter loaded
-2019-06-03T02:41:30.057Z - success: code-editor loaded
-2019-06-03T02:41:30.058Z - success: color-picker loaded
-2019-06-03T02:41:30.173Z - success: fb-audience-network loaded
-2019-06-03T02:41:30.256Z - success: fb-live-stream loaded
-2019-06-03T02:41:30.261Z - success: google-play-instant loaded
-2019-06-03T02:41:30.266Z - success: huawei-runtime loaded
-2019-06-03T02:41:30.267Z - success: jsb-adapter loaded
-2019-06-03T02:41:30.271Z - success: oppo-runtime loaded
-2019-06-03T02:41:30.275Z - success: package-manager loaded
-2019-06-03T02:41:30.428Z - success: qqplay-adapter loaded
-2019-06-03T02:41:30.430Z - success: runtime-dev-tools loaded
-2019-06-03T02:41:30.434Z - success: sdkbox loaded
-2019-06-03T02:41:30.438Z - success: tester loaded
-2019-06-03T02:41:30.440Z - success: ui-grid loaded
-2019-06-03T02:41:30.441Z - success: ui-kit-preview-extra loaded
-2019-06-03T02:41:30.444Z - success: ui-kit-preview loaded
-2019-06-03T02:41:30.445Z - success: ui-kit loaded
-2019-06-03T02:41:30.447Z - success: ui-tree loaded
-2019-06-03T02:41:30.452Z - success: vivo-runtime loaded
-2019-06-03T02:41:30.452Z - success: weapp-adapter loaded
-2019-06-03T02:41:30.495Z - success: assets loaded
-2019-06-03T02:41:30.497Z - success: builder loaded
-2019-06-03T02:41:30.861Z - success: cocos-services loaded
-2019-06-03T02:41:30.871Z - success: console loaded
-2019-06-03T02:41:30.918Z - success: fb-instant-games loaded
-2019-06-03T02:41:30.921Z - success: google-instant-games loaded
-2019-06-03T02:41:30.929Z - success: hierarchy loaded
-2019-06-03T02:41:30.941Z - success: inspector loaded
-2019-06-03T02:41:30.947Z - success: keystore loaded
-2019-06-03T02:41:30.957Z - success: node-library loaded
-2019-06-03T02:41:30.962Z - success: package-asset loaded
-2019-06-03T02:41:30.969Z - success: preferences loaded
-2019-06-03T02:41:30.976Z - success: project-exporter loaded
-2019-06-03T02:41:30.992Z - success: project-importer loaded
-2019-06-03T02:41:30.996Z - success: project-settings loaded
-2019-06-03T02:41:31.017Z - success: scene loaded
-2019-06-03T02:41:31.020Z - success: simulator-debugger loaded
-2019-06-03T02:41:31.022Z - success: sprite-editor loaded
-2019-06-03T02:41:31.026Z - success: store loaded
-2019-06-03T02:41:31.029Z - success: timeline loaded
-2019-06-03T02:41:32.999Z - info: Cocos Services load base data!
-2019-06-03T02:41:33.824Z - normal: Loading packages
-2019-06-03T02:41:33.833Z - normal: Watching packages
-2019-06-03T02:41:34.628Z - normal: Run Application
-2019-06-03T02:42:29.464Z - normal: Start building with options : {
+2019-06-03T09:10:27.679Z - normal: Load ~/.CocosCreator/settings.json
+2019-06-03T09:10:28.915Z - normal: Initializing Asset Database
+2019-06-03T09:10:28.919Z - normal: checking language setting...
+2019-06-03T09:10:28.919Z - normal: Language: zh
+2019-06-03T09:10:30.325Z - success: preview server running at http://localhost:7456
+2019-06-03T09:10:30.328Z - success: protocol editor-framework registered
+2019-06-03T09:10:30.328Z - success: protocol app registered
+2019-06-03T09:10:30.328Z - success: protocol theme registered
+2019-06-03T09:10:30.328Z - success: protocol packages registered
+2019-06-03T09:10:30.328Z - success: protocol uuid registerred
+2019-06-03T09:10:30.328Z - success: protocol db registerred
+2019-06-03T09:10:30.328Z - success: protocol thumbnail registerred
+2019-06-03T09:10:30.328Z - success: protocol unpack registerred
+2019-06-03T09:10:30.329Z - success: protocol disable-commonjs registerred
+2019-06-03T09:10:30.405Z - normal: connected!
+2019-06-03T09:10:30.408Z - normal: Check project D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:10:30.412Z - normal: Initializing project D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:10:31.522Z - normal: Initializing Cocos2d
+2019-06-03T09:10:32.694Z - normal: Initializing engine extends
+2019-06-03T09:10:32.745Z - success: asset-db-debugger loaded
+2019-06-03T09:10:32.750Z - success: baidu-adapter loaded
+2019-06-03T09:10:32.769Z - success: code-editor loaded
+2019-06-03T09:10:32.772Z - success: color-picker loaded
+2019-06-03T09:10:32.979Z - success: fb-audience-network loaded
+2019-06-03T09:10:33.062Z - success: fb-live-stream loaded
+2019-06-03T09:10:33.083Z - success: google-play-instant loaded
+2019-06-03T09:10:33.135Z - success: huawei-runtime loaded
+2019-06-03T09:10:33.136Z - success: jsb-adapter loaded
+2019-06-03T09:10:33.153Z - success: oppo-runtime loaded
+2019-06-03T09:10:33.165Z - success: package-manager loaded
+2019-06-03T09:10:33.551Z - success: qqplay-adapter loaded
+2019-06-03T09:10:33.553Z - success: runtime-dev-tools loaded
+2019-06-03T09:10:33.570Z - success: sdkbox loaded
+2019-06-03T09:10:33.575Z - success: tester loaded
+2019-06-03T09:10:33.578Z - success: ui-grid loaded
+2019-06-03T09:10:33.580Z - success: ui-kit-preview-extra loaded
+2019-06-03T09:10:33.582Z - success: ui-kit-preview loaded
+2019-06-03T09:10:33.585Z - success: ui-kit loaded
+2019-06-03T09:10:33.587Z - success: ui-tree loaded
+2019-06-03T09:10:33.594Z - success: vivo-runtime loaded
+2019-06-03T09:10:33.595Z - success: weapp-adapter loaded
+2019-06-03T09:10:33.644Z - success: assets loaded
+2019-06-03T09:10:33.647Z - success: builder loaded
+2019-06-03T09:10:34.208Z - success: cocos-services loaded
+2019-06-03T09:10:34.212Z - success: console loaded
+2019-06-03T09:10:34.254Z - success: fb-instant-games loaded
+2019-06-03T09:10:34.256Z - success: google-instant-games loaded
+2019-06-03T09:10:34.261Z - success: hierarchy loaded
+2019-06-03T09:10:34.264Z - success: inspector loaded
+2019-06-03T09:10:34.265Z - success: keystore loaded
+2019-06-03T09:10:34.271Z - success: node-library loaded
+2019-06-03T09:10:34.273Z - success: package-asset loaded
+2019-06-03T09:10:34.275Z - success: preferences loaded
+2019-06-03T09:10:34.276Z - success: project-exporter loaded
+2019-06-03T09:10:34.279Z - success: project-importer loaded
+2019-06-03T09:10:34.281Z - success: project-settings loaded
+2019-06-03T09:10:34.285Z - success: scene loaded
+2019-06-03T09:10:34.288Z - success: simulator-debugger loaded
+2019-06-03T09:10:34.291Z - success: sprite-editor loaded
+2019-06-03T09:10:34.295Z - success: store loaded
+2019-06-03T09:10:34.300Z - success: timeline loaded
+2019-06-03T09:10:36.239Z - normal: Loading packages
+2019-06-03T09:10:36.247Z - normal: Watching packages
+2019-06-03T09:10:36.363Z - info: Cocos Services load base data!
+2019-06-03T09:10:37.102Z - normal: Run Application
+2019-06-03T09:11:21.859Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -133,33 +133,33 @@
   "projectName": "BrickBreaker",
   "debugBuildWorker": false
 }
-2019-06-03T02:42:29.473Z - normal: Building D:\cocosCreator\workspace\Arkanoid
-2019-06-03T02:42:29.473Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
-2019-06-03T02:42:30.085Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
-2019-06-03T02:42:33.277Z - normal: Start building assets
-2019-06-03T02:42:33.277Z - normal: Start spawn build-worker
-2019-06-03T02:42:34.091Z - normal: Finish spawn build-worker
-2019-06-03T02:42:34.091Z - normal: Start init build-worker
-2019-06-03T02:42:37.711Z - normal: Finish init build-worker
-2019-06-03T02:42:37.711Z - normal: Start build-assets in worker
-2019-06-03T02:42:38.095Z - normal: Finish build-assets in worker
-2019-06-03T02:42:38.099Z - normal: Finish building assets
-2019-06-03T02:42:38.116Z - normal: Start building plugin scripts
-2019-06-03T02:42:38.134Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
-2019-06-03T02:42:39.293Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
-2019-06-03T02:42:49.460Z - normal: Initializing...
+2019-06-03T09:11:21.864Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:11:21.864Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-06-03T09:11:22.162Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-06-03T09:11:24.835Z - normal: Start building assets
+2019-06-03T09:11:24.836Z - normal: Start spawn build-worker
+2019-06-03T09:11:25.633Z - normal: Finish spawn build-worker
+2019-06-03T09:11:25.633Z - normal: Start init build-worker
+2019-06-03T09:11:29.142Z - normal: Finish init build-worker
+2019-06-03T09:11:29.142Z - normal: Start build-assets in worker
+2019-06-03T09:11:29.475Z - normal: Finish build-assets in worker
+2019-06-03T09:11:29.479Z - normal: Finish building assets
+2019-06-03T09:11:29.493Z - normal: Start building plugin scripts
+2019-06-03T09:11:29.500Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-06-03T09:11:31.101Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-06-03T09:12:55.200Z - normal: Initializing...
 
-2019-06-03T02:42:49.489Z - normal: idePortFile: C:\Users\Administrator\AppData\Local\微信web开发者工具\User Data\Default\.ide
+2019-06-03T09:12:55.205Z - normal: idePortFile: C:\Users\Administrator\AppData\Local\微信web开发者工具\User Data\Default\.ide
 
-2019-06-03T02:42:50.579Z - normal: starting ide...
+2019-06-03T09:12:56.219Z - normal: starting ide...
 
-2019-06-03T02:43:05.095Z - normal: IDE server has started, listening on http://127.0.0.1:50981
+2019-06-03T09:13:09.899Z - normal: IDE server has started, listening on http://127.0.0.1:15916
 
-2019-06-03T02:43:05.116Z - normal: initialization finished
+2019-06-03T09:13:09.923Z - normal: initialization finished
 
-2019-06-03T02:43:06.646Z - normal: open IDE success
+2019-06-03T09:13:10.754Z - normal: open IDE success
 
-2019-06-03T02:47:18.138Z - normal: Start building with options : {
+2019-06-03T09:14:44.805Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -229,21 +229,21 @@
   "projectName": "BrickBreaker",
   "debugBuildWorker": false
 }
-2019-06-03T02:47:18.142Z - normal: Building D:\cocosCreator\workspace\Arkanoid
-2019-06-03T02:47:18.142Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
-2019-06-03T02:47:18.143Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
-2019-06-03T02:47:21.357Z - normal: Start building assets
-2019-06-03T02:47:21.358Z - normal: Start spawn build-worker
-2019-06-03T02:47:22.254Z - normal: Finish spawn build-worker
-2019-06-03T02:47:22.254Z - normal: Start init build-worker
-2019-06-03T02:47:25.826Z - normal: Finish init build-worker
-2019-06-03T02:47:25.826Z - normal: Start build-assets in worker
-2019-06-03T02:47:26.339Z - normal: Finish build-assets in worker
-2019-06-03T02:47:26.349Z - normal: Finish building assets
-2019-06-03T02:47:26.364Z - normal: Start building plugin scripts
-2019-06-03T02:47:26.371Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
-2019-06-03T02:47:27.769Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
-2019-06-03T02:48:59.745Z - normal: Start building with options : {
+2019-06-03T09:14:44.814Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:14:44.814Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-06-03T09:14:44.817Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-06-03T09:14:48.037Z - normal: Start building assets
+2019-06-03T09:14:48.038Z - normal: Start spawn build-worker
+2019-06-03T09:14:48.874Z - normal: Finish spawn build-worker
+2019-06-03T09:14:48.875Z - normal: Start init build-worker
+2019-06-03T09:14:52.451Z - normal: Finish init build-worker
+2019-06-03T09:14:52.451Z - normal: Start build-assets in worker
+2019-06-03T09:14:52.977Z - normal: Finish build-assets in worker
+2019-06-03T09:14:52.983Z - normal: Finish building assets
+2019-06-03T09:14:53.001Z - normal: Start building plugin scripts
+2019-06-03T09:14:53.006Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-06-03T09:14:54.400Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-06-03T09:16:14.742Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -313,21 +313,21 @@
   "projectName": "BrickBreaker",
   "debugBuildWorker": false
 }
-2019-06-03T02:48:59.750Z - normal: Building D:\cocosCreator\workspace\Arkanoid
-2019-06-03T02:48:59.751Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
-2019-06-03T02:48:59.753Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
-2019-06-03T02:49:03.228Z - normal: Start building assets
-2019-06-03T02:49:03.229Z - normal: Start spawn build-worker
-2019-06-03T02:49:04.121Z - normal: Finish spawn build-worker
-2019-06-03T02:49:04.121Z - normal: Start init build-worker
-2019-06-03T02:49:07.763Z - normal: Finish init build-worker
-2019-06-03T02:49:07.763Z - normal: Start build-assets in worker
-2019-06-03T02:49:08.263Z - normal: Finish build-assets in worker
-2019-06-03T02:49:08.268Z - normal: Finish building assets
-2019-06-03T02:49:08.284Z - normal: Start building plugin scripts
-2019-06-03T02:49:08.287Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
-2019-06-03T02:49:09.667Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
-2019-06-03T02:52:11.912Z - normal: Start building with options : {
+2019-06-03T09:16:14.748Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:16:14.748Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-06-03T09:16:14.750Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-06-03T09:16:17.772Z - normal: Start building assets
+2019-06-03T09:16:17.773Z - normal: Start spawn build-worker
+2019-06-03T09:16:18.591Z - normal: Finish spawn build-worker
+2019-06-03T09:16:18.591Z - normal: Start init build-worker
+2019-06-03T09:16:22.110Z - normal: Finish init build-worker
+2019-06-03T09:16:22.110Z - normal: Start build-assets in worker
+2019-06-03T09:16:22.570Z - normal: Finish build-assets in worker
+2019-06-03T09:16:22.575Z - normal: Finish building assets
+2019-06-03T09:16:22.591Z - normal: Start building plugin scripts
+2019-06-03T09:16:22.596Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-06-03T09:16:23.888Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-06-03T09:16:49.715Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -397,21 +397,21 @@
   "projectName": "BrickBreaker",
   "debugBuildWorker": false
 }
-2019-06-03T02:52:11.916Z - normal: Building D:\cocosCreator\workspace\Arkanoid
-2019-06-03T02:52:11.916Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
-2019-06-03T02:52:11.918Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
-2019-06-03T02:52:16.263Z - normal: Start building assets
-2019-06-03T02:52:16.263Z - normal: Start spawn build-worker
-2019-06-03T02:52:17.155Z - normal: Finish spawn build-worker
-2019-06-03T02:52:17.155Z - normal: Start init build-worker
-2019-06-03T02:52:20.798Z - normal: Finish init build-worker
-2019-06-03T02:52:20.798Z - normal: Start build-assets in worker
-2019-06-03T02:52:21.278Z - normal: Finish build-assets in worker
-2019-06-03T02:52:21.291Z - normal: Finish building assets
-2019-06-03T02:52:21.311Z - normal: Start building plugin scripts
-2019-06-03T02:52:21.314Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
-2019-06-03T02:52:22.558Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
-2019-06-03T02:52:34.489Z - normal: Start building with options : {
+2019-06-03T09:16:49.715Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:16:49.715Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-06-03T09:16:49.716Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-06-03T09:16:52.861Z - normal: Start building assets
+2019-06-03T09:16:52.861Z - normal: Start spawn build-worker
+2019-06-03T09:16:53.702Z - normal: Finish spawn build-worker
+2019-06-03T09:16:53.702Z - normal: Start init build-worker
+2019-06-03T09:16:57.254Z - normal: Finish init build-worker
+2019-06-03T09:16:57.254Z - normal: Start build-assets in worker
+2019-06-03T09:16:57.762Z - normal: Finish build-assets in worker
+2019-06-03T09:16:57.768Z - normal: Finish building assets
+2019-06-03T09:16:57.781Z - normal: Start building plugin scripts
+2019-06-03T09:16:57.785Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-06-03T09:16:58.897Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-06-03T09:20:45.786Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -481,33 +481,21 @@
   "projectName": "BrickBreaker",
   "debugBuildWorker": false
 }
-2019-06-03T02:52:34.490Z - normal: Building D:\cocosCreator\workspace\Arkanoid
-2019-06-03T02:52:34.490Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
-2019-06-03T02:52:34.491Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
-2019-06-03T02:52:37.866Z - normal: Start building assets
-2019-06-03T02:52:37.866Z - normal: Start spawn build-worker
-2019-06-03T02:52:38.752Z - normal: Finish spawn build-worker
-2019-06-03T02:52:38.752Z - normal: Start init build-worker
-2019-06-03T02:52:42.335Z - normal: Finish init build-worker
-2019-06-03T02:52:42.336Z - normal: Start build-assets in worker
-2019-06-03T02:52:42.738Z - normal: Finish build-assets in worker
-2019-06-03T02:52:42.746Z - normal: Finish building assets
-2019-06-03T02:52:42.757Z - normal: Start building plugin scripts
-2019-06-03T02:52:42.761Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
-2019-06-03T02:52:43.860Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
-2019-06-03T02:52:50.319Z - normal: Initializing...
-
-2019-06-03T02:52:50.325Z - normal: idePortFile: C:\Users\Administrator\AppData\Local\微信web开发者工具\User Data\Default\.ide
-
-2019-06-03T02:52:51.339Z - normal: starting ide...
-
-2019-06-03T02:52:56.490Z - normal: IDE server has started, listening on http://127.0.0.1:55288
-
-2019-06-03T02:52:56.495Z - normal: initialization finished
-
-2019-06-03T02:52:56.996Z - normal: open IDE success
-
-2019-06-03T02:54:17.175Z - normal: Start building with options : {
+2019-06-03T09:20:45.790Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:20:45.790Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-06-03T09:20:45.791Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-06-03T09:20:48.884Z - normal: Start building assets
+2019-06-03T09:20:48.884Z - normal: Start spawn build-worker
+2019-06-03T09:20:49.718Z - normal: Finish spawn build-worker
+2019-06-03T09:20:49.719Z - normal: Start init build-worker
+2019-06-03T09:20:53.265Z - normal: Finish init build-worker
+2019-06-03T09:20:53.265Z - normal: Start build-assets in worker
+2019-06-03T09:20:53.728Z - normal: Finish build-assets in worker
+2019-06-03T09:20:53.733Z - normal: Finish building assets
+2019-06-03T09:20:53.750Z - normal: Start building plugin scripts
+2019-06-03T09:20:53.755Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-06-03T09:20:55.243Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-06-03T09:23:58.608Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -577,21 +565,31 @@
   "projectName": "BrickBreaker",
   "debugBuildWorker": false
 }
-2019-06-03T02:54:17.178Z - normal: Building D:\cocosCreator\workspace\Arkanoid
-2019-06-03T02:54:17.178Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
-2019-06-03T02:54:17.179Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
-2019-06-03T02:54:20.436Z - normal: Start building assets
-2019-06-03T02:54:20.436Z - normal: Start spawn build-worker
-2019-06-03T02:54:21.842Z - normal: Finish spawn build-worker
-2019-06-03T02:54:21.842Z - normal: Start init build-worker
-2019-06-03T02:54:25.583Z - normal: Finish init build-worker
-2019-06-03T02:54:25.583Z - normal: Start build-assets in worker
-2019-06-03T02:54:26.094Z - normal: Finish build-assets in worker
-2019-06-03T02:54:26.103Z - normal: Finish building assets
-2019-06-03T02:54:26.119Z - normal: Start building plugin scripts
-2019-06-03T02:54:26.124Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
-2019-06-03T02:54:27.798Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
-2019-06-03T03:01:31.152Z - normal: Start building with options : {
+2019-06-03T09:23:58.617Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:23:58.618Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-06-03T09:23:58.620Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-06-03T09:24:01.907Z - normal: Start building assets
+2019-06-03T09:24:01.907Z - normal: Start spawn build-worker
+2019-06-03T09:24:02.813Z - normal: Finish spawn build-worker
+2019-06-03T09:24:02.813Z - normal: Start init build-worker
+2019-06-03T09:24:06.349Z - normal: Finish init build-worker
+2019-06-03T09:24:06.349Z - normal: Start build-assets in worker
+2019-06-03T09:24:06.774Z - normal: Finish build-assets in worker
+2019-06-03T09:24:06.779Z - normal: Finish building assets
+2019-06-03T09:24:06.792Z - normal: Start building plugin scripts
+2019-06-03T09:24:06.796Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-06-03T09:24:08.210Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-06-03T09:24:10.820Z - normal: Initializing...
+
+2019-06-03T09:24:10.826Z - normal: idePortFile: C:\Users\Administrator\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2019-06-03T09:24:10.851Z - normal: IDE server has started, listening on http://127.0.0.1:15916
+
+2019-06-03T09:24:10.851Z - normal: initialization finished
+
+2019-06-03T09:24:11.339Z - normal: open IDE success
+
+2019-06-03T09:30:37.921Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -661,21 +659,21 @@
   "projectName": "BrickBreaker",
   "debugBuildWorker": false
 }
-2019-06-03T03:01:31.157Z - normal: Building D:\cocosCreator\workspace\Arkanoid
-2019-06-03T03:01:31.157Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
-2019-06-03T03:01:31.158Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
-2019-06-03T03:01:34.959Z - normal: Start building assets
-2019-06-03T03:01:34.960Z - normal: Start spawn build-worker
-2019-06-03T03:01:36.008Z - normal: Finish spawn build-worker
-2019-06-03T03:01:36.008Z - normal: Start init build-worker
-2019-06-03T03:01:39.651Z - normal: Finish init build-worker
-2019-06-03T03:01:39.651Z - normal: Start build-assets in worker
-2019-06-03T03:01:40.128Z - normal: Finish build-assets in worker
-2019-06-03T03:01:40.135Z - normal: Finish building assets
-2019-06-03T03:01:40.151Z - normal: Start building plugin scripts
-2019-06-03T03:01:40.157Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
-2019-06-03T03:01:41.596Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
-2019-06-03T03:04:24.843Z - normal: Start building with options : {
+2019-06-03T09:30:37.925Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:30:37.926Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-06-03T09:30:37.927Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-06-03T09:30:41.109Z - normal: Start building assets
+2019-06-03T09:30:41.109Z - normal: Start spawn build-worker
+2019-06-03T09:30:41.979Z - normal: Finish spawn build-worker
+2019-06-03T09:30:41.980Z - normal: Start init build-worker
+2019-06-03T09:30:45.551Z - normal: Finish init build-worker
+2019-06-03T09:30:45.552Z - normal: Start build-assets in worker
+2019-06-03T09:30:46.001Z - normal: Finish build-assets in worker
+2019-06-03T09:30:46.007Z - normal: Finish building assets
+2019-06-03T09:30:46.019Z - normal: Start building plugin scripts
+2019-06-03T09:30:46.024Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-06-03T09:30:47.241Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-06-03T09:32:56.504Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -745,113 +743,28 @@
   "projectName": "BrickBreaker",
   "debugBuildWorker": false
 }
-2019-06-03T03:04:24.849Z - normal: Building D:\cocosCreator\workspace\Arkanoid
-2019-06-03T03:04:24.849Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
-2019-06-03T03:04:24.851Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
-2019-06-03T03:04:27.641Z - normal: Start building assets
-2019-06-03T03:04:27.641Z - normal: Start spawn build-worker
-2019-06-03T03:04:28.497Z - normal: Finish spawn build-worker
-2019-06-03T03:04:28.497Z - normal: Start init build-worker
-2019-06-03T03:04:32.003Z - normal: Finish init build-worker
-2019-06-03T03:04:32.003Z - normal: Start build-assets in worker
-2019-06-03T03:04:32.508Z - normal: Finish build-assets in worker
-2019-06-03T03:04:32.512Z - normal: Finish building assets
-2019-06-03T03:04:32.526Z - normal: Start building plugin scripts
-2019-06-03T03:04:32.533Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
-2019-06-03T03:04:33.668Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
-2019-06-03T03:04:35.592Z - normal: Initializing...
-
-2019-06-03T03:04:35.598Z - normal: idePortFile: C:\Users\Administrator\AppData\Local\微信web开发者工具\User Data\Default\.ide
-
-2019-06-03T03:04:36.614Z - normal: starting ide...
-
-2019-06-03T03:04:41.972Z - normal: IDE server has started, listening on http://127.0.0.1:19728
-
-2019-06-03T03:04:41.978Z - normal: initialization finished
-
-2019-06-03T03:04:42.457Z - normal: open IDE success
-
-2019-06-03T03:06:24.649Z - normal: Start building with options : {
-  "actualPlatform": "wechatgame",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appBundle": false,
-  "baidugame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "testappid",
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "buildPath": "D:\\cocosCreator\\workspace\\Arkanoid\\build",
-  "debug": false,
-  "dest": "D:\\cocosCreator\\workspace\\Arkanoid\\build\\wechatgame",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": false,
-    "landscapeRight": false,
-    "portrait": true,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.brickbreakermaster",
-  "platform": "wechatgame",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "scenes": [
-    "2ef97242-9501-4637-ab4d-d2e235f1f114"
-  ],
-  "sourceMaps": false,
-  "startScene": "2ef97242-9501-4637-ab4d-d2e235f1f114",
-  "template": "link",
-  "title": "BrickBreaker",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wxce1bb384f5bde4c8",
-    "isSubdomain": false,
-    "orientation": "portrait",
-    "subContext": "wx-open-data-project"
-  },
-  "xxteaKey": "f4ef681c-8fa6-40",
-  "zipCompressJs": true,
-  "project": "D:\\cocosCreator\\workspace\\Arkanoid",
-  "projectName": "BrickBreaker",
-  "debugBuildWorker": false
-}
-2019-06-03T03:06:24.654Z - normal: Building D:\cocosCreator\workspace\Arkanoid
-2019-06-03T03:06:24.654Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
-2019-06-03T03:06:24.656Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
-2019-06-03T03:06:27.698Z - normal: Start building assets
-2019-06-03T03:06:27.698Z - normal: Start spawn build-worker
-2019-06-03T03:06:28.592Z - normal: Finish spawn build-worker
-2019-06-03T03:06:28.592Z - normal: Start init build-worker
-2019-06-03T03:06:32.209Z - normal: Finish init build-worker
-2019-06-03T03:06:32.210Z - normal: Start build-assets in worker
-2019-06-03T03:06:32.702Z - normal: Finish build-assets in worker
-2019-06-03T03:06:32.707Z - normal: Finish building assets
-2019-06-03T03:06:32.722Z - normal: Start building plugin scripts
-2019-06-03T03:06:32.729Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
-2019-06-03T03:06:34.209Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-06-03T09:32:56.508Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-06-03T09:32:56.508Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-06-03T09:32:56.509Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-06-03T09:32:59.763Z - normal: Start building assets
+2019-06-03T09:32:59.764Z - normal: Start spawn build-worker
+2019-06-03T09:33:00.627Z - normal: Finish spawn build-worker
+2019-06-03T09:33:00.627Z - normal: Start init build-worker
+2019-06-03T09:33:04.149Z - normal: Finish init build-worker
+2019-06-03T09:33:04.149Z - normal: Start build-assets in worker
+2019-06-03T09:33:04.642Z - normal: Finish build-assets in worker
+2019-06-03T09:33:04.648Z - normal: Finish building assets
+2019-06-03T09:33:04.664Z - normal: Start building plugin scripts
+2019-06-03T09:33:04.668Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-06-03T09:33:05.969Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-06-03T11:05:00.803Z - error: Package Watcher Error: Error watching file for changes: EPERM
+    at FSWatcher.on.on.on.on.on.on.e (D:\cocosCreator\cocoscreator\resources\app.asar\editor-framework\lib\main\editor.js:1:4254)
+    at emitOne (events.js:96:13)
+    at FSWatcher.emit (events.js:191:7)
+    at FSWatcher._handleError (D:\cocosCreator\cocoscreator\resources\app.asar\node_modules\chokidar\index.js:252:10)
+    at D:\cocosCreator\cocoscreator\resources\app.asar\node_modules\chokidar\lib\nodefs-handler.js:54:5
+    at Array.forEach (native)
+    at fsWatchBroadcast (D:\cocosCreator\cocoscreator\resources\app.asar\node_modules\chokidar\lib\nodefs-handler.js:53:36)
+    at D:\cocosCreator\cocoscreator\resources\app.asar\node_modules\chokidar\lib\nodefs-handler.js:94:21
+    at FSReqWrap.oncomplete (fs.js:114:15)
+2019-06-03T11:05:09.810Z - info: shutdown preview server
