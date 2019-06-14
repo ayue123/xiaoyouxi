@@ -2,7 +2,7 @@
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-06-14 15:44:58
+ * @Last Modified time: 2019-06-14 16:59:01
  */
 
 const GameModel = require('GameModel');
@@ -487,7 +487,7 @@ cc.Class({
                 adUnitId: 'adunit-256c6c4d51b28192',
                 style: {
                     left: (winSize.windowWidth-bannerWidth)/2,
-                    top: winSize.windowHeight - bannerHeight,
+                    top: winSize.windowHeight - bannerHeight-30,
                     width: bannerWidth,
                 }
             })

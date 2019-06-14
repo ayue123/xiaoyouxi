@@ -65,8 +65,8 @@
     "relativePath": "scripts"
   },
   "2ef97242-9501-4637-ab4d-d2e235f1f114": {
-    "asset": 1560498663641,
-    "meta": 1560498663654,
+    "asset": 1560502454800,
+    "meta": 1560502454815,
     "relativePath": "scenes\\game.fire"
   },
   "6afeca96-9d19-4d0f-8104-c71f315af186": {
@@ -405,8 +405,8 @@
     "relativePath": "scripts\\view\\OverPanel.js"
   },
   "a3373d3c-bb1c-49bd-aeef-87c1b4eaaed9": {
-    "asset": 1560498298376,
-    "meta": 1560498423316,
+    "asset": 1560502741281,
+    "meta": 1560502743271,
     "relativePath": "scripts\\controller\\GameCtl.js"
   }
 }
