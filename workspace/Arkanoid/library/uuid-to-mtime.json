@@ -25,7 +25,7 @@
     "relativePath": "prefab"
   },
   "f8733a59-b3d6-4f24-8d6f-3a76d95ea221": {
-    "asset": 1559553017265,
+    "asset": 1560480301392,
     "meta": 1552997150398,
     "relativePath": "audio"
   },
@@ -40,7 +40,7 @@
     "relativePath": "audio\\score.mp3"
   },
   "6b9a4a4f-553f-4eeb-85a1-0da8f183631d": {
-    "asset": 1559553017285,
+    "asset": 1560480301442,
     "meta": 1552997150401,
     "relativePath": "prefabs"
   },
@@ -50,7 +50,7 @@
     "relativePath": "prefabs\\ball.prefab"
   },
   "21b744bb-e2a0-439f-8959-d1cf1492d2d5": {
-    "asset": 1559553017295,
+    "asset": 1560480301451,
     "meta": 1552997150403,
     "relativePath": "scenes"
   },
@@ -60,32 +60,32 @@
     "relativePath": "prefabs\\slump.prefab"
   },
   "67b57183-2cb0-4ab3-92e2-610669d275c2": {
-    "asset": 1559553017333,
+    "asset": 1560480301485,
     "meta": 1552997150405,
     "relativePath": "scripts"
   },
   "2ef97242-9501-4637-ab4d-d2e235f1f114": {
-    "asset": 1559554086385,
-    "meta": 1559554086409,
+    "asset": 1560498663641,
+    "meta": 1560498663654,
     "relativePath": "scenes\\game.fire"
   },
   "6afeca96-9d19-4d0f-8104-c71f315af186": {
-    "asset": 1559553017315,
+    "asset": 1560480301471,
     "meta": 1552997150405,
     "relativePath": "scripts\\controller"
   },
   "4edadf36-9140-4808-8b00-bbfc6d643911": {
-    "asset": 1559553017331,
+    "asset": 1560480301482,
     "meta": 1552997150406,
     "relativePath": "scripts\\model"
   },
   "2ad79e41-5421-437f-8f76-a4ca4ebf5cdc": {
-    "asset": 1559553017372,
+    "asset": 1560480301521,
     "meta": 1552997150408,
     "relativePath": "scripts\\view"
   },
   "781eefd2-30d7-4a45-8baa-80a0261353db": {
-    "asset": 1559553017439,
+    "asset": 1560480301596,
     "meta": 1552997150412,
     "relativePath": "textures"
   },
@@ -153,11 +153,6 @@
     "asset": 1553948481449,
     "meta": 1553948487371,
     "relativePath": "scripts\\view\\BrickLayout.js"
-  },
-  "60425cd1-210e-4b34-867a-2a6679a7f2cd": {
-    "asset": 1553948445780,
-    "meta": 1553948487407,
-    "relativePath": "scripts\\view\\OverPanel.js"
   },
   "4dc82735-a8ef-4a6d-906c-31919b1e5315": {
     "asset": 1558492808538,
@@ -394,11 +389,6 @@
     "meta": 1559553035278,
     "relativePath": "prefab\\webview.prefab"
   },
-  "a3373d3c-bb1c-49bd-aeef-87c1b4eaaed9": {
-    "asset": 1559531154960,
-    "meta": 1559531157150,
-    "relativePath": "scripts\\controller\\GameCtl.js"
-  },
   "5cb42808-93ee-4e78-8283-b5e5b4970f74": {
     "asset": 1559554057411,
     "meta": 1559554086909,
@@ -408,5 +398,15 @@
     "asset": 1559554371906,
     "meta": 1559554375861,
     "relativePath": "scripts\\view\\GameView.js"
+  },
+  "60425cd1-210e-4b34-867a-2a6679a7f2cd": {
+    "asset": 1560494794396,
+    "meta": 1560494810287,
+    "relativePath": "scripts\\view\\OverPanel.js"
+  },
+  "a3373d3c-bb1c-49bd-aeef-87c1b4eaaed9": {
+    "asset": 1560498298376,
+    "meta": 1560498423316,
+    "relativePath": "scripts\\controller\\GameCtl.js"
   }
 }

@@ -2,7 +2,7 @@
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-06-03 11:05:54
+ * @Last Modified time: 2019-06-14 15:44:58
  */
 
 const GameModel = require('GameModel');
@@ -476,7 +476,33 @@ cc.Class({
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
     },
-    
+    banner(){
+        let winSize = wx.getSystemInfoSync();
+        console.log(winSize);
+        let bannerHeight = 100;
+        let bannerWidth = 350;
+        // 创建 Banner 广告实例，提前初始化
+        if(this.bannerAd==null){
+            this.bannerAd = wx.createBannerAd({
+                adUnitId: 'adunit-256c6c4d51b28192',
+                style: {
+                    left: (winSize.windowWidth-bannerWidth)/2,
+                    top: winSize.windowHeight - bannerHeight,
+                    width: bannerWidth,
+                }
+            })
+            // 在适合的场景显示 Banner 广告
+            this.bannerAd.show();
+            this.bannerAd.onError(err => {
+                console.log("广告拉取错误");
+                console.log(err);
+              })
+        }else{
+            this.bannerAd.destroy();
+            this.bannerAd = null;
+        }
+       
+    },
    // login(){
     //     var isUserInfo = false;
     //     var newUserInfo  = null;

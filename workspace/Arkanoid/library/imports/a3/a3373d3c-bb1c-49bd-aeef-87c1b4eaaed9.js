@@ -8,7 +8,7 @@ cc._RF.push(module, 'a337308uxxJva7vh8G06q7Z', 'GameCtl');
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-06-03 11:05:54
+ * @Last Modified time: 2019-06-14 15:44:58
  */
 
 var GameModel = require('GameModel');
@@ -501,7 +501,117 @@ cc.Class({
     onBtnBack: function onBtnBack() {
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
+    },
+    banner: function banner() {
+        var winSize = wx.getSystemInfoSync();
+        console.log(winSize);
+        var bannerHeight = 100;
+        var bannerWidth = 350;
+        // 创建 Banner 广告实例，提前初始化
+        if (this.bannerAd == null) {
+            this.bannerAd = wx.createBannerAd({
+                adUnitId: 'adunit-256c6c4d51b28192',
+                style: {
+                    left: (winSize.windowWidth - bannerWidth) / 2,
+                    top: winSize.windowHeight - bannerHeight,
+                    width: bannerWidth
+                }
+            });
+            // 在适合的场景显示 Banner 广告
+            this.bannerAd.show();
+            this.bannerAd.onError(function (err) {
+                console.log("广告拉取错误");
+                console.log(err);
+            });
+        } else {
+            this.bannerAd.destroy();
+            this.bannerAd = null;
+        }
     }
-});
+}
+// login(){
+//     var isUserInfo = false;
+//     var newUserInfo  = null;
+//     wx.getSetting({
+//         success (res) {
+//           console.log(res.authSetting)
+//           isUserInfo = res.authSetting['scope.userInfo'];
+//           console.log(isUserInfo);
+//           if(!isUserInfo){
+//             let button = wx.createUserInfoButton({
+//                 type: 'text',
+//                 text: '获取用户信息',
+//                 style: {
+//                   left: 100,
+//                   top: 525,
+//                   width: 200,
+//                   height: 40,
+//                   lineHeight: 40,
+//                   backgroundColor: '#ff0000',
+//                   color: '#ffffff',
+//                   textAlign: 'center',
+//                   fontSize: 16,
+//                   borderRadius: 4
+//                 }
+//               })
+//               button.onTap((res) => {
+//                 console.log(res)
+//                 button.destroy();
+//               })
+//           }else{
+//             wx.getUserInfo({
+//                 success: function(res) {
+//                   var userInfo = res.userInfo
+//                   var nickName = userInfo.nickName
+//                   var avatarUrl = userInfo.avatarUrl
+//                   var gender = userInfo.gender //性别 0：未知、1：男、2：女
+//                   var province = userInfo.province
+//                   var city = userInfo.city
+//                   var country = userInfo.country
+//                   newUserInfo = userInfo
+//                   console.log(userInfo);
+//                   console.log(newUserInfo);
+
+//                   //发起网络请求
+//                     wx.request({
+//                         url: 'https://api.weixin.qq.com/sns/jscode2session',
+//                         data:{
+//                             appid:AppId,
+//                             secret:AppSecret,
+//                             js_code:res.code,
+//                             grant_type:'authorization_code'
+//                         },
+//                         header: {  
+//                             "Content-Type": "application/x-www-form-urlencoded"
+//                         }, 
+//                         method: 'GET', 
+//                         success: function(res){
+//                             var pc = new WXBizDataCrypt(AppId, res.data.session_key)
+//                             wx.getUserInfo({
+//                             success: function (res) {
+//                                 var data = pc.decryptData(res.encryptedData , res.iv)
+//                                 console.log('解密后 data: ', data)
+//                             }
+//                             })
+//                         },
+//                         fail: function(res) {},
+//                         complete: function(res) {}
+//                     });
+//                 }
+//               })
+//           }
+//           // res.authSetting = {
+//           //   "scope.userInfo": true,
+//           //   "scope.userLocation": true
+//           // }
+
+//         }
+
+//       })
+
+
+// },
+
+);
 
 cc._RF.pop();
