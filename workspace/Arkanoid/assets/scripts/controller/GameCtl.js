@@ -2,7 +2,7 @@
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-06-14 16:59:01
+ * @Last Modified time: 2019-06-19 16:04:52
  */
 
 const GameModel = require('GameModel');
@@ -34,6 +34,7 @@ cc.Class({
         allSkillBall: [],
         allBall: [],
         allSlump: [],
+        videoAd:null,
     },
 
     onLoad: function () {
@@ -43,8 +44,7 @@ cc.Class({
         this.startGame();
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
-       
-
+        
     },
     update: function () {
 
@@ -70,6 +70,7 @@ cc.Class({
         this.paddle.init();
         this.brickLayout.init(this.gameModel.bricksNumber, this.gameModel.getLevelPosition(), this.gameModel.getLevelSilveryPosition());
         this.overPanel.init(this);
+        
     },
     //部分属性重新初始化（在玩家仍然有机会时初始化调用）
     reInit() {
@@ -476,32 +477,78 @@ cc.Class({
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
     },
-    banner(){
-        let winSize = wx.getSystemInfoSync();
-        console.log(winSize);
-        let bannerHeight = 100;
-        let bannerWidth = 350;
-        // 创建 Banner 广告实例，提前初始化
-        if(this.bannerAd==null){
-            this.bannerAd = wx.createBannerAd({
-                adUnitId: 'adunit-256c6c4d51b28192',
-                style: {
-                    left: (winSize.windowWidth-bannerWidth)/2,
-                    top: winSize.windowHeight - bannerHeight-30,
-                    width: bannerWidth,
-                }
-            })
-            // 在适合的场景显示 Banner 广告
-            this.bannerAd.show();
-            this.bannerAd.onError(err => {
-                console.log("广告拉取错误");
-                console.log(err);
-              })
+    banner(isShow){
+        if(isShow == true){
+            let winSize = wx.getSystemInfoSync();
+            let bannerHeight = 135;
+            let bannerWidth = 360;
+            // 创建 Banner 广告实例，提前初始化
+            if(this.bannerAd==null){
+                this.bannerAd = wx.createBannerAd({
+                    adUnitId: 'adunit-256c6c4d51b28192',
+                    style: {
+                        left: (winSize.windowWidth-bannerWidth)/2+0.1,
+                        top: winSize.windowHeight - bannerHeight-30,
+                        width: bannerWidth,
+                    }
+                })
+                // 在适合的场景显示 Banner 广告
+                this.bannerAd.show();
+                this.bannerAd.onError(err => {
+                    console.log("广告拉取错误");
+                    console.log(err);
+                  })
+            }else{
+                this.bannerAd.destroy();
+                this.bannerAd = null;
+            }
         }else{
-            this.bannerAd.destroy();
-            this.bannerAd = null;
+            if(this.bannerAd!=null){
+                this.bannerAd.destroy();
+                this.bannerAd = null;
+            }
         }
-       
+    },
+
+    initVideoAd(){
+        //实例
+		// 创建激励视频广告实例，提前初始化
+        let videoAd = wx.createRewardedVideoAd({
+            adUnitId: 'adunit-97d79c620e54fee7'
+        })
+  
+		this.videoAd = videoAd;
+        // 用户触发广告后，显示激励视频广告
+        this.videoAd.show().catch(() => {
+        // 失败重试
+            this.videoAd.load()
+            .then(() => this.videoAd.show())
+            .catch(err => {
+                console.log('激励视频 广告显示失败')
+            })
+        })
+        //捕捉错误
+		this.videoAd.onError(err => {
+			console.log(err)
+		})
+
+		//关闭视频的回调函数
+		this.videoAd.onClose(res => {
+			// 用户点击了【关闭广告】按钮
+			// 小于 2.1.0 的基础库版本，res 是一个 undefined
+			console.log(res)
+			if (res && res.isEnded || res === undefined) {
+                this.gameModel.addLife();
+                this.gameView.updateLife(this.gameModel.life)
+                this.overPanel.updateGameModel(this.gameModel)
+                this.reBeginGame();
+                this.banner(true);
+			} else {
+                // 播放中途退出，不下发游戏奖励
+                this.banner(true);
+			}
+		})
+
     },
    // login(){
     //     var isUserInfo = false;

@@ -7,7 +7,7 @@
       "windowType": "dockable",
       "x": -1293,
       "y": 123,
-      "width": 1274,
+      "width": 1256,
       "height": 700,
       "layout": {
         "children": [
@@ -27,7 +27,7 @@
                 "children": [
                   "assets"
                 ],
-                "height": 288.984375,
+                "height": 289,
                 "type": "panel",
                 "width": 206
               }
@@ -69,7 +69,7 @@
                   "console",
                   "timeline"
                 ],
-                "height": 288.984375,
+                "height": 289,
                 "type": "panel",
                 "width": 741.984375
               }
@@ -100,7 +100,7 @@
         "scene"
       ]
     },
-    "window-1560500481014": {}
+    "window-1560850539953": {}
   },
   "panels": {
     "preferences": {

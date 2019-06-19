@@ -8,7 +8,7 @@ cc._RF.push(module, 'a337308uxxJva7vh8G06q7Z', 'GameCtl', __filename);
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-06-14 16:59:01
+ * @Last Modified time: 2019-06-19 16:04:52
  */
 
 var GameModel = require('GameModel');
@@ -39,7 +39,8 @@ cc.Class({
         wxBackGround: cc.Node,
         allSkillBall: [],
         allBall: [],
-        allSlump: []
+        allSlump: [],
+        videoAd: null
     },
 
     onLoad: function onLoad() {
@@ -502,31 +503,78 @@ cc.Class({
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
     },
-    banner: function banner() {
-        var winSize = wx.getSystemInfoSync();
-        console.log(winSize);
-        var bannerHeight = 100;
-        var bannerWidth = 350;
-        // 创建 Banner 广告实例，提前初始化
-        if (this.bannerAd == null) {
-            this.bannerAd = wx.createBannerAd({
-                adUnitId: 'adunit-256c6c4d51b28192',
-                style: {
-                    left: (winSize.windowWidth - bannerWidth) / 2,
-                    top: winSize.windowHeight - bannerHeight - 30,
-                    width: bannerWidth
-                }
-            });
-            // 在适合的场景显示 Banner 广告
-            this.bannerAd.show();
-            this.bannerAd.onError(function (err) {
-                console.log("广告拉取错误");
-                console.log(err);
-            });
+    banner: function banner(isShow) {
+        if (isShow == true) {
+            var winSize = wx.getSystemInfoSync();
+            var bannerHeight = 135;
+            var bannerWidth = 360;
+            // 创建 Banner 广告实例，提前初始化
+            if (this.bannerAd == null) {
+                this.bannerAd = wx.createBannerAd({
+                    adUnitId: 'adunit-256c6c4d51b28192',
+                    style: {
+                        left: (winSize.windowWidth - bannerWidth) / 2 + 0.1,
+                        top: winSize.windowHeight - bannerHeight - 30,
+                        width: bannerWidth
+                    }
+                });
+                // 在适合的场景显示 Banner 广告
+                this.bannerAd.show();
+                this.bannerAd.onError(function (err) {
+                    console.log("广告拉取错误");
+                    console.log(err);
+                });
+            } else {
+                this.bannerAd.destroy();
+                this.bannerAd = null;
+            }
         } else {
-            this.bannerAd.destroy();
-            this.bannerAd = null;
+            if (this.bannerAd != null) {
+                this.bannerAd.destroy();
+                this.bannerAd = null;
+            }
         }
+    },
+    initVideoAd: function initVideoAd() {
+        var _this = this;
+
+        //实例
+        // 创建激励视频广告实例，提前初始化
+        var videoAd = wx.createRewardedVideoAd({
+            adUnitId: 'adunit-97d79c620e54fee7'
+        });
+
+        this.videoAd = videoAd;
+        // 用户触发广告后，显示激励视频广告
+        this.videoAd.show().catch(function () {
+            // 失败重试
+            _this.videoAd.load().then(function () {
+                return _this.videoAd.show();
+            }).catch(function (err) {
+                console.log('激励视频 广告显示失败');
+            });
+        });
+        //捕捉错误
+        this.videoAd.onError(function (err) {
+            console.log(err);
+        });
+
+        //关闭视频的回调函数
+        this.videoAd.onClose(function (res) {
+            // 用户点击了【关闭广告】按钮
+            // 小于 2.1.0 的基础库版本，res 是一个 undefined
+            console.log(res);
+            if (res && res.isEnded || res === undefined) {
+                _this.gameModel.addLife();
+                _this.gameView.updateLife(_this.gameModel.life);
+                _this.overPanel.updateGameModel(_this.gameModel);
+                _this.reBeginGame();
+                _this.banner(true);
+            } else {
+                // 播放中途退出，不下发游戏奖励
+                _this.banner(true);
+            }
+        });
     }
 }
 // login(){

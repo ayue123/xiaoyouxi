@@ -8,7 +8,7 @@ cc._RF.push(module, '60425zRIQ5LNIZ6KmZ5p/LN', 'OverPanel', __filename);
  * @Author: ayue 
  * @Date: 2019-03-30 20:20:24 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-06-14 14:46:34
+ * @Last Modified time: 2019-06-19 15:08:53
  */
 var GameModel = require('GameModel');
 cc.Class({
@@ -36,7 +36,7 @@ cc.Class({
             this.resultLabel.string = '重新开始!';
         }
         this.scoreLabel.string = "score:" + score;
-        this.gameCtl.banner();
+        this.gameCtl.banner(true);
     },
 
     //每一关结束展示界面
@@ -44,7 +44,7 @@ cc.Class({
         this.node.active = true;
         this.resultLabel.string = 'life:' + life;
         this.scoreLabel.string = 'score:' + score + "\n" + " level:" + level;
-        this.gameCtl.banner();
+        this.gameCtl.banner(true);
     },
     updateGameModel: function updateGameModel(gameModel) {
         this.gameModel = gameModel;
@@ -53,6 +53,7 @@ cc.Class({
 
     //展示界面点击处理逻辑
     onBtnRestart: function onBtnRestart() {
+        this.gameCtl.banner(false);
         if (this.gameModel.life > 0 && this.gameModel.surviveBricksNumber > 0) {
             this.gameCtl.reStartGame();
         } else if (this.gameModel.life > 0 && this.gameModel.surviveBricksNumber <= 0) {
@@ -66,7 +67,9 @@ cc.Class({
         } else {
             this.gameCtl.startGame();
         }
-        this.gameCtl.banner();
+    },
+    onBtnAddLife: function onBtnAddLife() {
+        this.gameCtl.initVideoAd();
     }
 });
 

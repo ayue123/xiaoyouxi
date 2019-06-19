@@ -1,8 +1,8 @@
 /*
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:54 
- * @Last Modified by:   ayue 
- * @Last Modified time: 2019-03-30 20:18:54 
+ * @Last Modified by: ayue
+ * @Last Modified time: 2019-06-19 14:33:27
  */
 
 cc.Class({
@@ -91,6 +91,10 @@ cc.Class({
 
     reduceLife() {
         this.life -= 1;
+    },
+
+    addLife() {
+        this.life += 1;
     },
 
     addLevel() {
