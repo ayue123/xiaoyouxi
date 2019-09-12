@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="protocolRequestMap" class="java.util.HashMap">
+		<constructor-arg>
+			<map>
+				<entry key="1001">
+					<bean class="com.arkanoid.rank.protocol.Request1001"/>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="protocolResponseMap" class="java.util.HashMap">
+		<constructor-arg>
+			<map>
+				<entry key="1001">
+					<bean class="com.arkanoid.rank.protocol.Response1001"/>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="rankProcessor" class="com.arkanoid.rank.processor.RankPrcocessorImpl"/>
+	<bean id="scoreRankZSetDao" class="com.arkanoid.rank.dao.ScoreRankZSetDao"/>
+</beans>

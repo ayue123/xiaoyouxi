@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	<bean id="httpSocket" class="com.arkanoid.core.net.HttpSocket"/>
+	
+	<bean id="cmdExecutor" class="com.arkanoid.core.thread.FixedThreadPoolExecutor" destroy-method="shutdown">
+		<constructor-arg value="${cmd.Executor.min}" />
+		<constructor-arg value="${cmd.Executor.max}" />
+		<constructor-arg value="${cmd.Executor.idle}" />
+		<constructor-arg value="${cmd.Executor.name}" />
+		<constructor-arg ref="threadUncaughtExceptionHandler" />
+	</bean>
+	
+	
+ 	<bean id="eventExecutor" class="com.arkanoid.core.thread.FixedThreadPoolExecutor" destroy-method="shutdown">
+ 		<constructor-arg value="${event.Executor.min}" />
+ 		<constructor-arg value="${event.Executor.max}" />
+ 		<constructor-arg value="${event.Executor.idle}" />
+ 		<constructor-arg value="${event.Executor.name}" />
+ 		<constructor-arg ref="threadUncaughtExceptionHandler"/>
+ 	</bean>
+ 	
+ 	<bean id="threadUncaughtExceptionHandler" class="com.arkanoid.core.thread.ThreadUncaughtExceptionHandler"/>
+</beans>

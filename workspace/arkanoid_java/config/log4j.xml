@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%-5p][%-9d{HH:mm:ss,SSS}][%t] (%c{3}) - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WORK_LOG" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Encoding" value="UTF-8" />
+		<param name="File" value="logs/game.log" />
+		<param name="Append" value="true" />
+		<param name="ImmediateFlush" value="true" />
+		<layout class="net.logstash.log4j.JSONEventLayoutV1">
+		</layout>
+	</appender>
+
+	<root>
+		<level value="info"/>
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="WORK_LOG" />
+	</root>
+</log4j:configuration>
