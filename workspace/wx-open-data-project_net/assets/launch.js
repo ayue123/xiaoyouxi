@@ -2,7 +2,7 @@
  * @Author: ayue 
  * @Date: 2019-04-09 14:37:09 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-05-28 16:18:31
+ * @Last Modified time: 2019-09-17 19:23:01
  */
 //
 // api: https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getUserInfo.html
@@ -175,19 +175,16 @@ var launch =cc.Class({
             if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 400)) {
                 var response = xhr.responseText;
                 let rankMap = JSON.parse(response)
-                ccc(rankMap);
+                console.log(rankMap);
             }
         }
-        xhr.open("POST", "http://localhost:8080", true);
+        xhr.open('POST', 'http://47.105.63.173:17594', true);
         var rankCondition = new Object();
         rankCondition.start = 0;
         rankCondition.count = 100;
         let json = JSON.stringify(rankCondition);
         xhr.send("1001-" + json);
 
-        function ccc(rankMap) {
-            console.log(rankMap);
-        }
     },
 
     playerLogin(playerInfo) {
