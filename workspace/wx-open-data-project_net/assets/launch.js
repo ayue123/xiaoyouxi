@@ -2,12 +2,12 @@
  * @Author: ayue 
  * @Date: 2019-04-09 14:37:09 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-09-17 19:23:01
+ * @Last Modified time: 2019-09-17 19:50:58
  */
 //
 // api: https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getUserInfo.html
 //
-var launch =cc.Class({
+var launch = cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -169,22 +169,20 @@ var launch =cc.Class({
         return userb.KVDataList[0].value - usera.KVDataList[0].value;
     },
 
-    socket() {
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 400)) {
-                var response = xhr.responseText;
-                let rankMap = JSON.parse(response)
-                console.log(rankMap);
+    statics: {
+        socket(response) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 400)) {
+                    var response = xhr.responseText;
+                    let rankMap = JSON.parse(response)
+                    console.log(rankMap);
+                    la.test1(rankMap);
+                }
             }
+            xhr.open('POST', 'http://47.105.63.173:17594', true);
+            xhr.send(response);
         }
-        xhr.open('POST', 'http://47.105.63.173:17594', true);
-        var rankCondition = new Object();
-        rankCondition.start = 0;
-        rankCondition.count = 100;
-        let json = JSON.stringify(rankCondition);
-        xhr.send("1001-" + json);
-
     },
 
     playerLogin(playerInfo) {
@@ -201,25 +199,23 @@ var launch =cc.Class({
         });
 
         function socketInfo(user, playerInfo) {
-            console.log(user);
-            console.log(playerInfo);
+            // console.log(user);
+            // console.log(playerInfo);
             // playerInfo.nickName = user.nickName || user.nickname;
             // playerInfo.avatarUrl = user.avatarUrl;
-            launch.test();
+            var rankCondition = new Object();
+            rankCondition.start = 0;
+            rankCondition.count = 100;
+            let json = JSON.stringify(rankCondition);
+            let response = "1001-" + json;
+            launch.socket(response)
         }
     },
 
-    statics:{
-        test() {
-            console.log("ddddddddddddddddddddddddd")
-            la.test1();
-        }
-    },
-
-    test1(){
+    test1(request) {
         console.log("****************************")
+        console.log(request);
     }
-
 
 });
 //对象初始化
