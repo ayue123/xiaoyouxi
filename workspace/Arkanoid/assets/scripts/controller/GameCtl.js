@@ -2,7 +2,7 @@
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-06-19 16:04:52
+ * @Last Modified time: 2019-09-18 11:33:32
  */
 
 const GameModel = require('GameModel');
@@ -31,10 +31,12 @@ cc.Class({
         startBackGround: cc.Node,
         wxSubContextView: cc.Node,
         wxBackGround: cc.Node,
+        rankButton: cc.Node,
+        addLifeButton: cc.Node,
         allSkillBall: [],
         allBall: [],
         allSlump: [],
-        videoAd:null,
+        videoAd: null,
     },
 
     onLoad: function () {
@@ -44,12 +46,12 @@ cc.Class({
         this.startGame();
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
-        
+        this.authorize();
+        this.addLifeButton.active = false;
     },
     update: function () {
 
     },
-
 
     startGame() {
         this.init();
@@ -70,7 +72,7 @@ cc.Class({
         this.paddle.init();
         this.brickLayout.init(this.gameModel.bricksNumber, this.gameModel.getLevelPosition(), this.gameModel.getLevelSilveryPosition());
         this.overPanel.init(this);
-        
+
     },
     //部分属性重新初始化（在玩家仍然有机会时初始化调用）
     reInit() {
@@ -168,6 +170,7 @@ cc.Class({
                 this.gameView.updateLife(this.gameModel.life)
                 this.overPanel.updateGameModel(this.gameModel)
                 this.stopGame();
+                this.addLifeButton.active = true;
             }
             this.destroyBall(ballNode);
         } else {
@@ -207,7 +210,7 @@ cc.Class({
     },
     //创建技能小球
     createSkillBall() {
-            //小球复制代码
+        //小球复制代码
         let ballNode1 = cc.instantiate(this.ballPrefab);
         let collider1 = ballNode1.getComponent(cc.PhysicsCircleCollider);
         collider1.radius = 6;
@@ -216,7 +219,7 @@ cc.Class({
         ballNode1.parent = this.paddle.node.parent;
         ballNode1.color = cc.color(209, 10, 247);
         var Ball1 = ballNode1.getComponent('Ball')
-        Ball1.node.width=10;
+        Ball1.node.width = 10;
 
         let ballNode2 = cc.instantiate(this.ballPrefab);
         let collider = ballNode2.getComponent(cc.PhysicsCircleCollider);
@@ -226,11 +229,11 @@ cc.Class({
         ballNode2.parent = this.paddle.node.parent;
         ballNode2.color = cc.color(209, 10, 247);
         var Ball = ballNode2.getComponent('Ball')
-        Ball.node.width =10;
+        Ball.node.width = 10;
 
         Ball1.initSkillBall(this, this.paddle.node.position, "left");
         Ball.initSkillBall(this, this.paddle.node.position, "right");
-        
+
     },
     //处理技能小球
     destroySkillBall(ballNode) {
@@ -477,18 +480,18 @@ cc.Class({
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
     },
-    banner(isShow){
-        if(isShow == true){
+    banner(isShow) {
+        if (isShow == true) {
             let winSize = wx.getSystemInfoSync();
             let bannerHeight = 135;
             let bannerWidth = 360;
             // 创建 Banner 广告实例，提前初始化
-            if(this.bannerAd==null){
+            if (this.bannerAd == null) {
                 this.bannerAd = wx.createBannerAd({
                     adUnitId: 'adunit-256c6c4d51b28192',
                     style: {
-                        left: (winSize.windowWidth-bannerWidth)/2+0.1,
-                        top: winSize.windowHeight - bannerHeight-30,
+                        left: (winSize.windowWidth - bannerWidth) / 2 + 0.1,
+                        top: winSize.windowHeight - bannerHeight - 30,
                         width: bannerWidth,
                     }
                 })
@@ -497,140 +500,162 @@ cc.Class({
                 this.bannerAd.onError(err => {
                     console.log("广告拉取错误");
                     console.log(err);
-                  })
-            }else{
+                })
+            } else {
                 this.bannerAd.destroy();
                 this.bannerAd = null;
             }
-        }else{
-            if(this.bannerAd!=null){
+        } else {
+            if (this.bannerAd != null) {
                 this.bannerAd.destroy();
                 this.bannerAd = null;
             }
         }
     },
 
-    initVideoAd(){
+    initVideoAd() {
         //实例
-		// 创建激励视频广告实例，提前初始化
+        // 创建激励视频广告实例，提前初始化
         let videoAd = wx.createRewardedVideoAd({
             adUnitId: 'adunit-97d79c620e54fee7'
         })
-  
-		this.videoAd = videoAd;
+
+        this.videoAd = videoAd;
         // 用户触发广告后，显示激励视频广告
         this.videoAd.show().catch(() => {
-        // 失败重试
+            // 失败重试
             this.videoAd.load()
-            .then(() => this.videoAd.show())
-            .catch(err => {
-                console.log('激励视频 广告显示失败')
-            })
+                .then(() => this.videoAd.show())
+                .catch(err => {
+                    console.log('激励视频 广告显示失败')
+                })
         })
         //捕捉错误
-		this.videoAd.onError(err => {
-			console.log(err)
-		})
-
-		//关闭视频的回调函数
-		this.videoAd.onClose(res => {
-			// 用户点击了【关闭广告】按钮
-			// 小于 2.1.0 的基础库版本，res 是一个 undefined
-			console.log(res)
-			if (res && res.isEnded || res === undefined) {
-                this.gameModel.addLife();
-                this.gameView.updateLife(this.gameModel.life)
-                this.overPanel.updateGameModel(this.gameModel)
-                this.reBeginGame();
-                this.banner(true);
-			} else {
-                // 播放中途退出，不下发游戏奖励
-                this.banner(true);
-			}
-		})
+        this.videoAd.onError(err => {
+            console.log(err)
+        })
+        let tag = 1;
+        //关闭视频的回调函数
+        this.videoAd.onClose(res => {
+            // 用户点击了【关闭广告】按钮
+            // 小于 2.1.0 的基础库版本，res 是一个 undefined
+            if (tag <= 1) {
+                if (res && res.isEnded || res === undefined) {
+                    this.gameModel.addLife();
+                    this.gameView.updateLife(this.gameModel.life)
+                    this.overPanel.updateGameModel(this.gameModel)
+                    this.reBeginGame();
+                    this.banner(true);
+                    this.addLifeButton.active = false;
+                } else {
+                    // 播放中途退出，不下发游戏奖励
+                    this.banner(true);
+                }
+                tag++;
+            }
+        })
 
     },
-   // login(){
-    //     var isUserInfo = false;
-    //     var newUserInfo  = null;
-    //     wx.getSetting({
-    //         success (res) {
-    //           console.log(res.authSetting)
-    //           isUserInfo = res.authSetting['scope.userInfo'];
-    //           console.log(isUserInfo);
-    //           if(!isUserInfo){
-    //             let button = wx.createUserInfoButton({
-    //                 type: 'text',
-    //                 text: '获取用户信息',
-    //                 style: {
-    //                   left: 100,
-    //                   top: 525,
-    //                   width: 200,
-    //                   height: 40,
-    //                   lineHeight: 40,
-    //                   backgroundColor: '#ff0000',
-    //                   color: '#ffffff',
-    //                   textAlign: 'center',
-    //                   fontSize: 16,
-    //                   borderRadius: 4
-    //                 }
-    //               })
-    //               button.onTap((res) => {
-    //                 console.log(res)
-    //                 button.destroy();
-    //               })
-    //           }else{
-    //             wx.getUserInfo({
-    //                 success: function(res) {
-    //                   var userInfo = res.userInfo
-    //                   var nickName = userInfo.nickName
-    //                   var avatarUrl = userInfo.avatarUrl
-    //                   var gender = userInfo.gender //性别 0：未知、1：男、2：女
-    //                   var province = userInfo.province
-    //                   var city = userInfo.city
-    //                   var country = userInfo.country
-    //                   newUserInfo = userInfo
-    //                   console.log(userInfo);
-    //                   console.log(newUserInfo);
 
-    //                   //发起网络请求
-    //                     wx.request({
-    //                         url: 'https://api.weixin.qq.com/sns/jscode2session',
-    //                         data:{
-    //                             appid:AppId,
-    //                             secret:AppSecret,
-    //                             js_code:res.code,
-    //                             grant_type:'authorization_code'
-    //                         },
-    //                         header: {  
-    //                             "Content-Type": "application/x-www-form-urlencoded"
-    //                         }, 
-    //                         method: 'GET', 
-    //                         success: function(res){
-    //                             var pc = new WXBizDataCrypt(AppId, res.data.session_key)
-    //                             wx.getUserInfo({
-    //                             success: function (res) {
-    //                                 var data = pc.decryptData(res.encryptedData , res.iv)
-    //                                 console.log('解密后 data: ', data)
-    //                             }
-    //                             })
-    //                         },
-    //                         fail: function(res) {},
-    //                         complete: function(res) {}
-    //                     });
-    //                 }
-    //               })
-    //           }
-    //           // res.authSetting = {
-    //           //   "scope.userInfo": true,
-    //           //   "scope.userLocation": true
-    //           // }
-              
-    //         }
-            
-    //       })
 
-        
-    // },
+    socket(response) {
+        console.log(response + "1111111111111111111111111");
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 400)) {
+                var result = xhr.responseText;
+                let rankMap = JSON.parse(result)
+                console.log(rankMap);
+                // la.test1(rankMap);
+            }
+        }
+        xhr.open('POST', 'http://47.105.63.173:17594', true);
+        // var rankCondition = new Object();
+        // rankCondition.start = 0;
+        // rankCondition.count = 100;
+        // let json = JSON.stringify(rankCondition);
+        // let response1 = "AYUE"+"1001-" + json;
+        xhr.send(response);
+    },
+
+    playerLogin() {
+        wx.getUserInfo({
+            openIdList: ['selfOpenId'],
+            lang: 'zh_CN',
+            success: (res) => {
+                socketInfo(res.data[0]);
+            },
+
+            fail: (res) => {
+                console.error(res);
+            }
+        });
+
+        function socketInfo(user) {
+            console.log(user + "66666666666666666666666");
+            // console.log(playerInfo);
+            // playerInfo.nickName = user.nickName || user.nickname;
+            // playerInfo.avatarUrl = user.avatarUrl;
+            var rankCondition = new Object();
+            rankCondition.start = 0;
+            rankCondition.count = 100;
+            let json = JSON.stringify(rankCondition);
+            let response = "AYUE" + "1001-" + json;
+            console.log(response)
+            this.socket(response)
+        }
+    },
+
+
+    authorize() {
+        let exportJson = {};
+        let sysInfo = window.wx.getSystemInfoSync();
+        //获取微信界面大小
+        let width = sysInfo.screenWidth;
+        let height = sysInfo.screenHeight;
+        window.wx.getSetting({
+            success(res) {
+                console.log(res.authSetting);
+                if (res.authSetting["scope.userInfo"]) {
+                    console.log("用户已授权");
+                    window.wx.getUserInfo({
+                        success(res) {
+                            console.log(res);
+                            exportJson.userInfo = res.userInfo;
+                            //此时可进行登录操作
+                        }
+                    });
+                } else {
+                    console.log("用户未授权");
+                    let button = window.wx.createUserInfoButton({
+                        type: 'text',
+                        text: '',
+                        style: {
+                            left: 130,
+                            top: 470,
+                            width: 150,
+                            height: 50,
+                            backgroundColor: '#00000000',//最后两位为透明度
+                            color: '#ffffff',
+                            fontSize: 20,
+                            textAlign: "center",
+                            lineHeight: height,
+                        }
+                    });
+                    button.onTap((res) => {
+                        if (res.userInfo) {
+                            console.log("用户授权:", res);
+                            exportJson.userInfo = res.userInfo;
+                            //此时可进行登录操作
+                            button.destroy();
+                        } else {
+                            console.log("用户拒绝授权:", res);
+                        }
+                    });
+                }
+            }
+        })
+
+    },
 
 });

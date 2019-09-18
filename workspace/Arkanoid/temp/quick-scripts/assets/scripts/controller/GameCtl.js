@@ -8,7 +8,7 @@ cc._RF.push(module, 'a337308uxxJva7vh8G06q7Z', 'GameCtl', __filename);
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-06-19 16:04:52
+ * @Last Modified time: 2019-09-18 11:33:32
  */
 
 var GameModel = require('GameModel');
@@ -37,6 +37,8 @@ cc.Class({
         startBackGround: cc.Node,
         wxSubContextView: cc.Node,
         wxBackGround: cc.Node,
+        rankButton: cc.Node,
+        addLifeButton: cc.Node,
         allSkillBall: [],
         allBall: [],
         allSlump: [],
@@ -50,6 +52,8 @@ cc.Class({
         this.startGame();
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
+        this.authorize();
+        this.addLifeButton.active = false;
     },
     update: function update() {},
 
@@ -176,6 +180,7 @@ cc.Class({
                 this.gameView.updateLife(this.gameModel.life);
                 this.overPanel.updateGameModel(this.gameModel);
                 this.stopGame();
+                this.addLifeButton.active = true;
             }
             this.destroyBall(ballNode);
         } else {
@@ -558,109 +563,123 @@ cc.Class({
         this.videoAd.onError(function (err) {
             console.log(err);
         });
-
+        var tag = 1;
         //关闭视频的回调函数
         this.videoAd.onClose(function (res) {
             // 用户点击了【关闭广告】按钮
             // 小于 2.1.0 的基础库版本，res 是一个 undefined
-            console.log(res);
-            if (res && res.isEnded || res === undefined) {
-                _this.gameModel.addLife();
-                _this.gameView.updateLife(_this.gameModel.life);
-                _this.overPanel.updateGameModel(_this.gameModel);
-                _this.reBeginGame();
-                _this.banner(true);
-            } else {
-                // 播放中途退出，不下发游戏奖励
-                _this.banner(true);
+            if (tag <= 1) {
+                if (res && res.isEnded || res === undefined) {
+                    _this.gameModel.addLife();
+                    _this.gameView.updateLife(_this.gameModel.life);
+                    _this.overPanel.updateGameModel(_this.gameModel);
+                    _this.reBeginGame();
+                    _this.banner(true);
+                    _this.addLifeButton.active = false;
+                } else {
+                    // 播放中途退出，不下发游戏奖励
+                    _this.banner(true);
+                }
+                tag++;
+            }
+        });
+    },
+    socket: function socket(response) {
+        console.log(response + "1111111111111111111111111");
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 400) {
+                var result = xhr.responseText;
+                var rankMap = JSON.parse(result);
+                console.log(rankMap);
+                // la.test1(rankMap);
+            }
+        };
+        xhr.open('POST', 'http://47.105.63.173:17594', true);
+        // var rankCondition = new Object();
+        // rankCondition.start = 0;
+        // rankCondition.count = 100;
+        // let json = JSON.stringify(rankCondition);
+        // let response1 = "AYUE"+"1001-" + json;
+        xhr.send(response);
+    },
+    playerLogin: function playerLogin() {
+        wx.getUserInfo({
+            openIdList: ['selfOpenId'],
+            lang: 'zh_CN',
+            success: function success(res) {
+                socketInfo(res.data[0]);
+            },
+
+            fail: function fail(res) {
+                console.error(res);
+            }
+        });
+
+        function socketInfo(user) {
+            console.log(user + "66666666666666666666666");
+            // console.log(playerInfo);
+            // playerInfo.nickName = user.nickName || user.nickname;
+            // playerInfo.avatarUrl = user.avatarUrl;
+            var rankCondition = new Object();
+            rankCondition.start = 0;
+            rankCondition.count = 100;
+            var json = JSON.stringify(rankCondition);
+            var response = "AYUE" + "1001-" + json;
+            console.log(response);
+            this.socket(response);
+        }
+    },
+    authorize: function authorize() {
+        var exportJson = {};
+        var sysInfo = window.wx.getSystemInfoSync();
+        //获取微信界面大小
+        var width = sysInfo.screenWidth;
+        var height = sysInfo.screenHeight;
+        window.wx.getSetting({
+            success: function success(res) {
+                console.log(res.authSetting);
+                if (res.authSetting["scope.userInfo"]) {
+                    console.log("用户已授权");
+                    window.wx.getUserInfo({
+                        success: function success(res) {
+                            console.log(res);
+                            exportJson.userInfo = res.userInfo;
+                            //此时可进行登录操作
+                        }
+                    });
+                } else {
+                    console.log("用户未授权");
+                    var button = window.wx.createUserInfoButton({
+                        type: 'text',
+                        text: '',
+                        style: {
+                            left: 130,
+                            top: 470,
+                            width: 150,
+                            height: 50,
+                            backgroundColor: '#00000000', //最后两位为透明度
+                            color: '#ffffff',
+                            fontSize: 20,
+                            textAlign: "center",
+                            lineHeight: height
+                        }
+                    });
+                    button.onTap(function (res) {
+                        if (res.userInfo) {
+                            console.log("用户授权:", res);
+                            exportJson.userInfo = res.userInfo;
+                            //此时可进行登录操作
+                            button.destroy();
+                        } else {
+                            console.log("用户拒绝授权:", res);
+                        }
+                    });
+                }
             }
         });
     }
-}
-// login(){
-//     var isUserInfo = false;
-//     var newUserInfo  = null;
-//     wx.getSetting({
-//         success (res) {
-//           console.log(res.authSetting)
-//           isUserInfo = res.authSetting['scope.userInfo'];
-//           console.log(isUserInfo);
-//           if(!isUserInfo){
-//             let button = wx.createUserInfoButton({
-//                 type: 'text',
-//                 text: '获取用户信息',
-//                 style: {
-//                   left: 100,
-//                   top: 525,
-//                   width: 200,
-//                   height: 40,
-//                   lineHeight: 40,
-//                   backgroundColor: '#ff0000',
-//                   color: '#ffffff',
-//                   textAlign: 'center',
-//                   fontSize: 16,
-//                   borderRadius: 4
-//                 }
-//               })
-//               button.onTap((res) => {
-//                 console.log(res)
-//                 button.destroy();
-//               })
-//           }else{
-//             wx.getUserInfo({
-//                 success: function(res) {
-//                   var userInfo = res.userInfo
-//                   var nickName = userInfo.nickName
-//                   var avatarUrl = userInfo.avatarUrl
-//                   var gender = userInfo.gender //性别 0：未知、1：男、2：女
-//                   var province = userInfo.province
-//                   var city = userInfo.city
-//                   var country = userInfo.country
-//                   newUserInfo = userInfo
-//                   console.log(userInfo);
-//                   console.log(newUserInfo);
-
-//                   //发起网络请求
-//                     wx.request({
-//                         url: 'https://api.weixin.qq.com/sns/jscode2session',
-//                         data:{
-//                             appid:AppId,
-//                             secret:AppSecret,
-//                             js_code:res.code,
-//                             grant_type:'authorization_code'
-//                         },
-//                         header: {  
-//                             "Content-Type": "application/x-www-form-urlencoded"
-//                         }, 
-//                         method: 'GET', 
-//                         success: function(res){
-//                             var pc = new WXBizDataCrypt(AppId, res.data.session_key)
-//                             wx.getUserInfo({
-//                             success: function (res) {
-//                                 var data = pc.decryptData(res.encryptedData , res.iv)
-//                                 console.log('解密后 data: ', data)
-//                             }
-//                             })
-//                         },
-//                         fail: function(res) {},
-//                         complete: function(res) {}
-//                     });
-//                 }
-//               })
-//           }
-//           // res.authSetting = {
-//           //   "scope.userInfo": true,
-//           //   "scope.userLocation": true
-//           // }
-
-//         }
-
-//       })
-
-
-// },
-
-);
+});
 
 cc._RF.pop();
         }

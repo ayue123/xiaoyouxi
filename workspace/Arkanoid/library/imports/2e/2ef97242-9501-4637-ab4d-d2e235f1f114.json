@@ -51,8 +51,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.26266038717202767,
-      "y": 0.26266038717202767,
+      "x": 0.15946044921875,
+      "y": 0.15946044921875,
       "z": 1
     },
     "_quat": {
@@ -1075,6 +1075,12 @@
     },
     "wxBackGround": {
       "__id__": 78
+    },
+    "rankButton": {
+      "__id__": 49
+    },
+    "addLifeButton": {
+      "__id__": 68
     },
     "allSkillBall": [],
     "allBall": [],
@@ -2984,8 +2990,8 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_string": "ADDLIFE",
-    "_N$string": "ADDLIFE",
+    "_string": "看广告立即复活",
+    "_N$string": "看广告立即复活",
     "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": false,
