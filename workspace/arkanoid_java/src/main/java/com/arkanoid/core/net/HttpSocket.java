@@ -4,14 +4,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ExecutorService;
-
-import javax.servlet.http.HttpServlet;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +19,8 @@ import com.arkanoid.core.cmd.CmdManager;
  * @author ayue
  * @version 2019年4月6日 下午5:09:21
  */
-@SuppressWarnings("serial")
-public class HttpSocket extends HttpServlet {
-        Logger logger = Logger.getLogger(getClass());
+public class HttpSocket {
+        Logger logger = Logger.getLogger(this.getClass());
         @Autowired
         private ExecutorService eventExecutor;
         @Autowired
@@ -33,7 +29,7 @@ public class HttpSocket extends HttpServlet {
         public void start() {
                 ServerSocket serverSocket = null;
                 try {
-                        serverSocket = new ServerSocket(8080);
+                        serverSocket = new ServerSocket(17594);
                         while (true) {
                                 Socket socket = serverSocket.accept();
                                 eventExecutor.execute(new ExeSocketTask(socket, this, cmdManager));
@@ -63,6 +59,7 @@ public class HttpSocket extends HttpServlet {
 
         private void exeSocket(Socket socket, CmdManager cmdManager) {
                 try {
+                        InetAddress insocket = socket.getInetAddress();
                         InputStream is = socket.getInputStream();
                         OutputStream os = socket.getOutputStream();
                         InputStreamReader isr = new InputStreamReader(is);
@@ -80,20 +77,22 @@ public class HttpSocket extends HttpServlet {
                                 return;
                         }
 
-                        Map<String, String> headers = new HashMap<String, String>();
-
                         String[] splits = builder.toString().split("\r\n");
-                        int index = 1;
 
-                        // 处理header
-                        while (splits[index].length() > 0) {
-                                String[] keyVal = splits[index].split(":");
-                                headers.put(keyVal[0], keyVal[1].trim());
-                                index++;
+                        String requestProtocal = splits[splits.length - 1];
+                        logger.info(requestProtocal);
+                        String responseProtocol = "";
+                        if (requestProtocal.contains("Accept-Encoding")) {
+                                responseProtocol = "refresh";
+                        } else {
+                                String head = requestProtocal.substring(0, 4);
+                                if (!head.equals("AYUE")) {
+                                        logger.error("协议头错误,IP:" + insocket + ";内容：" + requestProtocal);
+                                        return;
+                                }
+                                requestProtocal = requestProtocal.substring(4, requestProtocal.length());
+                                responseProtocol = cmdManager.calcul(requestProtocal);
                         }
-                        String requestProtocal = splits[index + 1];
-                        System.out.print(requestProtocal);
-                        String responseProtocol = cmdManager.calcul(requestProtocal);
                         os.write("HTTP/1.1 200 OK\r\n".getBytes());
                         os.write("Content-Type:text/html;charset=utf-8\r\n".getBytes());
                         os.write("Server:gybs\r\n".getBytes());

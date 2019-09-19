@@ -7,7 +7,11 @@
 				<entry key="1001">
 					<bean class="com.arkanoid.rank.protocol.Request1001"/>
 				</entry>
+				<entry key="1002">
+					<bean class="com.arkanoid.rank.protocol.Request1002"/>
+				</entry>
 			</map>
+			
 		</constructor-arg>
 	</bean>
 	<bean id="protocolResponseMap" class="java.util.HashMap">
@@ -15,6 +19,9 @@
 			<map>
 				<entry key="1001">
 					<bean class="com.arkanoid.rank.protocol.Response1001"/>
+				</entry>
+				<entry key="1002">
+					<bean class="com.arkanoid.rank.protocol.Response1002"/>
 				</entry>
 			</map>
 		</constructor-arg>

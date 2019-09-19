@@ -21,6 +21,7 @@ public class GetAllPlayerRankHanler1001 extends AbstractCmdHandler {
                 int start = request1001.getStart();
                 int count = request1001.getCount();
                 Map<String, Integer> map = rankProcessor.getPlayerScoreRank(start, count);
+                response1001.setProtocal(1001);
                 response1001.setMap(map);
         }
 }

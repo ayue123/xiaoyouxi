@@ -1,0 +1,289 @@
+[INFO ][10:10:04,535][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:10:04,637][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 10:10:04 CST 2019]; root of context hierarchy
+[INFO ][10:10:04,668][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:10:04,690][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:10:04,699][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:10:04,759][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:10:04,769][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:10:04,777][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:10:04,851][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:10:04,851][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:10:04,851][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:10:05,052][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][10:10:09,989][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:23:29,980][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:23:30,076][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 10:23:30 CST 2019]; root of context hierarchy
+[INFO ][10:23:30,106][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:23:30,128][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:23:30,138][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:23:30,196][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:23:30,205][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:23:30,211][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:23:30,276][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:23:30,276][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:23:30,276][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:23:30,484][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[ERROR][10:23:49,207][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:86)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:24:03,583][eventExecutor-2-thread-3] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-3]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:86)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:24:04,129][eventExecutor-2-thread-5] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-5]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:86)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][10:25:16,358][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:25:16,451][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 10:25:16 CST 2019]; root of context hierarchy
+[INFO ][10:25:16,483][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:25:16,505][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:25:16,513][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:25:16,575][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:25:16,628][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:25:16,634][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:25:16,702][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:25:16,703][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:25:16,703][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:25:16,907][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[ERROR][10:25:19,672][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:86)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:25:49,674][eventExecutor-2-thread-3] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-3]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:86)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][10:25:54,912][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:25:55,011][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 10:25:55 CST 2019]; root of context hierarchy
+[INFO ][10:25:55,044][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:25:55,069][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:25:55,080][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:25:55,139][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:25:55,145][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:25:55,151][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:25:55,211][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:25:55,211][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:25:55,211][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:25:55,420][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[ERROR][10:25:56,422][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:89)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][10:30:03,320][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:30:11,572][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:30:12,082][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:30:12,598][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:31:03,446][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:31:20,453][eventExecutor-2-thread-8] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-8]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:89)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:31:21,483][eventExecutor-2-thread-10] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-10]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:89)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:31:27,806][eventExecutor-2-thread-2] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-2]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:89)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][10:32:58,550][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:33:07,122][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:33:37,512][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:33:37,610][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 10:33:37 CST 2019]; root of context hierarchy
+[INFO ][10:33:37,641][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:33:37,662][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:33:37,671][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:33:37,729][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:33:37,736][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:33:37,742][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:33:37,807][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:33:37,808][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:33:37,808][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:33:38,011][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][10:33:39,360][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:34:31,555][eventExecutor-2-thread-2] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-2]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:85)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][10:34:50,157][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:55,433][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:35:47,887][eventExecutor-2-thread-6] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-6]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:85)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][10:36:16,030][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:37:03,576][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:37:03,668][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 10:37:03 CST 2019]; root of context hierarchy
+[INFO ][10:37:03,699][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:37:03,721][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:37:03,729][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:37:03,786][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:37:03,794][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:37:03,803][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:37:03,874][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:37:03,875][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:37:03,875][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:37:04,083][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][10:37:08,920][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:38:28,753][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:38:28,864][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@1060b431: startup date [Tue Sep 17 10:38:28 CST 2019]; root of context hierarchy
+[INFO ][10:38:28,902][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:38:28,925][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:38:28,934][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:38:29,000][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:38:29,009][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:38:29,016][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:38:29,093][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:38:29,094][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:38:29,094][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:38:29,396][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[ERROR][10:40:44,602][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:85)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:41:42,399][eventExecutor-2-thread-4] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-4]-报错
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:87)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:41:43,175][eventExecutor-2-thread-5] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-5]-报错
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:87)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:42:20,807][eventExecutor-2-thread-8] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-8]-报错
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:87)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][10:43:02,439][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:43:02,534][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 10:43:02 CST 2019]; root of context hierarchy
+[INFO ][10:43:02,565][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:43:02,586][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:43:02,594][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:43:02,651][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:43:02,658][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:43:02,664][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:43:02,729][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:43:02,730][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:43:02,730][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:43:02,940][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[ERROR][10:43:19,023][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:85)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:43:20,905][eventExecutor-2-thread-3] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-3]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:85)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][10:43:27,385][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:43:27,511][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@1060b431: startup date [Tue Sep 17 10:43:27 CST 2019]; root of context hierarchy
+[INFO ][10:43:27,548][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:43:27,574][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:43:27,584][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:43:27,650][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:43:27,660][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:43:27,669][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:43:27,752][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:43:27,752][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:43:27,753][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:43:28,038][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][10:44:54,744][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:44:54,842][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 10:44:54 CST 2019]; root of context hierarchy
+[INFO ][10:44:54,872][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:44:54,896][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:44:54,904][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:44:54,963][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:44:54,969][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:44:54,979][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:44:55,046][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:44:55,047][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:44:55,047][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:44:55,253][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][10:45:00,120][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:45:01,399][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:45:02,066][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:45:39,310][eventExecutor-2-thread-4] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-4]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:85)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR][10:49:26,413][eventExecutor-2-thread-6] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-6]-报错
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:85)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][10:49:40,685][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}

@@ -1,0 +1,12 @@
+[INFO ][15:01:52,186][main] (com.arkanoid.Launcher) - 服务器开始启动
+[INFO ][15:01:52,287][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Sat Sep 14 15:01:52 CST 2019]; root of context hierarchy
+[INFO ][15:01:52,318][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][15:01:52,339][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][15:01:52,347][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][15:01:52,405][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][15:01:52,414][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][15:01:52,421][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][15:01:52,496][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][15:01:52,496][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][15:01:52,496][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][15:01:52,700][main] (com.arkanoid.Launcher) - 服务器启动成功

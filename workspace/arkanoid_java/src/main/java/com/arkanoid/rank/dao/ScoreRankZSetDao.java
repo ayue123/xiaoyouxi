@@ -31,9 +31,8 @@ public class ScoreRankZSetDao extends AbstractZSetCDao<String> {
                 this.zadd(this.getKey(), playerOpenId, score);
         }
 
-        @SuppressWarnings("unused")
         public int getPlayerScore(String playerOpenId) {
-                Double score = this.getScore(this.getKey(), playerOpenId).doubleValue();
+                Double score = this.getScore(this.getKey(), playerOpenId);
                 if (score == null) {
                         return 0;
                 } else {

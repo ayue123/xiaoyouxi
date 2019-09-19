@@ -8,7 +8,7 @@ cc._RF.push(module, 'e4735UW3lFPMoW0rK22obsG', 'GameView');
  * @Author: ayue 
  * @Date: 2019-03-30 20:19:11 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-06-03 17:32:51
+ * @Last Modified time: 2019-09-18 11:35:28
  */
 cc.Class({
     extends: cc.Component,
@@ -24,10 +24,10 @@ cc.Class({
         });
         var id = 'bLQD2KKZQw-o9WQRPo7pYQ'; // 通过 MP 系统审核的图片编号
         var url = 'https://mmocgame.qpic.cn/wechatgame/LH7dMAXmj7xXGYPicJBPbHgVtibIlZrgJCTq0QLF5Kmphq1s0x3eMtONquViaQR64YO/0'; // 通过 MP 系统审核的图片地址
-        wx.shareAppMessage({
-            imageUrlId: id,
-            imageUrl: url
-        });
+        // wx.shareAppMessage({
+        // imageUrlId: id,
+        // imageUrl: url
+        // })
 
         wx.onShareAppMessage(function () {
             return {

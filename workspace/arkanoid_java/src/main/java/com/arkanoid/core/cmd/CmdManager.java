@@ -31,17 +31,12 @@ public class CmdManager {
                         logger.error(cmdId + "协议没有处理的handler");
                         return null;
                 }
-                try {
-                        logger.debug("进入" + cmdId + "协议体");
-                        Request request = JSON.parseObject(jsonObject, protocolRequestMap.get(cmdId).getClass());
-                        Response response = protocolResponseMap.get(cmdId);
-                        iCmdHandler.execute(request, response);
-                        // 返回消息组装
-                        String responseProtocol = JSON.toJSONString(response, SerializerFeature.SortField);
-                        return responseProtocol;
-                } catch (Exception e) {
-                        logger.info("协议-" + cmdId + "-报错" + e);
-                }
-                return null;
+                logger.debug("进入" + cmdId + "协议体");
+                Request request = JSON.parseObject(jsonObject, protocolRequestMap.get(cmdId).getClass());
+                Response response = protocolResponseMap.get(cmdId + "");
+                iCmdHandler.execute(request, response);
+                // 返回消息组装
+                String responseProtocol = JSON.toJSONString(response, SerializerFeature.SortField);
+                return responseProtocol;
         }
 }

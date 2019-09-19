@@ -12,7 +12,9 @@
 		<param name="File" value="logs/game.log" />
 		<param name="Append" value="true" />
 		<param name="ImmediateFlush" value="true" />
-		<layout class="net.logstash.log4j.JSONEventLayoutV1">
+		<param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%-5p][%-9d{HH:mm:ss,SSS}][%t] (%c{3}) - %m%n" />
 		</layout>
 	</appender>
 

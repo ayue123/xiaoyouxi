@@ -2,13 +2,13 @@
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-09-18 11:33:32
+ * @Last Modified time: 2019-09-19 17:27:28
  */
 
 const GameModel = require('GameModel');
 var Ball = require("Ball");
 const Slump = require('Slump');
-cc.Class({
+var GameCtl = cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -97,6 +97,7 @@ cc.Class({
         this.destroyAllBall();
         this.reInit(levelPosition);
         this.startBackGround.active = false;
+        this.addLifeButton.active = false;
     },
     pauseGame() {
         this.physicsManager.enabled = false;
@@ -120,6 +121,7 @@ cc.Class({
         this.overPanel.showReBegin(this.gameModel.score, this.gameModel.life, this.gameModel.level);
         this.startBackGround.active = true;
         this.setUserScorePassage(this.gameModel.score);
+        this.addLifeButton.active = false;
     },
     //小球撞击砖块处理
     onBallContactBrick(ballNode, brickNode) {
@@ -398,51 +400,20 @@ cc.Class({
 
     //排行榜按钮
     onBtnRank() {
-        this.initUserInfo()
+        this.allRank(this);
+        // this.initUserInfo()
+    },
+    //排行榜返回按钮
+    onBtnBack() {
+        this.wxSubContextView.active = false;
+        this.wxBackGround.active = false;
     },
     //初始化玩家排行榜
-    initUserInfo(nickName, avatarUrl) {
-        //权限按钮
-        // if(this.nickName.string == "nickName"){
-        //     let systemInfo = wx.getSystemInfoSync();
-        //     let width = systemInfo.windowWidth;
-        //     let height = systemInfo.windowHeight;
-        // const button = wx.createUserInfoButton({
-        //     type: 'text',
-        //     text: '',
-        //     style: {
-        //         left: 0,
-        //         top: 0,
-        //         width: width,
-        //         height: height,
-        //         lineHeight: 40,
-        //         backgroundColor: '#00000000',
-        //         color: '#00000000',
-        //         textAlign: 'center',
-        //         fontSize: 10,
-        //         borderRadius: 4
-        //     }
-        // })
-        //
-        // button.onTap((res) => {
-        //     let userInfo = res.userInfo;
-        //     this.nickName.string = userInfo.nickName;
-        //     cc.loader.load({url: userInfo.avatarUrl, type: 'png'}, (err, texture) => {
-        //         if (err) {
-        //             console.error(err);
-        //             return;
-        //         }
-        //         this.avatar.spriteFrame = new cc.SpriteFrame(texture);
-        //     });
-        //     button.hide();
-        //     button.destroy();
-        //
-        // })
-        // }
+    initUserInfo() {
         this.wxSubContextView.active = true;
         this.wxBackGround.active = true;
         let a = wx.getOpenDataContext().postMessage({
-            message: "User info get success."
+            type: 'friendRank',
         });
     },
     //上传玩家得分
@@ -472,14 +443,12 @@ cc.Class({
             }
         } catch (e) {
             console.log("获取数据存储失败")
-        }
+        };
+        this.saveScore(score, this);
     },
 
-    //排行榜返回按钮
-    onBtnBack() {
-        this.wxSubContextView.active = false;
-        this.wxBackGround.active = false;
-    },
+    
+    //banner广告
     banner(isShow) {
         if (isShow == true) {
             let winSize = wx.getSystemInfoSync();
@@ -512,7 +481,7 @@ cc.Class({
             }
         }
     },
-
+    //视频广告
     initVideoAd() {
         //实例
         // 创建激励视频广告实例，提前初始化
@@ -534,6 +503,7 @@ cc.Class({
         this.videoAd.onError(err => {
             console.log(err)
         })
+        //该标识符主要用于处理res缓存了之前广告的结果导致多次奖励分发
         let tag = 1;
         //关闭视频的回调函数
         this.videoAd.onClose(res => {
@@ -554,64 +524,77 @@ cc.Class({
                 tag++;
             }
         })
-
     },
 
-
-    socket(response) {
-        console.log(response + "1111111111111111111111111");
+    //网络接口
+    socket(response, gameCtl) {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 400)) {
                 var result = xhr.responseText;
-                let rankMap = JSON.parse(result)
-                console.log(rankMap);
-                // la.test1(rankMap);
+                if (result == 'refresh') {
+                    GC.allRank(gameCtl);
+                } else {
+                    let resultObject = JSON.parse(result)
+                    if (resultObject.protocal == '1001') {
+                        GC.initPlayerRank(resultObject.map, gameCtl);
+                    }
+                }
             }
         }
         xhr.open('POST', 'http://47.105.63.173:17594', true);
-        // var rankCondition = new Object();
-        // rankCondition.start = 0;
-        // rankCondition.count = 100;
-        // let json = JSON.stringify(rankCondition);
-        // let response1 = "AYUE"+"1001-" + json;
+        // xhr.open('POST', 'http://192.168.1.48:17594', true);
         xhr.send(response);
     },
-
-    playerLogin() {
-        wx.getUserInfo({
-            openIdList: ['selfOpenId'],
-            lang: 'zh_CN',
-            success: (res) => {
-                socketInfo(res.data[0]);
-            },
-
-            fail: (res) => {
-                console.error(res);
+    //保存玩家分数
+    saveScore(score, gameCtl) {
+        window.wx.getSetting({
+            success(res) {
+                if (res.authSetting["scope.userInfo"]) {
+                    window.wx.getUserInfo({
+                        success(res) {
+                            let userInfo = res.userInfo;
+                            userInfo.score = score;
+                            save(userInfo, gameCtl);
+                        }
+                    });
+                }
             }
-        });
+        })
 
-        function socketInfo(user) {
-            console.log(user + "66666666666666666666666");
-            // console.log(playerInfo);
-            // playerInfo.nickName = user.nickName || user.nickname;
-            // playerInfo.avatarUrl = user.avatarUrl;
+        function save(userInfo, gameCtl) {
             var rankCondition = new Object();
-            rankCondition.start = 0;
-            rankCondition.count = 100;
+            rankCondition.playerNickName = userInfo.nickName + "*" + userInfo.avatarUrl;
+            rankCondition.score = userInfo.score;
             let json = JSON.stringify(rankCondition);
-            let response = "AYUE" + "1001-" + json;
-            console.log(response)
-            this.socket(response)
+            let response = "AYUE" + "1002-" + json;
+            GC.socket(response, gameCtl)
         }
     },
 
 
+    //获取全服排行榜
+    allRank(gameCtl) {
+        var rankCondition = new Object();
+        rankCondition.start = 0;
+        rankCondition.count = 100;
+        let json = JSON.stringify(rankCondition);
+        let response = "AYUE" + "1001-" + json;
+        this.socket(response, gameCtl)
+    },
+
+    initPlayerRank(rankMap, gameCtl) {
+        gameCtl.wxSubContextView.active = true;
+        gameCtl.wxBackGround.active = true;
+        let a = wx.getOpenDataContext().postMessage({
+            type: 'playerRank',
+            message: JSON.stringify(rankMap),
+        });
+    },
+    //授权
     authorize() {
-        let exportJson = {};
         let sysInfo = window.wx.getSystemInfoSync();
         //获取微信界面大小
-        let width = sysInfo.screenWidth;
         let height = sysInfo.screenHeight;
         window.wx.getSetting({
             success(res) {
@@ -621,7 +604,6 @@ cc.Class({
                     window.wx.getUserInfo({
                         success(res) {
                             console.log(res);
-                            exportJson.userInfo = res.userInfo;
                             //此时可进行登录操作
                         }
                     });
@@ -631,11 +613,12 @@ cc.Class({
                         type: 'text',
                         text: '',
                         style: {
-                            left: 130,
-                            top: 470,
-                            width: 150,
-                            height: 50,
+                            left: 30,
+                            top: 370,
+                            width: 350,
+                            height: 200,
                             backgroundColor: '#00000000',//最后两位为透明度
+                            // backgroundColor: '#FC0707',
                             color: '#ffffff',
                             fontSize: 20,
                             textAlign: "center",
@@ -645,7 +628,6 @@ cc.Class({
                     button.onTap((res) => {
                         if (res.userInfo) {
                             console.log("用户授权:", res);
-                            exportJson.userInfo = res.userInfo;
                             //此时可进行登录操作
                             button.destroy();
                         } else {
@@ -659,3 +641,6 @@ cc.Class({
     },
 
 });
+
+//对象初始化
+var GC = new GameCtl();

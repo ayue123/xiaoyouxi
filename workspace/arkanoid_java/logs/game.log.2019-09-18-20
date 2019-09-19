@@ -1,0 +1,67 @@
+[INFO ][20:02:07,402][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][20:02:15,581][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][20:02:17,442][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][20:02:29,048][eventExecutor-2-thread-1] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[ERROR][20:02:33,966][eventExecutor-2-thread-2] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:02:34,886][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:02:41,828][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:03:28,331][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":1}
+[ERROR][20:04:02,480][eventExecutor-2-thread-6] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:04:13,830][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":10}
+[ERROR][20:05:35,339][eventExecutor-2-thread-8] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[ERROR][20:07:23,453][eventExecutor-2-thread-1] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[ERROR][20:07:29,794][eventExecutor-2-thread-2] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:08:46,929][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[ERROR][20:08:54,066][eventExecutor-2-thread-4] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[ERROR][20:08:55,998][eventExecutor-2-thread-5] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:09:00,876][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:09:07,044][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:09:43,386][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:11:22,180][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][20:11:37,709][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[ERROR][20:11:39,309][eventExecutor-2-thread-3] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[ERROR][20:11:49,229][eventExecutor-2-thread-4] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:11:50,097][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:11:52,898][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][20:11:56,723][eventExecutor-2-thread-7] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:12:00,165][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:12:10,811][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:12:22,744][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:15:58,958][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][20:16:06,564][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][20:16:08,185][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:17:42,299][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][20:17:49,148][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:17:58,872][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][20:28:04,523][eventExecutor-2-thread-1] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:28:15,328][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][20:28:18,560][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:30:12,289][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][20:30:28,052][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][20:32:06,405][eventExecutor-2-thread-6] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:32:20,722][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:32:25,306][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:34:50,794][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][20:35:21,029][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:38:07,464][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[ERROR][20:38:10,729][eventExecutor-2-thread-4] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:38:17,480][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:39:19,908][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:41:32,948][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:41:38,069][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][20:41:47,925][eventExecutor-2-thread-1] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:41:52,800][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:41:55,334][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:41:57,085][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:41:58,606][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:44:14,394][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:44:16,975][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][20:44:18,924][eventExecutor-2-thread-8] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[ERROR][20:44:20,532][eventExecutor-2-thread-1] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][20:44:21,262][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:44:22,781][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:49:02,471][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:49:12,672][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:52:10,967][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:52:13,593][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][20:52:22,724][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}

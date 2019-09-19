@@ -1,0 +1,99 @@
+[INFO ][10:02:33,360][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:02:33,517][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Thu Sep 19 10:02:33 CST 2019]; root of context hierarchy
+[INFO ][10:02:33,550][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:02:33,572][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:02:33,583][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:02:33,685][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:02:33,692][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:02:33,698][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:02:33,771][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:02:33,772][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:02:33,772][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:02:34,071][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][10:04:20,549][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][10:04:38,086][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][10:07:47,292][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][10:07:55,551][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][10:07:57,145][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:12:47,446][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][10:13:01,015][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:17:41,917][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][10:17:49,708][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:18:42,594][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:18:55,341][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":3}
+[INFO ][10:19:02,889][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":6}
+[INFO ][10:19:17,799][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":12}
+[INFO ][10:19:19,948][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:23:19,522][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:23:27,727][eventExecutor-2-thread-8] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:23:30,075][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:24:05,891][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:24:08,152][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:24:09,631][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:24:11,480][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:24:14,375][eventExecutor-2-thread-6] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[ERROR][10:24:16,755][eventExecutor-2-thread-7] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:24:17,736][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:24:19,264][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:24:21,574][eventExecutor-2-thread-2] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:24:23,184][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:24:34,047][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:24:39,823][eventExecutor-2-thread-5] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:24:41,199][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:24:42,753][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:24:44,159][eventExecutor-2-thread-8] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:24:56,616][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:25:00,785][eventExecutor-2-thread-2] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[ERROR][10:25:06,237][eventExecutor-2-thread-3] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:25:07,320][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:25:15,806][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:25:18,000][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:25:20,102][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:25:22,525][eventExecutor-2-thread-8] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:33:22,844][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][10:33:22,955][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Thu Sep 19 10:33:22 CST 2019]; root of context hierarchy
+[INFO ][10:33:22,990][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][10:33:23,013][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][10:33:23,024][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][10:33:23,090][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][10:33:23,099][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][10:33:23,107][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][10:33:23,181][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][10:33:23,182][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][10:33:23,182][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][10:33:23,412][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][10:33:45,767][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][10:34:15,532][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][10:34:19,700][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:25,155][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:27,403][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:29,138][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:30,419][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:31,717][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:33,348][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:35,002][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:36,835][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:39,858][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:40,196][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:40,783][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:41,106][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:41,771][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:34:42,333][eventExecutor-2-thread-1] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:34:42,548][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:44,515][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:45,701][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:46,892][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:49,371][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:34:51,331][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:35:03,701][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:35:04,883][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:35:06,018][eventExecutor-2-thread-2] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:37:20,635][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:37:22,449][eventExecutor-2-thread-4] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[ERROR][10:37:23,546][eventExecutor-2-thread-5] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:37:24,291][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:37:27,220][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][10:37:29,041][eventExecutor-2-thread-8] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][10:37:30,123][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][10:40:52,779][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[ERROR][10:41:34,790][eventExecutor-2-thread-3] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate

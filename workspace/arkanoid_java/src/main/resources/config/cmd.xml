@@ -12,6 +12,9 @@
 				<entry key="1001">
 					<bean class="com.arkanoid.rank.cmd.GetAllPlayerRankHanler1001" parent="abstractCmdHandler" />
 				</entry>
+				<entry key="1002">
+					<bean class="com.arkanoid.rank.cmd.SavePlayerInfo1002" parent="abstractCmdHandler" />
+				</entry>
 			</map>
 		</constructor-arg>
 	</bean>

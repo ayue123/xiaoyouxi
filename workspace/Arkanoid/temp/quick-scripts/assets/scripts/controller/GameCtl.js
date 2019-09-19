@@ -8,13 +8,13 @@ cc._RF.push(module, 'a337308uxxJva7vh8G06q7Z', 'GameCtl', __filename);
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-09-18 11:33:32
+ * @Last Modified time: 2019-09-19 17:27:28
  */
 
 var GameModel = require('GameModel');
 var Ball = require("Ball");
 var Slump = require('Slump');
-cc.Class({
+var GameCtl = cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -104,6 +104,7 @@ cc.Class({
         this.destroyAllBall();
         this.reInit(levelPosition);
         this.startBackGround.active = false;
+        this.addLifeButton.active = false;
     },
     pauseGame: function pauseGame() {
         this.physicsManager.enabled = false;
@@ -128,6 +129,7 @@ cc.Class({
         this.overPanel.showReBegin(this.gameModel.score, this.gameModel.life, this.gameModel.level);
         this.startBackGround.active = true;
         this.setUserScorePassage(this.gameModel.score);
+        this.addLifeButton.active = false;
     },
 
     //小球撞击砖块处理
@@ -423,52 +425,22 @@ cc.Class({
 
     //排行榜按钮
     onBtnRank: function onBtnRank() {
-        this.initUserInfo();
+        this.allRank(this);
+        // this.initUserInfo()
+    },
+
+    //排行榜返回按钮
+    onBtnBack: function onBtnBack() {
+        this.wxSubContextView.active = false;
+        this.wxBackGround.active = false;
     },
 
     //初始化玩家排行榜
-    initUserInfo: function initUserInfo(nickName, avatarUrl) {
-        //权限按钮
-        // if(this.nickName.string == "nickName"){
-        //     let systemInfo = wx.getSystemInfoSync();
-        //     let width = systemInfo.windowWidth;
-        //     let height = systemInfo.windowHeight;
-        // const button = wx.createUserInfoButton({
-        //     type: 'text',
-        //     text: '',
-        //     style: {
-        //         left: 0,
-        //         top: 0,
-        //         width: width,
-        //         height: height,
-        //         lineHeight: 40,
-        //         backgroundColor: '#00000000',
-        //         color: '#00000000',
-        //         textAlign: 'center',
-        //         fontSize: 10,
-        //         borderRadius: 4
-        //     }
-        // })
-        //
-        // button.onTap((res) => {
-        //     let userInfo = res.userInfo;
-        //     this.nickName.string = userInfo.nickName;
-        //     cc.loader.load({url: userInfo.avatarUrl, type: 'png'}, (err, texture) => {
-        //         if (err) {
-        //             console.error(err);
-        //             return;
-        //         }
-        //         this.avatar.spriteFrame = new cc.SpriteFrame(texture);
-        //     });
-        //     button.hide();
-        //     button.destroy();
-        //
-        // })
-        // }
+    initUserInfo: function initUserInfo() {
         this.wxSubContextView.active = true;
         this.wxBackGround.active = true;
         var a = wx.getOpenDataContext().postMessage({
-            message: "User info get success."
+            type: 'friendRank'
         });
     },
 
@@ -499,15 +471,12 @@ cc.Class({
             }
         } catch (e) {
             console.log("获取数据存储失败");
-        }
+        };
+        this.saveScore(score, this);
     },
 
 
-    //排行榜返回按钮
-    onBtnBack: function onBtnBack() {
-        this.wxSubContextView.active = false;
-        this.wxBackGround.active = false;
-    },
+    //banner广告
     banner: function banner(isShow) {
         if (isShow == true) {
             var winSize = wx.getSystemInfoSync();
@@ -540,6 +509,8 @@ cc.Class({
             }
         }
     },
+
+    //视频广告
     initVideoAd: function initVideoAd() {
         var _this = this;
 
@@ -563,6 +534,7 @@ cc.Class({
         this.videoAd.onError(function (err) {
             console.log(err);
         });
+        //该标识符主要用于处理res缓存了之前广告的结果导致多次奖励分发
         var tag = 1;
         //关闭视频的回调函数
         this.videoAd.onClose(function (res) {
@@ -584,57 +556,78 @@ cc.Class({
             }
         });
     },
-    socket: function socket(response) {
-        console.log(response + "1111111111111111111111111");
+
+
+    //网络接口
+    socket: function socket(response, gameCtl) {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 400) {
                 var result = xhr.responseText;
-                var rankMap = JSON.parse(result);
-                console.log(rankMap);
-                // la.test1(rankMap);
+                if (result == 'refresh') {
+                    GC.allRank(gameCtl);
+                } else {
+                    var resultObject = JSON.parse(result);
+                    if (resultObject.protocal == '1001') {
+                        GC.initPlayerRank(resultObject.map, gameCtl);
+                    }
+                }
             }
         };
         xhr.open('POST', 'http://47.105.63.173:17594', true);
-        // var rankCondition = new Object();
-        // rankCondition.start = 0;
-        // rankCondition.count = 100;
-        // let json = JSON.stringify(rankCondition);
-        // let response1 = "AYUE"+"1001-" + json;
+        // xhr.open('POST', 'http://192.168.1.48:17594', true);
         xhr.send(response);
     },
-    playerLogin: function playerLogin() {
-        wx.getUserInfo({
-            openIdList: ['selfOpenId'],
-            lang: 'zh_CN',
-            success: function success(res) {
-                socketInfo(res.data[0]);
-            },
 
-            fail: function fail(res) {
-                console.error(res);
+    //保存玩家分数
+    saveScore: function saveScore(score, gameCtl) {
+        window.wx.getSetting({
+            success: function success(res) {
+                if (res.authSetting["scope.userInfo"]) {
+                    window.wx.getUserInfo({
+                        success: function success(res) {
+                            var userInfo = res.userInfo;
+                            userInfo.score = score;
+                            save(userInfo, gameCtl);
+                        }
+                    });
+                }
             }
         });
 
-        function socketInfo(user) {
-            console.log(user + "66666666666666666666666");
-            // console.log(playerInfo);
-            // playerInfo.nickName = user.nickName || user.nickname;
-            // playerInfo.avatarUrl = user.avatarUrl;
+        function save(userInfo, gameCtl) {
             var rankCondition = new Object();
-            rankCondition.start = 0;
-            rankCondition.count = 100;
+            rankCondition.playerNickName = userInfo.nickName + "*" + userInfo.avatarUrl;
+            rankCondition.score = userInfo.score;
             var json = JSON.stringify(rankCondition);
-            var response = "AYUE" + "1001-" + json;
-            console.log(response);
-            this.socket(response);
+            var response = "AYUE" + "1002-" + json;
+            GC.socket(response, gameCtl);
         }
     },
+
+
+    //获取全服排行榜
+    allRank: function allRank(gameCtl) {
+        var rankCondition = new Object();
+        rankCondition.start = 0;
+        rankCondition.count = 100;
+        var json = JSON.stringify(rankCondition);
+        var response = "AYUE" + "1001-" + json;
+        this.socket(response, gameCtl);
+    },
+    initPlayerRank: function initPlayerRank(rankMap, gameCtl) {
+        gameCtl.wxSubContextView.active = true;
+        gameCtl.wxBackGround.active = true;
+        var a = wx.getOpenDataContext().postMessage({
+            type: 'playerRank',
+            message: JSON.stringify(rankMap)
+        });
+    },
+
+    //授权
     authorize: function authorize() {
-        var exportJson = {};
         var sysInfo = window.wx.getSystemInfoSync();
         //获取微信界面大小
-        var width = sysInfo.screenWidth;
         var height = sysInfo.screenHeight;
         window.wx.getSetting({
             success: function success(res) {
@@ -644,7 +637,6 @@ cc.Class({
                     window.wx.getUserInfo({
                         success: function success(res) {
                             console.log(res);
-                            exportJson.userInfo = res.userInfo;
                             //此时可进行登录操作
                         }
                     });
@@ -654,11 +646,12 @@ cc.Class({
                         type: 'text',
                         text: '',
                         style: {
-                            left: 130,
-                            top: 470,
-                            width: 150,
-                            height: 50,
+                            left: 30,
+                            top: 370,
+                            width: 350,
+                            height: 200,
                             backgroundColor: '#00000000', //最后两位为透明度
+                            // backgroundColor: '#FC0707',
                             color: '#ffffff',
                             fontSize: 20,
                             textAlign: "center",
@@ -668,7 +661,6 @@ cc.Class({
                     button.onTap(function (res) {
                         if (res.userInfo) {
                             console.log("用户授权:", res);
-                            exportJson.userInfo = res.userInfo;
                             //此时可进行登录操作
                             button.destroy();
                         } else {
@@ -680,6 +672,9 @@ cc.Class({
         });
     }
 });
+
+//对象初始化
+var GC = new GameCtl();
 
 cc._RF.pop();
         }

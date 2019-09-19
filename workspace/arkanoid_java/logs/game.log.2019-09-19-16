@@ -1,0 +1,135 @@
+[INFO ][16:42:42,422][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][16:42:42,577][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Thu Sep 19 16:42:42 CST 2019]; root of context hierarchy
+[INFO ][16:42:42,612][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][16:42:42,636][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][16:42:42,648][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][16:42:42,870][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][16:42:42,898][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][16:42:42,917][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][16:42:43,089][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][16:42:43,090][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][16:42:43,090][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][16:42:43,487][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][16:43:22,232][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][16:44:07,141][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][16:44:09,262][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:10,578][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:11,816][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:12,864][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:13,965][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:15,177][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:16,328][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:17,380][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:18,431][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:19,342][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:20,330][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:21,230][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:22,285][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:23,279][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:24,268][eventExecutor-2-thread-1] (core.net.HttpSocket) - Accept-Encoding: gzip, deflate
+[ERROR][16:44:24,269][eventExecutor-2-thread-1] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][16:44:24,812][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:26,127][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:27,118][eventExecutor-2-thread-4] (core.net.HttpSocket) - Accept-Encoding: gzip, deflate
+[ERROR][16:44:27,118][eventExecutor-2-thread-4] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][16:44:27,806][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:29,021][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:30,029][eventExecutor-2-thread-7] (core.net.HttpSocket) - Accept-Encoding: gzip, deflate
+[ERROR][16:44:30,029][eventExecutor-2-thread-7] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][16:44:30,838][eventExecutor-2-thread-8] (core.net.HttpSocket) - Accept-Encoding: gzip, deflate
+[ERROR][16:44:30,838][eventExecutor-2-thread-8] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][16:44:31,415][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:32,654][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:33,862][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:34,979][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:36,038][eventExecutor-2-thread-5] (core.net.HttpSocket) - Accept-Encoding: gzip, deflate
+[ERROR][16:44:36,038][eventExecutor-2-thread-5] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][16:44:37,530][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:38,685][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:40,014][eventExecutor-2-thread-8] (core.net.HttpSocket) - Accept-Encoding: gzip, deflate
+[ERROR][16:44:40,015][eventExecutor-2-thread-8] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][16:44:41,239][eventExecutor-2-thread-1] (core.net.HttpSocket) - Accept-Encoding: gzip, deflate
+[ERROR][16:44:41,239][eventExecutor-2-thread-1] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][16:44:42,126][eventExecutor-2-thread-2] (core.net.HttpSocket) - Accept-Encoding: gzip, deflate
+[ERROR][16:44:42,127][eventExecutor-2-thread-2] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][16:44:43,063][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:44:44,446][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:01,062][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:03,814][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:04,039][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:04,136][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:04,479][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:26,379][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:26,963][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:27,566][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:28,051][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:28,506][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:28,964][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:29,312][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:29,719][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:30,109][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:30,551][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:30,785][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:31,016][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:31,266][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:31,475][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:31,690][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:31,881][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:32,080][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:32,254][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:32,488][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:33,055][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:33,068][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:33,479][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:33,538][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:33,875][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:33,933][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:34,996][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:35,010][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:35,052][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:35,343][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:36,021][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:36,550][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:37,019][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:37,461][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:37,869][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:38,303][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:38,766][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:39,219][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:39,681][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:40,119][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:40,600][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:41,399][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:41,978][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:42,481][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:42,967][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:43,443][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:43,932][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:44,382][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:44,837][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:45,269][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:45,795][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:46,237][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:46,698][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:47,186][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:47,616][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:48,107][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:48,437][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:48,670][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:48,870][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:49,043][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:49,209][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:49,370][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:49,556][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:49,691][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:49,864][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:50,112][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:50,216][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:50,577][eventExecutor-2-thread-4] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:50,915][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:52:51,161][eventExecutor-2-thread-6] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:56:16,409][eventExecutor-2-thread-7] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:56:17,744][eventExecutor-2-thread-8] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[INFO ][16:56:18,913][eventExecutor-2-thread-1] (core.net.HttpSocket) - Accept-Encoding: gzip, deflate
+[ERROR][16:56:18,914][eventExecutor-2-thread-1] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][16:56:21,561][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}

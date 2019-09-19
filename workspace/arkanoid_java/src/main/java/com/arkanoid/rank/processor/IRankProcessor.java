@@ -7,11 +7,11 @@ import java.util.Map;
  * @version 2019年3月30日 下午11:07:49
  */
 public interface IRankProcessor {
-        void addPlayerScore(String playerOpenId, int score);
+        void addPlayerScore(String playerNickName, int score);
 
         Map<String, Integer> getPlayerScoreRank(int start, int count);
 
-        int getRank(String playerOpenId);
+        int getRank(String playerNickName);
 
-        int getScore(String playerOpenId);
+        int getScore(String playerNickName);
 }

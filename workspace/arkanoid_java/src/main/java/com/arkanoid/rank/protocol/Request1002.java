@@ -8,15 +8,15 @@ import com.arkanoid.core.cmd.Request;
  * @author ayue
  */
 public class Request1002 implements Request {
-        private String playerOpenId;
+        private String playerNickName;
         private int score;
 
-        public String getPlayerOpenId() {
-                return playerOpenId;
+        public String getPlayerNickName() {
+                return playerNickName;
         }
 
-        public void setPlayerOpenId(String playerOpenId) {
-                this.playerOpenId = playerOpenId;
+        public void setPlayerNickName(String playerNickName) {
+                this.playerNickName = playerNickName;
         }
 
         public int getScore() {

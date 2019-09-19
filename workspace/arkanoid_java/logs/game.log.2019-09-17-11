@@ -1,0 +1,326 @@
+[INFO ][11:13:36,497][eventExecutor-2-thread-9] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:13:36,643][eventExecutor-2-thread-10] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:18:32,460][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:18:32,552][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:18:32 CST 2019]; root of context hierarchy
+[INFO ][11:18:32,584][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:18:32,605][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:18:32,613][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:18:32,672][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:18:32,679][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:18:32,688][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:18:32,753][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:18:32,753][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:18:32,754][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:18:32,960][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:18:46,975][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:19:31,968][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:19:32,062][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:19:32 CST 2019]; root of context hierarchy
+[INFO ][11:19:32,093][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:19:32,114][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:19:32,122][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:19:32,179][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:19:32,186][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:19:32,192][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:19:32,256][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:19:32,257][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:19:32,257][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:19:32,462][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:19:35,558][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:20:09,235][eventExecutor-2-thread-2] (core.net.HttpSocket) - AYUE-1001-{"start":0,"count":100}
+[ERROR][11:20:09,236][eventExecutor-2-thread-2] (core.cmd.CmdManager) - AYUE协议没有处理的handler
+[ERROR][11:20:09,238][eventExecutor-2-thread-2] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-2]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:103)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:21:29,786][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:21:29,882][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:21:29 CST 2019]; root of context hierarchy
+[INFO ][11:21:29,913][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:21:29,934][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:21:29,944][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:21:30,004][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:21:30,012][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:21:30,019][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:21:30,084][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:21:30,084][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:21:30,084][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:21:30,287][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:21:33,177][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE-1001-{"start":0,"count":100}
+[ERROR][11:21:33,177][eventExecutor-2-thread-1] (core.cmd.CmdManager) - AYUE协议没有处理的handler
+[ERROR][11:21:33,182][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:102)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:23:49,071][eventExecutor-2-thread-3] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[ERROR][11:23:49,072][eventExecutor-2-thread-3] (core.cmd.CmdManager) - AYUE1001协议没有处理的handler
+[ERROR][11:23:49,073][eventExecutor-2-thread-3] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-3]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:102)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:23:57,590][eventExecutor-2-thread-5] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[ERROR][11:23:57,590][eventExecutor-2-thread-5] (core.cmd.CmdManager) - AYUE1001协议没有处理的handler
+[ERROR][11:23:57,596][eventExecutor-2-thread-5] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-5]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:102)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:24:01,970][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:24:02,067][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:24:02 CST 2019]; root of context hierarchy
+[INFO ][11:24:02,098][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:24:02,119][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:24:02,127][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:24:02,188][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:24:02,195][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:24:02,201][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:24:02,267][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:24:02,267][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:24:02,268][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:24:02,471][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:24:03,308][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[ERROR][11:24:03,308][eventExecutor-2-thread-1] (core.cmd.CmdManager) - AYUE1001协议没有处理的handler
+[ERROR][11:24:03,310][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:104)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:27:14,300][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:27:14,408][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:27:14 CST 2019]; root of context hierarchy
+[INFO ][11:27:14,439][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:27:14,460][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:27:14,469][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:27:14,526][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:27:14,532][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:27:14,539][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:27:14,605][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:27:14,605][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:27:14,605][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:27:14,807][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:27:18,036][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[ERROR][11:27:18,036][eventExecutor-2-thread-1] (core.cmd.CmdManager) - AYUE1001协议没有处理的handler
+[ERROR][11:27:18,039][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:97)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:28:11,935][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:28:12,030][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:28:12 CST 2019]; root of context hierarchy
+[INFO ][11:28:12,062][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:28:12,084][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:28:12,093][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:28:12,150][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:28:12,158][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:28:12,166][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:28:12,236][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:28:12,237][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:28:12,237][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:28:12,440][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:28:16,022][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100
+[INFO ][11:28:16,079][eventExecutor-2-thread-1] (core.cmd.CmdManager) - 协议-1001-报错com.alibaba.fastjson.JSONException: not match : - 
+[ERROR][11:28:16,080][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:94)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:59)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:28:48,205][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:28:48,299][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:28:48 CST 2019]; root of context hierarchy
+[INFO ][11:28:48,329][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:28:48,352][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:28:48,361][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:28:48,420][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:28:48,428][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:28:48,435][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:28:48,504][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:28:48,505][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:28:48,505][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:28:48,707][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:28:49,901][eventExecutor-2-thread-1] (core.net.HttpSocket) - AYUE1001-{"start":0,"count":100}
+[ERROR][11:28:49,901][eventExecutor-2-thread-1] (core.cmd.CmdManager) - AYUE1001协议没有处理的handler
+[ERROR][11:28:49,903][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:105)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:61)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:29:49,177][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:29:49,286][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:29:49 CST 2019]; root of context hierarchy
+[INFO ][11:29:49,320][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:29:49,340][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:29:49,349][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:29:49,407][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:29:49,415][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:29:49,422][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:29:49,485][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:29:49,485][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:29:49,485][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:29:49,688][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:29:51,957][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100
+[INFO ][11:29:52,016][eventExecutor-2-thread-1] (core.cmd.CmdManager) - 协议-1001-报错com.alibaba.fastjson.JSONException: not match : - 
+[ERROR][11:29:52,018][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:94)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:59)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:30:18,264][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100
+[INFO ][11:30:18,265][eventExecutor-2-thread-3] (core.cmd.CmdManager) - 协议-1001-报错com.alibaba.fastjson.JSONException: not match : - 
+[ERROR][11:30:18,266][eventExecutor-2-thread-3] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-3]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:94)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:59)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:30:21,889][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:30:21,998][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:30:21 CST 2019]; root of context hierarchy
+[INFO ][11:30:22,027][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:30:22,049][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:30:22,059][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:30:22,117][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:30:22,125][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:30:22,133][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:30:22,196][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:30:22,196][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:30:22,196][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:30:22,401][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:30:24,531][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:30:29,874][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:30:30,745][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:40:12,866][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:40:12,970][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:40:12 CST 2019]; root of context hierarchy
+[INFO ][11:40:13,001][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:40:13,022][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:40:13,030][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:40:13,091][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:40:13,098][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:40:13,104][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:40:13,169][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:40:13,169][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:40:13,170][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:40:13,373][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[ERROR][11:40:16,701][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+java.lang.NullPointerException
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:62)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:60)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:56)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][11:40:33,827][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:40:33,946][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@1060b431: startup date [Tue Sep 17 11:40:33 CST 2019]; root of context hierarchy
+[INFO ][11:40:33,982][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:40:34,007][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:40:34,017][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:40:34,081][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:40:34,090][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:40:34,098][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:40:34,178][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:40:34,179][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:40:34,179][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:40:34,441][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:42:35,448][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:42:35,539][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:42:35 CST 2019]; root of context hierarchy
+[INFO ][11:42:35,570][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:42:35,591][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:42:35,599][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:42:35,657][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:42:35,664][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:42:35,670][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:42:35,730][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:42:35,731][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:42:35,731][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:42:35,932][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:42:41,059][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:44:03,425][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:44:03,518][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:44:03 CST 2019]; root of context hierarchy
+[INFO ][11:44:03,550][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:44:03,574][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:44:03,585][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:44:03,642][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:44:03,650][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:44:03,656][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:44:03,720][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:44:03,720][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:44:03,720][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:44:03,923][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:44:04,875][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:44:28,570][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:44:28,668][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:44:28 CST 2019]; root of context hierarchy
+[INFO ][11:44:28,698][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:44:28,721][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:44:28,729][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:44:28,788][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:44:28,797][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:44:28,805][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:44:28,869][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:44:28,869][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:44:28,870][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:44:29,075][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:44:31,011][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:46:26,175][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:46:26,271][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:46:26 CST 2019]; root of context hierarchy
+[INFO ][11:46:26,302][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:46:26,324][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:46:26,334][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:46:26,392][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:46:26,401][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:46:26,407][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:46:26,477][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:46:26,478][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:46:26,478][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:46:26,680][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:46:27,797][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:48:41,373][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:48:41,465][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:48:41 CST 2019]; root of context hierarchy
+[INFO ][11:48:41,496][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:48:41,517][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:48:41,527][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:48:41,585][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:48:41,593][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:48:41,599][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:48:41,663][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:48:41,664][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:48:41,664][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:48:41,865][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:48:45,224][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:48:58,267][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][11:48:58,359][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Tue Sep 17 11:48:58 CST 2019]; root of context hierarchy
+[INFO ][11:48:58,390][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][11:48:58,411][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][11:48:58,419][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][11:48:58,480][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][11:48:58,488][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][11:48:58,496][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][11:48:58,561][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][11:48:58,561][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][11:48:58,562][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][11:48:58,769][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][11:59:07,601][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][11:59:08,349][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1001-{"start":0,"count":100}

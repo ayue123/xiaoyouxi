@@ -1,0 +1,92 @@
+[INFO ][19:14:25,029][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][19:14:25,166][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Wed Sep 18 19:14:25 CST 2019]; root of context hierarchy
+[INFO ][19:14:25,204][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][19:14:25,228][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][19:14:25,240][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][19:14:25,323][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][19:14:25,333][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][19:14:25,343][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][19:14:25,434][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][19:14:25,435][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][19:14:25,435][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][19:14:25,667][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][19:15:32,924][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳-https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[ERROR][19:15:32,984][eventExecutor-2-thread-1] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-1]-报错
+com.alibaba.fastjson.JSONException: unclosed str
+	at com.alibaba.fastjson.parser.JSONScanner.scanFieldString(JSONScanner.java:762)
+	at com.alibaba.fastjson.parser.deserializer.FastjsonASMDeserializer_1_Request1002.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:185)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:614)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:339)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:243)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:456)
+	at com.arkanoid.core.cmd.CmdManager.calcul(CmdManager.java:35)
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:90)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:60)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:56)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][19:18:32,438][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳-https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":6663}
+[ERROR][19:18:32,439][eventExecutor-2-thread-3] (core.thread.ThreadUncaughtExceptionHandler) - [Thread=eventExecutor-2-thread-3]-报错
+com.alibaba.fastjson.JSONException: unclosed str
+	at com.alibaba.fastjson.parser.JSONScanner.scanFieldString(JSONScanner.java:762)
+	at com.alibaba.fastjson.parser.deserializer.FastjsonASMDeserializer_1_Request1002.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:185)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:614)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:339)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:243)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:456)
+	at com.arkanoid.core.cmd.CmdManager.calcul(CmdManager.java:35)
+	at com.arkanoid.core.net.HttpSocket.exeSocket(HttpSocket.java:90)
+	at com.arkanoid.core.net.HttpSocket.access$0(HttpSocket.java:60)
+	at com.arkanoid.core.net.HttpSocket$ExeSocketTask.run(HttpSocket.java:56)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO ][19:18:42,664][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":6663}
+[INFO ][19:19:22,929][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:19:44,092][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[ERROR][19:21:14,919][eventExecutor-2-thread-8] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][19:22:11,532][eventExecutor-2-thread-9] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":1}
+[INFO ][19:22:19,908][eventExecutor-2-thread-10] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:23:05,874][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[ERROR][19:23:12,270][eventExecutor-2-thread-4] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][19:23:22,383][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":1}
+[INFO ][19:24:02,805][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:24:06,904][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:25:10,223][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:25:17,103][eventExecutor-2-thread-9] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:25:19,776][eventExecutor-2-thread-10] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][19:29:13,393][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:29:25,227][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:46:04,116][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:46:14,677][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:46:18,315][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][19:46:30,363][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[ERROR][19:46:31,268][eventExecutor-2-thread-9] (core.net.HttpSocket) - 协议头错误,IP:/192.168.1.48;内容：Accept-Encoding: gzip, deflate
+[INFO ][19:46:57,702][main] (com.arkanoid.ADLauncher) - 服务器开始启动
+[INFO ][19:46:57,813][main] (context.support.FileSystemXmlApplicationContext) - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@2d363fb3: startup date [Wed Sep 18 19:46:57 CST 2019]; root of context hierarchy
+[INFO ][19:46:57,849][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from file [D:\workspace\arkanoid_java\config\propholder.xml]
+[INFO ][19:46:57,874][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/root.xml]
+[INFO ][19:46:57,883][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/dbconfig.xml]
+[INFO ][19:46:57,951][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/core.xml]
+[INFO ][19:46:57,959][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/cmd.xml]
+[INFO ][19:46:57,967][main] (factory.xml.XmlBeanDefinitionReader) - Loading XML bean definitions from class path resource [config/rank.xml]
+[INFO ][19:46:58,048][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\redis.properties]
+[INFO ][19:46:58,049][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\timerTask.properties]
+[INFO ][19:46:58,049][main] (factory.config.PropertyPlaceholderConfigurer) - Loading properties file from file [D:\workspace\arkanoid_java\config\threadPoolVariables.properties]
+[INFO ][19:46:58,275][main] (com.arkanoid.ADLauncher) - 服务器启动成功
+[INFO ][19:47:08,672][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][19:48:17,150][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:48:27,378][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][19:48:28,797][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:48:49,742][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][19:48:50,608][eventExecutor-2-thread-6] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][19:54:11,385][eventExecutor-2-thread-7] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:54:21,776][eventExecutor-2-thread-8] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:54:35,929][eventExecutor-2-thread-1] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][19:57:02,883][eventExecutor-2-thread-2] (core.net.HttpSocket) - 1002-{"playerNickName":"阿岳*https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIvUOPozOeMQIBwib7DnK4cYtGzJ1fhBOZC0hqEHSticvBHrl706XkNVMOk0o9icRBeeqezL7hzn6Wlw/132","score":0}
+[INFO ][19:57:11,810][eventExecutor-2-thread-3] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][19:57:38,048][eventExecutor-2-thread-4] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
+[INFO ][19:57:48,192][eventExecutor-2-thread-5] (core.net.HttpSocket) - 1001-{"start":0,"count":100}
