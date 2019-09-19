@@ -2,7 +2,7 @@
  * @Author: ayue 
  * @Date: 2019-03-30 20:18:41 
  * @Last Modified by: ayue
- * @Last Modified time: 2019-09-19 17:27:28
+ * @Last Modified time: 2019-09-19 19:32:16
  */
 
 const GameModel = require('GameModel');
@@ -400,13 +400,20 @@ var GameCtl = cc.Class({
 
     //排行榜按钮
     onBtnRank() {
-        this.allRank(this);
-        // this.initUserInfo()
+        this.initUserInfo()
     },
     //排行榜返回按钮
     onBtnBack() {
         this.wxSubContextView.active = false;
         this.wxBackGround.active = false;
+    },
+    //好友排行榜按钮
+    onBtnFriendRank() {
+        this.initUserInfo()
+    },
+    //全服排行榜按钮
+    onBtnPlayerRank() {
+        this.allRank(this);
     },
     //初始化玩家排行榜
     initUserInfo() {

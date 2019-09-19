@@ -6790,3 +6790,352 @@ initialization finished
 2019-09-19T09:40:49.315Z - normal: Start building plugin scripts
 2019-09-19T09:40:49.323Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
 2019-09-19T09:40:50.986Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-09-19T11:33:24.230Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "D:\\cocosCreator\\workspace\\Arkanoid\\build",
+  "debug": false,
+  "dest": "D:\\cocosCreator\\workspace\\Arkanoid\\build\\wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": false,
+    "landscapeRight": false,
+    "portrait": true,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.brickbreakermaster",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "2ef97242-9501-4637-ab4d-d2e235f1f114"
+  ],
+  "sourceMaps": false,
+  "startScene": "2ef97242-9501-4637-ab4d-d2e235f1f114",
+  "template": "link",
+  "title": "BrickBreaker",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wxce1bb384f5bde4c8",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": "wx-open-data-project"
+  },
+  "xxteaKey": "f4ef681c-8fa6-40",
+  "zipCompressJs": true,
+  "project": "D:\\cocosCreator\\workspace\\Arkanoid",
+  "projectName": "BrickBreaker",
+  "debugBuildWorker": false
+}
+2019-09-19T11:33:24.236Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-09-19T11:33:24.237Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-09-19T11:33:24.240Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-09-19T11:33:27.540Z - normal: Start building assets
+2019-09-19T11:33:27.540Z - normal: Start spawn build-worker
+2019-09-19T11:33:28.465Z - normal: Finish spawn build-worker
+2019-09-19T11:33:28.466Z - normal: Start init build-worker
+2019-09-19T11:33:32.113Z - normal: Finish init build-worker
+2019-09-19T11:33:32.114Z - normal: Start build-assets in worker
+2019-09-19T11:33:32.835Z - normal: Finish build-assets in worker
+2019-09-19T11:33:32.840Z - normal: Finish building assets
+2019-09-19T11:33:32.853Z - normal: Start building plugin scripts
+2019-09-19T11:33:32.857Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-09-19T11:33:34.417Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-09-19T11:34:40.527Z - normal: Initializing...
+
+2019-09-19T11:34:40.533Z - normal: idePortFile: C:\Users\Administrator\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2019-09-19T11:34:41.547Z - normal: starting ide...
+
+2019-09-19T11:34:54.181Z - normal: IDE server has started, listening on http://127.0.0.1:51845
+
+2019-09-19T11:34:54.226Z - normal: initialization finished
+
+2019-09-19T11:34:55.316Z - normal: open IDE success
+
+2019-09-19T11:36:28.099Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "D:\\cocosCreator\\workspace\\Arkanoid\\build",
+  "debug": false,
+  "dest": "D:\\cocosCreator\\workspace\\Arkanoid\\build\\wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": false,
+    "landscapeRight": false,
+    "portrait": true,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.brickbreakermaster",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "2ef97242-9501-4637-ab4d-d2e235f1f114"
+  ],
+  "sourceMaps": false,
+  "startScene": "2ef97242-9501-4637-ab4d-d2e235f1f114",
+  "template": "link",
+  "title": "BrickBreaker",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wxce1bb384f5bde4c8",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": "wx-open-data-project"
+  },
+  "xxteaKey": "f4ef681c-8fa6-40",
+  "zipCompressJs": true,
+  "project": "D:\\cocosCreator\\workspace\\Arkanoid",
+  "projectName": "BrickBreaker",
+  "debugBuildWorker": false
+}
+2019-09-19T11:36:28.102Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-09-19T11:36:28.102Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-09-19T11:36:28.103Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-09-19T11:36:32.637Z - normal: Start building assets
+2019-09-19T11:36:32.637Z - normal: Start spawn build-worker
+2019-09-19T11:36:34.221Z - normal: Finish spawn build-worker
+2019-09-19T11:36:34.221Z - normal: Start init build-worker
+2019-09-19T11:36:37.974Z - normal: Finish init build-worker
+2019-09-19T11:36:37.974Z - normal: Start build-assets in worker
+2019-09-19T11:36:38.500Z - normal: Finish build-assets in worker
+2019-09-19T11:36:38.507Z - normal: Finish building assets
+2019-09-19T11:36:38.526Z - normal: Start building plugin scripts
+2019-09-19T11:36:38.535Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-09-19T11:36:40.101Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-09-19T11:37:54.054Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "D:\\cocosCreator\\workspace\\Arkanoid\\build",
+  "debug": false,
+  "dest": "D:\\cocosCreator\\workspace\\Arkanoid\\build\\wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": false,
+    "landscapeRight": false,
+    "portrait": true,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.brickbreakermaster",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "2ef97242-9501-4637-ab4d-d2e235f1f114"
+  ],
+  "sourceMaps": false,
+  "startScene": "2ef97242-9501-4637-ab4d-d2e235f1f114",
+  "template": "link",
+  "title": "BrickBreaker",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wxce1bb384f5bde4c8",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": "wx-open-data-project"
+  },
+  "xxteaKey": "f4ef681c-8fa6-40",
+  "zipCompressJs": true,
+  "project": "D:\\cocosCreator\\workspace\\Arkanoid",
+  "projectName": "BrickBreaker",
+  "debugBuildWorker": false
+}
+2019-09-19T11:37:54.057Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-09-19T11:37:54.057Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-09-19T11:37:54.058Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-09-19T11:37:57.742Z - normal: Start building assets
+2019-09-19T11:37:57.742Z - normal: Start spawn build-worker
+2019-09-19T11:37:58.622Z - normal: Finish spawn build-worker
+2019-09-19T11:37:58.622Z - normal: Start init build-worker
+2019-09-19T11:38:02.379Z - normal: Finish init build-worker
+2019-09-19T11:38:02.379Z - normal: Start build-assets in worker
+2019-09-19T11:38:03.048Z - normal: Finish build-assets in worker
+2019-09-19T11:38:03.054Z - normal: Finish building assets
+2019-09-19T11:38:03.069Z - normal: Start building plugin scripts
+2019-09-19T11:38:03.073Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-09-19T11:38:04.856Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-09-19T11:39:03.776Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "D:\\cocosCreator\\workspace\\Arkanoid\\build",
+  "debug": false,
+  "dest": "D:\\cocosCreator\\workspace\\Arkanoid\\build\\wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": false,
+    "landscapeRight": false,
+    "portrait": true,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.brickbreakermaster",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "2ef97242-9501-4637-ab4d-d2e235f1f114"
+  ],
+  "sourceMaps": false,
+  "startScene": "2ef97242-9501-4637-ab4d-d2e235f1f114",
+  "template": "link",
+  "title": "BrickBreaker",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wxce1bb384f5bde4c8",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": "wx-open-data-project"
+  },
+  "xxteaKey": "f4ef681c-8fa6-40",
+  "zipCompressJs": true,
+  "project": "D:\\cocosCreator\\workspace\\Arkanoid",
+  "projectName": "BrickBreaker",
+  "debugBuildWorker": false
+}
+2019-09-19T11:39:03.776Z - normal: Building D:\cocosCreator\workspace\Arkanoid
+2019-09-19T11:39:03.777Z - normal: Destination D:\cocosCreator\workspace\Arkanoid\build\wechatgame
+2019-09-19T11:39:03.777Z - normal: Delete D:\cocosCreator\workspace\Arkanoid\build\wechatgame\subpackages/**/*,D:\cocosCreator\workspace\Arkanoid\build\wechatgame\**\*,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project,!D:\cocosCreator\workspace\Arkanoid\build\wechatgame\wx-open-data-project\**\*
+2019-09-19T11:39:07.565Z - normal: Start building assets
+2019-09-19T11:39:07.565Z - normal: Start spawn build-worker
+2019-09-19T11:39:08.755Z - normal: Finish spawn build-worker
+2019-09-19T11:39:08.755Z - normal: Start init build-worker
+2019-09-19T11:39:12.426Z - normal: Finish init build-worker
+2019-09-19T11:39:12.427Z - normal: Start build-assets in worker
+2019-09-19T11:39:12.956Z - normal: Finish build-assets in worker
+2019-09-19T11:39:12.962Z - normal: Finish building assets
+2019-09-19T11:39:13.195Z - normal: Start building plugin scripts
+2019-09-19T11:39:13.200Z - normal: Generating main.js from D:\cocosCreator\cocoscreator\resources\static\build-templates\shares\main.js
+2019-09-19T11:39:14.675Z - normal: Built to "D:\cocosCreator\workspace\Arkanoid\build\wechatgame" successfully
+2019-09-19T12:40:00.654Z - info: shutdown preview server

@@ -7,7 +7,7 @@
       "windowType": "dockable",
       "x": -1293,
       "y": 123,
-      "width": 1256,
+      "width": 1198,
       "height": 700,
       "layout": {
         "children": [
@@ -99,9 +99,7 @@
         "inspector",
         "scene"
       ]
-    },
-    "window-1568786636465": {},
-    "worker": {}
+    }
   },
   "panels": {
     "preferences": {
