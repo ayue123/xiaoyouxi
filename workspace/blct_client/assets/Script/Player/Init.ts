@@ -1,7 +1,7 @@
 import { cmdManager } from "../Core/Cmd/CmdManager";
-import Response from "../Core/Cmd/Response";
+import Response from "../Core/Cmd/Protocol/Response";
 import Response1001 from "../Core/Cmd/Protocol/Response1001";
-import Request from "../Core/Cmd/Request";
+import Request from "../Core/Cmd/Protocol/Request";
 import Request1001 from "../Core/Cmd/Protocol/Request1001";
 
 const { ccclass, property } = cc._decorator;
@@ -23,6 +23,4 @@ export default class Init extends cc.Component {
         let request1001: Request1001 = <Request1001>request;
         console.log(request1001.playerId);
     }
-
-
 }

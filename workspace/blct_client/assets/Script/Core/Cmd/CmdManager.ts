@@ -7,11 +7,10 @@
 // Learn life-cycle callbacks:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-import ICmdHandler from "./ICmdHandler";
 import Request1001 from "./Protocol/Request1001";
 import Response1001 from "./Protocol/Response1001";
-import Response from "./Response";
-import Request from "./Response";
+import Response from "./Protocol/Response";
+import Request from "./Protocol/Response";
 import { CNet } from "../Net/Network"
 
 export interface CmdObject {
