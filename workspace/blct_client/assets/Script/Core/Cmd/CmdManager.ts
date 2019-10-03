@@ -45,9 +45,12 @@ export class CmdManager {
         let cmdId = splitted[0];
         let message = splitted[1];
         let request: Request = JSON.parse(message);
-        let cmdObject = this.m_events[cmdId];
-        for(let i=0;i<cmdObject.length;i++){
-            cmdObject[i].callBack.call(cmdObject[i].callBack,request);
+        let cmdObjects = this.m_events[cmdId];
+        for(let i=0;i<cmdObjects.length;i++){
+            let cmdObjectCallBack = cmdObjects[i].callBack;
+            cmdObjectCallBack.call(cmdObjectCallBack,request);
+            cmdObjects.splice(i,1);
+            i--;
         }
 
     }

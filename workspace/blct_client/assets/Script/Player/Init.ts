@@ -9,18 +9,25 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class Init extends cc.Component {
     onLoad () {
-        console.log("ddddddddddd")
     }
 
     start() {
+    }
+
+
+    exeRequest1001(){
         let response1001: Response1001 = new Response1001();
         response1001.userId=("ssss");
         response1001.name=("sss");
-        cmdManager.executeResponse(1001, response1001,this.exe1001);
+        cmdManager.executeResponse(1001, response1001,this.exeResponse1001);
     }
 
-    exe1001(request: Request) {
+    exeResponse1001(request: Request) {
         let request1001: Request1001 = <Request1001>request;
         console.log(request1001.playerId);
+    }
+
+    createNewPlayerBtn(){
+        this.exeRequest1001();
     }
 }
