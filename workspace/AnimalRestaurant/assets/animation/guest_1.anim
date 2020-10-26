@@ -1,0 +1,31 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "guest_1",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1,
+  "sample": 2,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "e0ed3259-30c7-4809-8374-acb3cbc1c73f"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "f64e59c5-05f6-4840-881d-967fe3dc2883"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
