@@ -1,0 +1,60 @@
+{
+	"RECORDS": [
+		{
+			"key": 201,
+			"value": "texture/stove/stove_1"
+		},
+		{
+			"key": 202,
+			"value": "texture/stove/stove_2"
+		},
+		{
+			"key": 203,
+			"value": "texture/stove/stove_3"
+		},
+		{
+			"key": 204,
+			"value": "texture/stove/stove_4"
+		},
+		{
+			"key": 205,
+			"value": "texture/stove/stove_5"
+		},
+		{
+			"key": 206,
+			"value": "texture/stove/stove_6"
+		},
+		{
+			"key": 207,
+			"value": "texture/stove/stove_7"
+		},
+		{
+			"key": 208,
+			"value": "texture/stove/stove_8"
+		},
+		{
+			"key": 209,
+			"value": "texture/stove/stove_9"
+		},
+		{
+			"key": 210,
+			"value": "texture/stove/stove_10"
+		},
+		{
+			"key": 211,
+			"value": "texture/stove/stove_11"
+		},
+		{
+			"key": 212,
+			"value": "texture/stove/stove_12"
+		},
+		{
+			"key": 213,
+			"value": "texture/stove/stove_13"
+		},
+		{
+			"key": 214,
+			"value": "texture/stove/stove_14"
+		}
+	]
+}
